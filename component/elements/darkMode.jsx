@@ -17,7 +17,7 @@ export default function DarkModeToggle() {
 
     return (
         <div className="flex items-center gap-2">
-            <span className="text-gray-600 dark:text-gray-300">Light</span>
+            <span className="text-gray-600 dark:text-white">Light</span>
             <input
                 type="checkbox"
                 checked={darkMode}
@@ -35,7 +35,7 @@ export default function DarkModeToggle() {
                     }`}
                 />
             </label>
-            <span className="text-gray-600 dark:text-gray-300">Dark</span>
+            <span className="text-gray-600 dark:text-white">Dark</span>
         </div>
     );
 }
