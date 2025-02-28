@@ -12,14 +12,14 @@ Sebelum memulai, pastikan Anda telah menginstal:
 
 ### 1️⃣ Clone menggunakan HTTPS
 ```bash
-git clone https://github.com/username/repository.git
+git clone https://github.com/Randi-95/capstone2.git
 ```
 
 ## 🚀 Menjalankan Proyek
 
 1. **Masuk ke folder proyek**
    ```bash
-   cd repository
+   cd capstone2
    ```
 
 2. **Install dependencies**
