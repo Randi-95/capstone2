@@ -19,7 +19,7 @@ git clone https://github.com/Randi-95/capstone2.git
 
 1. **Masuk ke folder proyek**
    ```bash
-   cd repository
+   cd capstone2
    ```
 
 2. **Install dependencies**
