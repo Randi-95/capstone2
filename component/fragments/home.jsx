@@ -9,7 +9,7 @@ export const Home = (props) => {
                 <button className="bg-white py-1 px-2 border border-[#7f5efd] rounded-[20px]"><p className="text-[#7f5efd] font-[600] py-1 px-3 bg-gray-100 rounded-[20px]">Best Financial Tracker</p></button>
             </div>   
             <div className="content flex flex-col justify-center ">
-                <p className="text-[60px] leading-[65px]  text-center  font-[600] text-[#374151]"><span className="text-[#7f5efd]">Kelola Keuangan dengan</span> <br /> Cerdas Bersama Financial Tracker </p>
+                <p className="md:text-[60px] text-[40px] leading-[40px] md:leading-[65px]  text-center  font-[600] text-[#374151]"><span className="text-[#7f5efd]">Kelola Keuangan dengan</span> <br /> Cerdas Bersama Financial Tracker </p>
                 <span className="flex justify-center mt-[10px]">
                     <p className="w-[70%] font-[600] text-center text-[#7F7F7F]">Smart Financial Tracker membantu Anda mencatat transaksi, menganalisis pola keuangan, dan memprediksi keuangan dengan Al. 
                     Aman, mudah, dan otomatis!</p>
