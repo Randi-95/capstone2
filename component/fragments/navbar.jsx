@@ -25,13 +25,14 @@ function Navbar() {
             <div className="container-navbar flex justify-between items-center">
                 <div className="nav-logo flex items-center gap-2">
                     <img src="/img/logo-capstone.png" alt="" className="w-[50px]"/>
-                    <p className="font-[600] text-[13px] md:text-[20px] hidden md:block">Financial Tracker</p>
+                    <p className="font-[600] text-[13px] md:text-[18px] hidden md:block">Financial Tracker</p>
                 </div>
                 <div className="navbar-nav hidden md:block">
-                    <ul className="flex gap-10">
+                    <ul className="flex gap-6 lg:gap-10">
                         <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Beranda</p></a></li>
                         <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Tentang Kami</p></a></li>
                         <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Fitur</p></a></li>
+                        <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Blog</p></a></li>
                     </ul>
                 </div>
                 <div className="navbar-button flex gap-[5px]">
