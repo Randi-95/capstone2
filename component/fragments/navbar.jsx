@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Button from "../elements/Button";
+import DarkModeToggle from "../elements/darkMode";
 
 
 function Navbar() {
@@ -37,6 +38,7 @@ function Navbar() {
                 </div>
                 <div className="navbar-button flex gap-[5px]">
                     <Button bgColor='bg-[#7f5efd]' border='border-[#7f5efd]' hover='hover:bg-transparent' hoverText = 'group-hover:text-[#7f5efd] ' >Masuk</Button>
+                    <DarkModeToggle />
                 </div>
             </div>
         </div>

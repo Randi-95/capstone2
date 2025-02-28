@@ -3,6 +3,7 @@ import Navbar  from '../component/fragments/navbar'
 import { Home } from '../component/fragments/home'
 
 function App() {
+
   return (
       <div className="">
         <Navbar />

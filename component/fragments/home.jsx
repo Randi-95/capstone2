@@ -4,7 +4,7 @@ export const Home = (props) => {
     const {} = props;
 
     return (
-        <div className="home w-full h-screen flex flex-col items-center justify-center">
+        <div className="home w-full h-screen flex flex-col items-center justify-center dark:bg-black">
             <div className="title">
                 <button className="bg-white py-1 px-2 border border-[#7f5efd] rounded-[20px]"><p className="text-[#7f5efd] font-[600] py-1 px-3 bg-gray-100 rounded-[20px]">Best Financial Tracker</p></button>
             </div>   
