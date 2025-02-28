@@ -35,8 +35,7 @@ function Navbar() {
                     </ul>
                 </div>
                 <div className="navbar-button flex gap-[5px]">
-                    <Button bgColor='bg-[#7f5efd]' border='border-[#7f5efd]' hover='hover:bg-transparent' hoverText = 'group-hover:text-[#4CB92D] ' >Masuk</Button>
-                    <Button bgColor='bg-transparent' border='border-[#7f5efd]' text='text-[#7f5efd]' hover="hover:bg-[#4CB92D]" hoverText="group-hover:text-white">Daftar</Button>
+                    <Button bgColor='bg-[#7f5efd]' border='border-[#7f5efd]' hover='hover:bg-transparent' hoverText = 'group-hover:text-[#7f5efd] ' >Masuk</Button>
                 </div>
             </div>
         </div>
