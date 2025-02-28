@@ -21,17 +21,16 @@ function Navbar() {
     }, []);
 
     return (
-        <div className={`navbar fixed top-0 right-0 left-0 transition-all duration-[0.1s] ${scrolling ? "bg-white shadow-lg px-[12px] py-[20px]" : "bg-white px-[25px] py-[30px]"}`}>
+        <div className={`navbar fixed top-0 right-0 left-0 transition-all duration-[0.1s] w-[85%] mx-auto border border-[#7f5efd] mt-4 rounded-[50px] px-[20px] py-[10px] ${scrolling ? "bg-white shadow-lg" : "bg-white"}`}>
             <div className="container-navbar flex justify-between items-center">
                 <div className="nav-logo">
-                    <h2 className="text-[20px] text-[#7f5efd] font-[700]">FinYouth</h2>
+                    <img src="../../public/img/logo-capstone.png" alt="" className="w-[60px]"/>
                 </div>
                 <div className="navbar-nav hidden md:block">
-                    <ul className="flex gap-4">
+                    <ul className="flex gap-10">
                         <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Beranda</p></a></li>
                         <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Tentang Kami</p></a></li>
                         <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Fitur</p></a></li>
-                        <li><a href=""><p className="text-[#828282] text-[16px] font-[500] hover:text-[#7f5efd]">Kontak</p></a></li>
                     </ul>
                 </div>
                 <div className="navbar-button flex gap-[5px]">
