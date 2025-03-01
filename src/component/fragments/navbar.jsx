@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Button from "../elements/Button";
 import DarkModeToggle from "../elements/darkMode";
 import {Menu, X} from 'react-feather'
+import { NavLink } from "react-router-dom";
 
 
 function Navbar() {
@@ -36,10 +37,18 @@ function Navbar() {
                 </div>
                 <div className="navbar-nav md:block z-10 ">
                     <ul className={`transition-all duration-300 dark:bg-primary dark:text-white z-40 flex gap-6 lg:gap-10 absolute flex-col right-0  ${isOpen ? "top-[80px] right-0 opacity-100 " : "top-[69px] right-[-900px] opacity-0" } shadow-lg px-10 py-5 bg-white rounded-b-2xl w-[250px] md:static md:flex-row md:w-auto md:top-0 md:py-0 md:px-0 md:bg-transparent md:dark:bg-transparent text-black md:opacity-100 md:shadow-none`}>
-                        <li><a href=""><p className="text-[16px] font-[500] hover:text-primary">Beranda</p></a></li>
-                        <li><a href=""><p className="text-[16px] font-[500] hover:text-primary">Tentang Kami</p></a></li>
-                        <li><a href=""><p className="text-[16px] font-[500] hover:text-primary">Fitur</p></a></li>
-                        <li><a href=""><p className="text-[16px] font-[500] hover:text-primary">Blog</p></a></li>
+                    <li>
+                        <NavLink to="/" className={({ isActive }) => isActive ? "text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Beranda</NavLink>
+                    </li>
+                    <li> 
+                        <NavLink to="/tentangkami" className={({ isActive}) => isActive ? "text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Tentang Kami</NavLink>
+                    </li>
+                    <li>
+                        <NavLink to="/fitur" className={({ isActive }) => isActive ? "text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Fitur</NavLink>
+                    </li>
+                    <li> 
+                        <NavLink to="/blog" className={({ isActive}) => isActive ? "text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Blog</NavLink>
+                    </li>
                         <div className="button md:hidden flex flex-col gap-3">
                             <Button bgColor='bg-primary dark:bg-violet-950' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' classCustom = 'w-full' >Masuk</Button>
                             <Button bgColor='bg-white dark:bg-violet-950' text = 'text-black dark:text-white' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' classCustom = 'w-full' >Daftar</Button>
