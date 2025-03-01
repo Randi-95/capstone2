@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
+import {Sun, Moon} from "react-feather"
 
 export default function DarkModeToggle() {
     const [darkMode, setDarkMode] = useState(() => {
         return localStorage.getItem("darkMode") === "enabled";
     });
+
 
     useEffect(() => {
         if (darkMode) {
@@ -15,27 +17,14 @@ export default function DarkModeToggle() {
         }
     }, [darkMode]);
 
+
+
     return (
-        <div className="flex items-center gap-2">
-            <span className="text-gray-600 dark:text-white">Light</span>
-            <input
-                type="checkbox"
-                checked={darkMode}
-                onChange={() => setDarkMode(!darkMode)}
-                className="toggle-checkbox hidden"
-                id="dark-toggle"
-            />
-            <label
-                htmlFor="dark-toggle"
-                className="cursor-pointer w-12 h-6 bg-gray-300 dark:bg-gray-600 rounded-full flex items-center p-1 transition duration-300"
-            >
-                <div
-                    className={`w-5 h-5 bg-white dark:bg-black rounded-full transform duration-300 ${
-                        darkMode ? "translate-x-6" : "translate-x-0"
-                    }`}
-                />
-            </label>
-            <span className="text-gray-600 dark:text-white">Dark</span>
+        <div 
+            className="flex items-center gap-2 cursor-pointer" 
+            onClick={() => setDarkMode(prev => !prev)}
+        >
+            {darkMode ? <Sun color="white" /> : <Moon color="black" />}
         </div>
     );
 }
