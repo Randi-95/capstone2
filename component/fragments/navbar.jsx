@@ -32,7 +32,7 @@ function Navbar() {
             <div className="container-navbar flex justify-between items-center">
                 <div className="nav-logo flex items-center gap-2">
                     <img src="/img/logo-capstone.png" alt="" className="w-[50px]"/>
-                    <p className="font-[600] text-[13px] md:text-[18px] hidden md:block"> Financial Tracker</p>
+                    <p className="font-[600] text-[13px] md:text-[18px] hidden md:block dark:text-white"> Financial Tracker</p>
                 </div>
                 <div className="navbar-nav md:block z-10 ">
                     <ul className={`transition-all duration-300 dark:bg-primary dark:text-white z-40 flex gap-6 lg:gap-10 absolute flex-col right-0  ${isOpen ? "top-[69px] right-0 opacity-100 " : "top-[69px] right-[-900px] opacity-0" } shadow-lg px-10 py-5 bg-white rounded-b-2xl w-[250px] md:static md:flex-row md:w-auto md:top-0 md:py-0 md:px-0 md:bg-transparent md:dark:bg-transparent text-black md:opacity-100 md:shadow-none`}>
