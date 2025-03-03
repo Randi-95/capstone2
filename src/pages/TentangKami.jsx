@@ -1,15 +1,101 @@
 
 import Navbar from '../component/fragments/navbar'
 import { Home } from '../component/fragments/home'
+import CardAbout from '../component/elements/cardAbout'
+import {Shield, Zap, CheckCircle, TrendingUp} from 'react-feather'
 
-function TentangKamiPage() {
+
+const Deskripsi = () => {
+  return (
+        <div className='flex justify-around gap-6 flex-wrap items-center px-4'>
+          <div className='m-auto xl:m-0'>
+            <CardAbout shadow="shadow-2xl">
+              <img className='m-auto' src="img/contoh1.png" alt="" width="300px"/>
+            </CardAbout>
+          </div>
+          <div className="w-[700px] mt-10 md:mt-0 px-8 md:w-[900px] lg:w-[700px]">
+            <h1 className='text-2xl md:text-5xl font-bold'>Mulai Perjalanan Keuangan Cerdas Anda dengan <span className='text-primary'> Smart Financial Tracker </span></h1>
+            <p className='mt-6 text-lg text-gray-600'>Kami menyadari bahwa banyak generasi muda kesulitan dalam mengelola keuangan mereka secara efektif, terutama dalam melacak pengeluaran dan pemasukan. Kurangnya kesadaran terhadap pola keuangan pribadi dapat menyebabkan masalah finansial di masa depan. Dengan latar belakang tim yang menggabungkan Machine Learning Engineer dan Front-End & Back-End Developer, kami melihat peluang untuk mengembangkan aplikasi fintech yang dapat memberikan solusi berbasis data dan AI untuk membantu pengguna dalam pengelolaan keuangan mereka. Dengan mengintegrasikan fitur financial dashboard, time series forecasting, dan chatbot interaktif, kami percaya bahwa aplikasi ini dapat menjadi alat yang berguna bagi generasi muda dalam mengontrol keuangan mereka dengan lebih baik.</p>
+          </div>
+      </div>
+  )
+}
+
+const NilaiInti = () => {
+    return (
+      <div className='mt-[90px] px-8'>
+          <div className='md:px-[120px] mb-10'>
+            <h1 className='text-2xl md:text-5xl font-bold text-center'><span className='text-primary'>Fondasi</span> Kepercayaan, Inovasi, Kemudahan, dan Pertumbuhan Finansial</h1>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-full max-w-6xl'>
+              <CardAbout>
+                <div className="flex gap-4 flex-col md:flex-row">
+                  <div>
+                  <div className="icon bg-primary rounded-full p-4 w-fit">
+                    <Shield color='white' size={50}/>
+                  </div>
+                  </div>
+                  <div className=''>
+                      <h1 className='text-2xl font-bold'>Keamanan Tanpa Kompromi</h1>
+                      <p>Kami menjaga data Anda seperti aset berharga. Dengan enkripsi, informasi keuangan Anda selalu aman di tangan kami.</p>
+                  </div>
+                </div>
+              </CardAbout>
+              <CardAbout>
+                <div className="flex gap-4 flex-col md:flex-row">
+                  <div>
+                  <div className="icon bg-primary rounded-full p-4 w-fit">
+                    <Zap color='white' size={50}/>
+                  </div>
+                  </div>
+                  <div className=''>
+                      <h1 className='text-2xl font-bold'>Inovasi yang Membantu Maju</h1>
+                      <p>Teknologi AI kami dirancang untuk memahami pola keuangan Anda, dan membantu Anda membuat keputusan yang lebih baik setiap hari.</p>
+                  </div>
+                </div>
+              </CardAbout>
+              <CardAbout>
+                <div className="flex gap-4 flex-col md:flex-row">
+                  <div>
+                  <div className="icon bg-primary rounded-full p-4 w-fit">
+                    <CheckCircle color='white' size={50}/>
+                  </div>
+                  </div>
+                  <div className=''>
+                      <h1 className='text-2xl font-bold'>Kemudahan di Setiap Langkah</h1>
+                      <p>Dengan desain intuitif dan fitur otomatisasi, kami memastikan pengalaman finansial Anda lebih lancar dan menyenangkan</p>
+                  </div>
+                </div>
+              </CardAbout>
+              <CardAbout>
+                <div className="flex gap-4 flex-col md:flex-row">
+                  <div>
+                  <div className="icon bg-primary rounded-full p-4 w-fit">
+                    <TrendingUp color='white' size={50}/>
+                  </div>
+                  </div>
+                  <div className=''>
+                      <h1 className='text-2xl font-bold'>Pertumbuhan Finansial</h1>
+                      <p>Dengan analisis cerdas dan blog artikel yang bermanfaat, kami membantu Anda membangun masa depan keuangan yang lebih stabil dan sejahtera.</p>
+                  </div>
+                </div>
+              </CardAbout>
+            </div>
+          </div>
+      </div>
+    )
+}
+
+
+export function TentangKamiPage() {
 
   return (
       <div className="">
         <Navbar/>
         <Home header = 'Mengenal Financial Tracker' isi = 'Solusi Keuangan Pintar' deskripsi = 'Financial Tracker hadir untuk membantu Anda mengelola keuangan dengan lebih baik.'/>
+        <Deskripsi />
+        <NilaiInti />
       </div>
   )
 }
-
-export default TentangKamiPage

@@ -3,7 +3,7 @@ import { createRoot } from 'react-dom/client'
 import './App.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/Home.jsx'
-import TentangKamiPage from './pages/TentangKami.jsx'
+import {TentangKamiPage} from './pages/TentangKami.jsx'
 import NotFound from './pages/notFound.jsx'
 
 const router = createBrowserRouter ([

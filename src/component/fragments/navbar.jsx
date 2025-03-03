@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Button from "../elements/Button";
 import DarkModeToggle from "../elements/darkMode";
 import {Menu, X} from 'react-feather'
