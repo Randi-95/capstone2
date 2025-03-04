@@ -30,7 +30,7 @@ const NilaiInti = () => {
           <div className="flex items-center justify-center">
             <div className='grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-full max-w-6xl'>
               <CardAbout>
-                <div className="flex gap-4 flex-col md:flex-row">
+                <div className="flex gap-4 flex-col md:flex-row md:h-[300px] lg:h-auto">
                   <div>
                   <div className="icon bg-primary rounded-full p-4 w-fit">
                     <Shield color='white' size={50}/>
@@ -43,7 +43,7 @@ const NilaiInti = () => {
                 </div>
               </CardAbout>
               <CardAbout>
-                <div className="flex gap-4 flex-col md:flex-row">
+                <div className="flex gap-4 flex-col md:flex-row md:h-[300px] lg:h-auto">
                   <div>
                   <div className="icon bg-primary rounded-full p-4 w-fit">
                     <Zap color='white' size={50}/>
@@ -56,7 +56,7 @@ const NilaiInti = () => {
                 </div>
               </CardAbout>
               <CardAbout>
-                <div className="flex gap-4 flex-col md:flex-row">
+                <div className="flex gap-4 flex-col md:flex-row md:h-[300px] lg:h-auto">
                   <div>
                   <div className="icon bg-primary rounded-full p-4 w-fit">
                     <CheckCircle color='white' size={50}/>
@@ -69,7 +69,7 @@ const NilaiInti = () => {
                 </div>
               </CardAbout>
               <CardAbout>
-                <div className="flex gap-4 flex-col md:flex-row">
+                <div className="flex gap-4 flex-col md:flex-row md:h-[300px] lg:h-auto">
                   <div>
                   <div className="icon bg-primary rounded-full p-4 w-fit">
                     <TrendingUp color='white' size={50}/>
