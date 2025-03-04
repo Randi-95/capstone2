@@ -7,7 +7,7 @@ import {Shield, Zap, CheckCircle, TrendingUp} from 'react-feather'
 
 const Deskripsi = () => {
   return (
-        <div className='flex justify-around gap-6 flex-wrap items-center px-4'>
+        <div className='flex justify-around gap-6 flex-wrap items-center px-4 lg:h-screen'>
           <div className='m-auto xl:m-0'>
             <CardAbout shadow="shadow-2xl">
               <img className='m-auto' src="img/contoh1.png" alt="" width="300px"/>
