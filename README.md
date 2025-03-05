@@ -10,7 +10,9 @@ Sebelum memulai, pastikan Anda telah menginstal:
 
 ## 📥 Cara Clone Repository
 
-### 1️⃣ Clone menggunakan HTTPS
+### 1. Buat folder: capstone2
+
+### 2. Clone menggunakan HTTPS
 ```bash
 git clone https://github.com/Randi-95/capstone2.git .
 ```
