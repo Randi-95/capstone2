@@ -17,6 +17,8 @@ export const Home = (props) => {
             <div className="mt-[10px]">
                 <Button bgColor='bg-primary' border='border-primary' hover='hover:bg-transparent' hoverText = 'group-hover:text-primary ' >Bergabung Sekarang</Button>
             </div>
+
+            
         </div>
     )
 }
