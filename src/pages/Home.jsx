@@ -30,7 +30,7 @@ function FAQ() {
 
   return (
     <div className="max-w-2xl mx-auto p-6">
-      <h2 className="text-[40px] font-bold text-center mb-4 text-primary">Frequently Asked Questions</h2>
+      <h2 className="text-[20px] md:text-[40px] font-bold text-center mb-4 text-primary">Frequently Asked Questions</h2>
       <div className="space-y-4">
         {faqs.map((faq, index) => (
           <div key={index} className=" rounded-lg overflow-hidden">
@@ -69,7 +69,7 @@ function FiturUtama() {
             </ul>
         </div>
         <div className="foto-fitur order-1 md:order-2">
-           <img className='m-auto rounded-2xl' src="img/dashboard.webp" alt="" width="600px"/>
+           <img className='m-auto rounded-2xl shadow-lg' src="img/dashboard.webp" alt="" width="600px"/>
         </div>
       </div>
 
@@ -84,7 +84,7 @@ function FiturUtama() {
             </ul>
         </div>
         <div className="foto-fitur order-1">
-           <img className='m-auto rounded-2xl' src="img/chatbot.webp" alt="" width="500px"/>
+           <img className='m-auto rounded-2xl shadow-lg' src="img/chatbot.webp" alt="" width="500px"/>
         </div>
       </div>
 
@@ -113,38 +113,38 @@ function KenapaHarus(){
       <div className="container mx-auto bg-primary lg:h-screen rounded-2xl py-16 px-4 lg:px-20"> 
           <div className="flex flex-col items-center">
             <h1 className='text-white font-[700] md:text-[30px]'>Kenapa Harus Financial Tracker?</h1>
-            <p className='text-gray-300 font-[600] text-[10px] md:text-[14px]'>Kelola Keuangan Tanpa Ribet, Capai Kebebasan Finansial dengan Lebih Mudah.</p>
+            <p className='text-[#bbbdc0] font-[600] text-[10px] md:text-[14px]'>Kelola Keuangan Tanpa Ribet, Capai Kebebasan Finansial dengan Lebih Mudah.</p>
           </div>
 
           <div className="content-kenapa mt-[40px] grid lg:grid-cols-2 gap-6 lg:gap-0">
             <div className="flex flex-col">
-              <div className="isi-alasan flex items-center gap-2 border-b-1 border-[#b8b6b6] py-4">
+              <div className="isi-alasan flex items-center gap-2 border-b-1 border-[#bbbdc0] py-4">
                 <div className="icon-alasan border-[2.5px] border-white p-2  rounded-[50px]">
                   <CheckCircle  color='white' size={30}/>
                 </div>
                 <div className="alasan leading-[22px]">
                   <h2 className='text-white font-[600] text-[18px] md:text-[24px]'>Mudah Digunakan</h2>
-                  <p className='text-gray-300 leading-[14px] md:leading-normal text-[14px] md:text-[16px]'>Antarmuka yang intuitif dan ramah pengguna memungkinkan siapa saja mengelola keuangan dengan mudah.</p>
+                  <p className='text-[#bbbdc0] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'>Antarmuka yang intuitif dan ramah pengguna memungkinkan siapa saja mengelola keuangan dengan mudah.</p>
                 </div>
               </div>
 
-              <div className="isi-alasan flex items-center gap-2 border-b-1 border-[#b8b6b6] py-4">
+              <div className="isi-alasan flex items-center gap-2 border-b-1 border-[#bbbdc0] py-4">
                 <div className="icon-alasan border-[2.5px] border-white p-2 rounded-[50px]">
                   <CheckCircle  color='white' size={30}/>
                 </div>
                 <div className="alasan leading-[22px]">
                   <h2 className='text-white font-[600] text-[18px] md:text-[24px]'>Akurat & Cerdas</h2>
-                  <p className='text-gray-300 leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Didukung oleh AI dan machine learning untuk prediksi keuangan yang lebih baik.</p>
+                  <p className='text-[#bbbdc0] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Didukung oleh AI dan machine learning untuk prediksi keuangan yang lebih baik.</p>
                 </div>
               </div>
 
-              <div className="isi-alasan flex items-center gap-2 border-b-1 border-[#b8b6b6] py-4">
+              <div className="isi-alasan flex items-center gap-2 border-b-1 border-[#bbbdc0] py-4">
                 <div className="icon-alasan border-[2.5px] border-white p-2 rounded-[50px]">
                   <CheckCircle  color='white' size={30}/>
                 </div>
                 <div className="alasan leading-[22px]">
                   <h2 className='text-white font-[600] text-[18px] md:text-[24px]'>Cocok untuk Semua</h2>
-                  <p className='text-gray-300 leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Baik Anda pelajar, pekerja, atau pebisnis, aplikasi ini siap membantu mengelola keuangan Anda dengan lebih baik.</p>
+                  <p className='text-[#bbbdc0] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Baik Anda pelajar, pekerja, atau pebisnis, aplikasi ini siap membantu mengelola keuangan Anda dengan lebih baik.</p>
                 </div>
               </div>
             </div>
@@ -237,7 +237,7 @@ function Tutorial(){
       <div className="container mx-auto">
         <div className="judul-tutor flex flex-col items-center justify-center">
           <h1 className="text-[#374151] font-[700] text-[16px] md:text-[28px]"> Cara Menggunakan <span className="text-primary">Smart Financial Tracker</span></h1>
-          <p className='text-[#374151] font-[500] text-[10px] md:text-[14px]'>Ikuti langkah-langkah ini untuk mulai mengelola keuangan Anda dengan Smart Financial Tracker.</p>
+          <p className='text-[#374151] font-[500] text-[10px] w-[80%] text-center md:w-full md:text-[14px]'>Ikuti langkah-langkah ini untuk mulai mengelola keuangan Anda dengan Smart Financial Tracker.</p>
         </div>
         <CardTutor></CardTutor>
       </div>
@@ -252,7 +252,7 @@ function Benefit() {
           <h1 className="text-[#374151] font-[700] text-[16px] md:text-[28px]"> Benefit <span className="text-primary">Financial Tracker</span></h1>
           <p className='text-[#374151] font-[500] text-[10px] md:text-[14px]'>Benefit Benefit yang didapatkan dalam menggunakan aplikasi ini.</p>
         </div>
-        <div className="flex justify-center px-10 mt-[60px]">
+        <div className="flex justify-center md:px-10 mt-[60px]">
             <div class="flex flex-col gap-8">
                 <div class="border-l-2 border-primary pl-4">
                     <h2 class="text-xl text-[#374151] font-bold">Kendali Penuh atas Keuangan</h2>
