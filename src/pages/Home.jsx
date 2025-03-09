@@ -58,14 +58,14 @@ function FAQ() {
 function FiturUtama() {
   return (
     <div className="max-w-6xl mx-auto p-6">
-      <div className="container grid grid-cols-1 md:grid-cols-2">
+      <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
         <div className="deskripsi-fitur order-2 md:order-1 flex flex-col justify-center items-center md:items-baseline">
-            <h2 className='text-[16px] md:text-[26px] text-primary font-[700]'>Kendalikan Keuangan Anda dengan Mudah</h2>
-            <p className='text-[10px] md:text-[14px] leading-[18px] md:w-[80%]'>Kelola keuangan Anda dengan dasbor interaktif yang memberikan tampilan jelas dan informatif. Pantau pemasukan dan pengeluaran dengan visualisasi data yang intuitif, sehingga Anda bisa mengambil keputusan finansial yang lebih baik.</p>
+            <h2 className='text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]'>Kendalikan Keuangan Anda dengan Mudah</h2>
+            <p className='text-lg md:text-xl mb-4 md:w-[80%]'>Kelola keuangan Anda dengan dasbor interaktif yang memberikan tampilan jelas dan informatif. Pantau pemasukan dan pengeluaran dengan visualisasi data yang intuitif, sehingga Anda bisa mengambil keputusan finansial yang lebih baik.</p>
             <ul className='mt-2'>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Lihat keuangan dalam satu tampilan</li>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Monitor pemasukan dan pengeluaran dengan mudah</li>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Visualisasi data yang informatif</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Lihat keuangan dalam satu tampilan</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Monitor pemasukan dan pengeluaran dengan mudah</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Visualisasi data yang informatif</li>
             </ul>
         </div>
         <div className="foto-fitur order-1 md:order-2">
@@ -73,14 +73,14 @@ function FiturUtama() {
         </div>
       </div>
 
-      <div className="container grid grid-cols-1 md:grid-cols-2 mt-4">
+      <div className="container grid grid-cols-1 md:grid-cols-2 mt-4 gap-8">
         <div className="deskripsi-fitur order-2 flex flex-col justify-center items-center md:items-baseline">
-            <h2 className='text-[16px] md:text-[26px] text-primary font-[700]'>Optimalkan Keuangan dengan AI</h2>
-            <p className='text-[10px] md:text-[14px] leading-[18px] md:w-[80%]'>Dapatkan wawasan mendalam tentang kondisi keuangan Anda dengan analisis berbasis kecerdasan buatan. AI kami membantu Anda memahami kebiasaan finansial dan memberikan rekomendasi cerdas untuk pengelolaan yang lebih baik.</p>
+            <h2 className='text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]'>Optimalkan Keuangan dengan AI</h2>
+            <p className='text-lg md:text-xl mb-4 md:w-[80%]'>Dapatkan wawasan mendalam tentang kondisi keuangan Anda dengan analisis berbasis kecerdasan buatan. AI kami membantu Anda memahami kebiasaan finansial dan memberikan rekomendasi cerdas untuk pengelolaan yang lebih baik.</p>
             <ul className='mt-2'>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Wawasan finansial yang personal</li>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Analisis kebiasaan keuangan otomatis</li>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Rekomendasi cerdas untuk keputusan yang lebih baik</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Wawasan finansial yang personal</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Analisis kebiasaan keuangan otomatis</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Rekomendasi cerdas untuk keputusan yang lebih baik</li>
             </ul>
         </div>
         <div className="foto-fitur order-1">
@@ -88,14 +88,14 @@ function FiturUtama() {
         </div>
       </div>
 
-      <div className="container grid grid-cols-1 md:grid-cols-2 mt-10">
+      <div className="container grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
         <div className="deskripsi-fitur order-2 md:order-1 flex flex-col justify-center items-center md:items-baseline">
-            <h2 className='text-[16px] md:text-[26px] text-primary font-[700]'>Optimalkan Keuangan dengan AI</h2>
-            <p className='text-[10px] md:text-[14px] leading-[18px] md:w-[80%]'>Dapatkan wawasan mendalam tentang kondisi keuangan Anda dengan analisis berbasis kecerdasan buatan. AI kami membantu Anda memahami kebiasaan finansial dan memberikan rekomendasi cerdas untuk pengelolaan yang lebih baik.</p>
+            <h2 className='text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]'>Optimalkan Keuangan dengan AI</h2>
+            <p className='text-lg md:text-xl mb-4 md:w-[80%]'>Dapatkan wawasan mendalam tentang kondisi keuangan Anda dengan analisis berbasis kecerdasan buatan. AI kami membantu Anda memahami kebiasaan finansial dan memberikan rekomendasi cerdas untuk pengelolaan yang lebih baik.</p>
             <ul className='mt-2'>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Wawasan finansial yang personal</li>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Analisis kebiasaan keuangan otomatis</li>
-              <li className='flex gap-2 font-[600] text-[#374151] text-[10px] md:text-[16px]'><img src="img/cheklist.png" alt="" width='20px'/>Rekomendasi cerdas untuk keputusan yang lebih baik</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Wawasan finansial yang personal</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Analisis kebiasaan keuangan otomatis</li>
+              <li className='flex gap-2 font-[600] text-[#374151] text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Rekomendasi cerdas untuk keputusan yang lebih baik</li>
             </ul>
         </div>
         <div className="foto-fitur order-1 md:order-2">
@@ -112,8 +112,7 @@ function KenapaHarus(){
     <div className="kenapa-harus mt-10">
       <div className="container mx-auto bg-primary lg:h-screen rounded-2xl py-16 px-4 lg:px-20"> 
           <div className="flex flex-col items-center">
-            <h1 className='text-white font-[700] md:text-[30px]'>Kenapa Harus Financial Tracker?</h1>
-            <p className='text-[#bbbdc0] font-[600] text-[10px] md:text-[14px]'>Kelola Keuangan Tanpa Ribet, Capai Kebebasan Finansial dengan Lebih Mudah.</p>
+            <h1 className='text-white text-2xl text-center font-[700] md:text-3xl'>Kenapa Harus Financial Tracker?</h1>
           </div>
 
           <div className="content-kenapa mt-[40px] grid lg:grid-cols-2 gap-6 lg:gap-0">
@@ -235,9 +234,9 @@ function Tutorial(){
   return(
     <div className="tutorial">
       <div className="container mx-auto">
-        <div className="judul-tutor flex flex-col items-center justify-center">
-          <h1 className="text-[#374151] font-[700] text-[16px] md:text-[28px]"> Cara Menggunakan <span className="text-primary">Smart Financial Tracker</span></h1>
-          <p className='text-[#374151] font-[500] text-[10px] w-[80%] text-center md:w-full md:text-[14px]'>Ikuti langkah-langkah ini untuk mulai mengelola keuangan Anda dengan Smart Financial Tracker.</p>
+        <div className="judul-tutor flex flex-col items-center justify-center px-2">
+          <h1 className="text-[#374151] font-[700] text-3xl md:text-5xl mt-2 text-center"> Cara Menggunakan <span className="text-primary">Smart Financial Tracker</span></h1>
+          {/* <p className='text-[#374151] mt-2 font-[500] text-sm text-center md:w-full md:text-xl'>Ikuti langkah-langkah ini untuk mulai mengelola keuangan Anda dengan Smart Financial Tracker.</p> */}
         </div>
         <CardTutor></CardTutor>
       </div>
@@ -249,8 +248,8 @@ function Benefit() {
     return (
         <div class="max-w-6xl mx-auto p-6">
         <div className="judul-tutor flex flex-col items-center justify-center">
-          <h1 className="text-[#374151] font-[700] text-[16px] md:text-[28px]"> Benefit <span className="text-primary">Financial Tracker</span></h1>
-          <p className='text-[#374151] font-[500] text-[10px] md:text-[14px]'>Benefit Benefit yang didapatkan dalam menggunakan aplikasi ini.</p>
+          <h1 className="text-[#374151] font-[700] text-3xl md:text-5xl mt-2 text-center w-[400px] max-w-[800px] md:w-[600px]"> Benefit <span className="text-primary">Financial Tracker</span></h1>
+          {/* <p className='text-[#374151] mt-2 font-[500] text-center text-sm md:text-xl'>Benefit Benefit yang didapatkan dalam menggunakan aplikasi ini.</p> */}
         </div>
         <div className="flex justify-center md:px-10 mt-[60px]">
             <div class="flex flex-col gap-8">
