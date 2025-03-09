@@ -21,6 +21,8 @@ const faqs = [
   }
 ];
 
+// tes
+
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
