@@ -248,7 +248,7 @@ function Benefit() {
     return (
         <div class="max-w-6xl mx-auto p-6">
         <div className="judul-tutor flex flex-col items-center justify-center">
-          <h1 className="text-[#374151] font-[700] text-3xl md:text-5xl mt-2 text-center w-[400px] max-w-[800px] md:w-[600px]"> Benefit <span className="text-primary">Financial Tracker</span></h1>
+          <h1 className="text-[#374151] font-[700] text-3xl md:text-5xl mt-2 text-center"> Benefit <span className="text-primary">Financial Tracker</span></h1>
           {/* <p className='text-[#374151] mt-2 font-[500] text-center text-sm md:text-xl'>Benefit Benefit yang didapatkan dalam menggunakan aplikasi ini.</p> */}
         </div>
         <div className="flex justify-center md:px-10 mt-[60px]">
