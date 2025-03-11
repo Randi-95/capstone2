@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import Navbar from "../component/fragments/navbar"
+import Navbar from "../component/fragments/navbar.jsx"
 import { Home } from "../component/fragments/home"
 
 
