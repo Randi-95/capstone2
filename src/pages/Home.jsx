@@ -21,6 +21,8 @@ const faqs = [
   }
 ];
 
+// tes
+
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
 
@@ -123,7 +125,7 @@ function KenapaHarus(){
                 </div>
                 <div className="alasan leading-[22px]">
                   <h2 className='text-white font-[600] text-[18px] md:text-[24px]'>Mudah Digunakan</h2>
-                  <p className='text-[#bbbdc0] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'>Antarmuka yang intuitif dan ramah pengguna memungkinkan siapa saja mengelola keuangan dengan mudah.</p>
+                  <p className='text-[#e2e3e4] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'>Antarmuka yang intuitif dan ramah pengguna memungkinkan siapa saja mengelola keuangan dengan mudah.</p>
                 </div>
               </div>
 
@@ -133,7 +135,7 @@ function KenapaHarus(){
                 </div>
                 <div className="alasan leading-[22px]">
                   <h2 className='text-white font-[600] text-[18px] md:text-[24px]'>Akurat & Cerdas</h2>
-                  <p className='text-[#bbbdc0] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Didukung oleh AI dan machine learning untuk prediksi keuangan yang lebih baik.</p>
+                  <p className='text-[#e2e3e4] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Didukung oleh AI dan machine learning untuk prediksi keuangan yang lebih baik.</p>
                 </div>
               </div>
 
@@ -143,7 +145,7 @@ function KenapaHarus(){
                 </div>
                 <div className="alasan leading-[22px]">
                   <h2 className='text-white font-[600] text-[18px] md:text-[24px]'>Cocok untuk Semua</h2>
-                  <p className='text-[#bbbdc0] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Baik Anda pelajar, pekerja, atau pebisnis, aplikasi ini siap membantu mengelola keuangan Anda dengan lebih baik.</p>
+                  <p className='text-[#e2e3e4] leading-[14px] md:leading-normal text-[14px] md:text-[16px]'> Baik Anda pelajar, pekerja, atau pebisnis, aplikasi ini siap membantu mengelola keuangan Anda dengan lebih baik.</p>
                 </div>
               </div>
             </div>
