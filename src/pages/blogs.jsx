@@ -1,19 +1,16 @@
-import { useState, useEffect } from "react"
-import Navbar from "../component/fragments/navbar.jsx"
-import { Home } from "../component/fragments/home"
 
-
-const Article = () => {
-    const {activeArticle, setActiveArticle} = useState(null)
+import Navbar from '../component/fragments/navbar'
+import { Home } from '../component/fragments/home'
 
 
 
+function Blogs() {
+  return (
+      <div className="">
+        <Navbar type = 'home'/>
+        <Home header = 'Kelola Keuangan dengan' isi = 'Cerdas Bersama Financial Tracker' deskripsi = 'Smart Financial Tracker membantu Anda mencatat transaksi, menganalisis pola keuangan, dan memprediksi keuangan dengan Al. Aman, mudah, dan otomatis!'/>
+      </div>
+  )
 }
 
-const ArticleApp = () => {
-    <div>
-        <Navbar />
-    </div>
-}
-
-export default ArticleApp
+export default Blogs
