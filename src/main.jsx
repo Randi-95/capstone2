@@ -5,6 +5,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import HomePage from './pages/Home.jsx'
 import {TentangKamiPage} from './pages/TentangKami.jsx'
 import NotFound from './pages/notFound.jsx'
+import ArticleApp from './pages/blogs.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -15,6 +16,10 @@ const router = createBrowserRouter ([
     {
       path: "/tentangkami",
       element: <TentangKamiPage />
+    },
+    {
+      path: "/blogs",
+      element: <ArticleApp />
     }
 ])
 

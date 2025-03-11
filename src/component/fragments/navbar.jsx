@@ -47,7 +47,7 @@ function Navbar() {
                         <NavLink to="/fitur" className={({ isActive }) => isActive ? "lg:dark:text-primary  text-primary dark:text-white font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Fitur</NavLink>
                     </li>
                     <li> 
-                        <NavLink to="/blog" className={({ isActive}) => isActive ? "lg:dark:text-primary text-primary dark:text-white font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Blog</NavLink>
+                        <NavLink to="/blogs" className={({ isActive}) => isActive ? "lg:dark:text-primary text-primary dark:text-white font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Blog</NavLink>
                     </li>
                         <div className="button md:hidden flex flex-col gap-3">
                             <Button bgColor='bg-primary dark:bg-violet-950' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' classCustom = 'w-full' >Masuk</Button>
