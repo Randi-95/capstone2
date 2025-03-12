@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import {Sun, Moon} from "react-feather"
 
-export default function DarkModeToggle() {
+export default function DarkModeToggle(props) {
+    const {colorDark="black", colorLight="white"} = props
     const [darkMode, setDarkMode] = useState(() => {
         return localStorage.getItem("darkMode") === "enabled";
     });
@@ -24,7 +25,7 @@ export default function DarkModeToggle() {
             className="flex items-center gap-2 cursor-pointer" 
             onClick={() => setDarkMode(prev => !prev)}
         >
-            {darkMode ? <Sun color="white" /> : <Moon color="black" />}
+            {darkMode ? <Sun color={colorLight} /> : <Moon color={colorDark} />}
         </div>
     );
 }
