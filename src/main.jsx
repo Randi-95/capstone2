@@ -6,6 +6,8 @@ import HomePage from './pages/Home.jsx'
 import {TentangKamiPage} from './pages/TentangKami.jsx'
 import NotFound from './pages/notFound.jsx'
 import Blogs from './pages/blogs.jsx'
+import Login from './pages/Login.jsx'
+import Registrasi from './pages/daftar.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -20,6 +22,14 @@ const router = createBrowserRouter ([
     {
       path: "/blogs",
       element: <Blogs />
+    },
+    {
+      path: "/Login",
+      element: <Login/>
+    },
+    {
+      path: "/Registrasi",
+      element: <Registrasi/>
     }
 ])
 

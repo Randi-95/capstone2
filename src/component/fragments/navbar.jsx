@@ -50,14 +50,14 @@ function Navbar() {
                         <NavLink to="/blogs" className={({ isActive}) => isActive ? "lg:dark:text-primary text-primary dark:text-white font-[500]" : "text-[16px] font-[500] hover:text-primary"}>Blog</NavLink>
                     </li>
                         <div className="button md:hidden flex flex-col gap-3">
-                            <Button bgColor='bg-primary dark:bg-violet-950' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' classCustom = 'w-full' >Masuk</Button>
+                            <Button to ='/login' bgColor='bg-primary dark:bg-violet-950' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' classCustom = 'w-full' >Masuk</Button>
                             <Button bgColor='bg-white dark:bg-violet-950' text = 'text-black dark:text-white' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' classCustom = 'w-full' >Daftar</Button>
                         </div>
                     </ul>
                 </div>
                 <div className="navbar-button flex items-center gap-[15px]">
                     <div className="button hidden md:block">
-                        <Button bgColor='bg-primary dark:bg-violet-950' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' >Masuk</Button>
+                        <Button to='/login' bgColor='bg-primary dark:bg-violet-950' border='border-primary' hover='hover: dark:bg-violet-600' hoverText = 'group-hover:text-gray-300 ' >Masuk</Button>
                     </div>
                     <DarkModeToggle />
                     <div className="menu-button cursor-pointer block md:hidden" onClick={toggleMenu}>
