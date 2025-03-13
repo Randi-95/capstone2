@@ -14,7 +14,7 @@ function Login(){
                     <img src="/img/logo-capstone.png" alt="" className="w-[60px]"/>
                     <h1 className="font-bold text-primary text-4xl">Masuk</h1>
                     <p className="text-[#434343] dark:text-white font-medium">Selamat datang diFinancial Tracker</p>
-                    <form action="/Dashboard">
+                    <form action="/Dashboard?">
                         <Input nama="Email" type= "email"></Input>
                         <Input nama="Password" type= "password"></Input>
                         <button type="submit" className="bg-primary mt-4 w-full h-10 font-bold text-white rounded-lg">Masuk</button>
