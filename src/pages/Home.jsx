@@ -5,10 +5,8 @@ import {User, CheckCircle} from 'react-feather'
 import CardAbout from '../component/elements/cardAbout'
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
-import { useEffect } from 'react';
-import AOS from "aos";
-import "aos/dist/aos.css";
 
+// halo
 
 
 const faqs = [
@@ -166,15 +164,9 @@ function KenapaHarus(){
 
 
 function CardTutor(){
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
-  }, []);
   return(
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3"  data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-out">
+        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" >
             <div class="flex items-center space-x-3">
                 <span class="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">1</span>
                 <h2 class="text-lg font-semibold">Buat Akun Anda</h2>
@@ -185,7 +177,7 @@ function CardTutor(){
             <p class="text-gray-600">Daftar dengan email dan buat kata sandi yang kuat untuk keamanan akun Anda.</p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out">
+        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" >
             <div class="flex items-center space-x-3">
                 <span class="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">2</span>
                 <h2 class="text-lg font-semibold">Lengkapi Profil</h2>
@@ -196,7 +188,7 @@ function CardTutor(){
             <p class="text-gray-600">Isi informasi pribadi dan sesuaikan pengaturan profil Anda.</p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-out">
+        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" >
             <div class="flex items-center space-x-3">
                 <span class="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">3</span>
                 <h2 class="text-lg font-semibold">Jelajahi Fitur</h2>
@@ -207,7 +199,7 @@ function CardTutor(){
             <p class="text-gray-600">Temukan berbagai fitur canggih untuk membantu mengelola keuangan Anda.</p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out">
+        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3">
             <div class="flex items-center space-x-3">
                 <span class="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">4</span>
                 <h2 class="text-lg font-semibold">Atur Kategori Keuangan</h2>
@@ -218,7 +210,7 @@ function CardTutor(){
             <p class="text-gray-600">Buat kategori pemasukan dan pengeluaran sesuai kebutuhan Anda.</p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-out">
+        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3">
             <div class="flex items-center space-x-3">
                 <span class="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">5</span>
                 <h2 class="text-lg font-semibold"> Mulai Mencatat Transaksi</h2>
@@ -229,7 +221,7 @@ function CardTutor(){
             <p class="text-gray-600">Tambahkan pemasukan, pengeluaran, dan pantau kondisi finansial Anda.</p>
         </div>
 
-        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-out">
+        <div class="bg-white shadow-lg rounded-2xl p-6 space-y-3" >
             <div class="flex items-center space-x-3">
                 <span class="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">6</span>
                 <h2 class="text-lg font-semibold">Dapatkan Bantuan</h2>
@@ -258,12 +250,6 @@ function Tutorial(){
 }
 
 function Benefit() {
-    useEffect(() => {
-      AOS.init({
-        duration: 800,
-        once: true,
-      });
-    }, []);
     return (
         <div class="max-w-6xl mx-auto p-6">
         <div className="judul-tutor flex flex-col items-center justify-center">
@@ -272,23 +258,23 @@ function Benefit() {
         </div>
         <div className="flex justify-center md:px-10 mt-[60px]">
             <div class="flex flex-col gap-8">
-                <div class="border-l-2 border-primary pl-4" data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-out">
+                <div class="border-l-2 border-primary pl-4" >
                     <h2 class="text-xl text-[#374151] font-bold">Kendali Penuh atas Keuangan</h2>
                     <p class="text-gray-400 md:w-[50%]">Pantau, analisis, dan kelola pengeluaran serta pemasukan dengan lebih baik.</p>
                 </div>
-                <div class="border-l-2 border-primary pl-4" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-easing="ease-in-out">
+                <div class="border-l-2 border-primary pl-4" >
                     <h2 class="text-xl text-[#374151] font-bold">Hemat Waktu & Efisien</h2>
                     <p class="text-gray-400 md:w-[50%]">Tidak perlu repot mencatat manual, semua data tercatat otomatis dalam aplikasi.</p>
                 </div>
-                <div class="border-l-2 border-primary pl-4" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-easing="ease-in-out">
+                <div class="border-l-2 border-primary pl-4" >
                     <h2 class="text-xl text-[#374151] font-bold">Bantu Capai Target Finansial</h2>
                     <p class="text-gray-400 md:w-[50%]">Perencanaan dan prediksi keuangan membantu Anda mencapai tujuan keuangan lebih cepat.</p>
                 </div>
-                <div class="border-l-2 border-primary pl-4" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-easing="ease-in-out">
+                <div class="border-l-2 border-primary pl-4" >
                     <h2 class="text-xl text-[#374151] font-bold">Pengambilan Keputusan Lebih Baik</h2>
                     <p class="text-gray-400 md:w-[50%]">Analisis berbasis AI memberikan wawasan cerdas untuk strategi keuangan yang lebih baik.</p>
                 </div>
-                <div class="border-l-2 border-primary pl-4" data-aos="fade-right" data-aos-offset="200" data-aos-delay="50" data-aos-easing="ease-in-out">
+                <div class="border-l-2 border-primary pl-4" >
                     <h2 class="text-xl text-[#374151] font-bold"> Dukungan Chatbot AI</h2>
                     <p class="text-gray-400 md:w-[50%]">Dapatkan rekomendasi dan informasi finansial secara cepat hanya dengan percakapan singkat.</p>
                 </div>
