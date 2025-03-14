@@ -128,7 +128,7 @@ const Dashboard = () => {
                                 <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
                         </div>
                     </div>
-                    <div className="grid grid-cols-2 mt-9">
+                    <div className="grid md:grid-cols-[2fr_1fr] mt-9">
                         <div className="">
                              <SalesChart />
                         </div>
