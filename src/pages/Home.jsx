@@ -113,7 +113,7 @@ function FiturUtama() {
 function KenapaHarus(){
   return(
     <div className="kenapa-harus mt-10">
-      <div className="container mx-auto bg-primary dark:bg-gray-800 lg:h-screen rounded-2xl py-16 px-4 lg:px-20"> 
+      <div className="container mx-auto bg-primary dark:bg-primary lg:h-screen rounded-2xl py-16 px-4 lg:px-20"> 
           <div className="flex flex-col items-center">
             <h1 className='text-white text-2xl text-center font-[700] md:text-3xl'>Kenapa Harus Financial Tracker?</h1>
           </div>
@@ -162,7 +162,7 @@ function KenapaHarus(){
 function CardTutor(){
   return(
     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 space-y-3" >
+        <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900 rounded-2xl p-6 space-y-3" >
             <div className="flex items-center space-x-3">
                 <span className="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">1</span>
                 <h2 className="text-lg font-semibold dark:text-white">Buat Akun Anda</h2>
@@ -173,7 +173,7 @@ function CardTutor(){
             <p className="text-gray-600 dark:text-gray-300">Daftar dengan email dan buat kata sandi yang kuat untuk keamanan akun Anda.</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 space-y-3" >
+        <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900 rounded-2xl p-6 space-y-3" >
             <div className="flex items-center space-x-3">
                 <span className="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">2</span>
                 <h2 className="text-lg font-semibold dark:text-white">Lengkapi Profil</h2>
@@ -184,7 +184,7 @@ function CardTutor(){
             <p className="text-gray-600 dark:text-gray-300">Isi informasi pribadi dan sesuaikan pengaturan profil Anda.</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 space-y-3" >
+        <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900 rounded-2xl p-6 space-y-3" >
             <div className="flex items-center space-x-3">
                 <span className="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">3</span>
                 <h2 className="text-lg font-semibold dark:text-white">Jelajahi Fitur</h2>
@@ -195,7 +195,7 @@ function CardTutor(){
             <p className="text-gray-600 dark:text-gray-300">Temukan berbagai fitur canggih untuk membantu mengelola keuangan Anda.</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 space-y-3">
+        <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900 rounded-2xl p-6 space-y-3">
             <div className="flex items-center space-x-3">
                 <span className="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">4</span>
                 <h2 className="text-lg font-semibold dark:text-white">Atur Kategori Keuangan</h2>
@@ -206,7 +206,7 @@ function CardTutor(){
             <p className="text-gray-600 dark:text-gray-300">Buat kategori pemasukan dan pengeluaran sesuai kebutuhan Anda.</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 space-y-3">
+        <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900 rounded-2xl p-6 space-y-3">
             <div className="flex items-center space-x-3">
                 <span className="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">5</span>
                 <h2 className="text-lg font-semibold dark:text-white">Mulai Mencatat Transaksi</h2>
@@ -217,7 +217,7 @@ function CardTutor(){
             <p className="text-gray-600 dark:text-gray-300">Tambahkan pemasukan, pengeluaran, dan pantau kondisi finansial Anda.</p>
         </div>
 
-        <div className="bg-white dark:bg-gray-800 shadow-lg rounded-2xl p-6 space-y-3" >
+        <div className="bg-white dark:bg-gray-800 shadow-lg dark:shadow-gray-900 rounded-2xl p-6 space-y-3" >
             <div className="flex items-center space-x-3">
                 <span className="w-10 h-10 flex items-center justify-center bg-primary text-white text-lg font-bold rounded-full">6</span>
                 <h2 className="text-lg font-semibold dark:text-white">Dapatkan Bantuan</h2>

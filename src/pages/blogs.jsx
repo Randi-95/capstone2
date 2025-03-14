@@ -22,7 +22,7 @@ const ArticleApp = () => {
           {articles.map((article) => (
             <div
               key={article.id}
-              className="card shadow-lg flex flex-col w-[350px] h-[550px] border-solid border-[1.5px] border-gray-200 dark:border-gray-700 rounded-2xl p-6 dark:bg-gray-800"
+              className="card shadow-lg dark:shadow-gray-900 flex flex-col w-[350px] h-[550px] border-solid border-[1.5px] border-gray-200 dark:border-gray-700 rounded-2xl p-6 dark:bg-gray-800"
             >
               <div className="foto flex justify-center h-[200px] overflow-hidden mb-4">
                 <img
@@ -34,7 +34,7 @@ const ArticleApp = () => {
               
               <div className="content flex flex-col flex-grow">
                 <div className="tag mb-3">
-                  <h1 className="bg-gray-100 dark:bg-gray-700 rounded-3xl inline px-4 py-2 text-primary font-medium">
+                  <h1 className="bg-gray-100 dark:bg-gray-700 rounded-3xl inline px-4 py-2 text-primary dark:text-primary font-medium">
                     Financial
                   </h1>
                 </div>
