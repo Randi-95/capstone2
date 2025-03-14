@@ -83,20 +83,56 @@ const Dashboard = () => {
                 </div>
             </div>
        
-            <div className="bg-gray-100 fixed top-0 right-0 bottom-0 left-0 lg:left-[20%]">
+            <div className="bg-gray-100 fixed top-1 right-0 bottom-0 left-0 lg:left-[20%]">
                 <div className="p-4">
                     <button className="lg:hidden text-gray-500 mb-4" onClick={toggleSidebar}>
                         <Menu size={24} />
                     </button>
                     
-                    {/* Your dashboard content here */}
-                    <div className="bg-white rounded-xl shadow-lg p-4">
-                        <h2 className="text-lg font-semibold">Dashboard Content</h2>
-                        <p>Your dashboard content goes here</p>
+                    <div className="bg-white rounded-xl shadow-lg p-4 py-6">
+                        <h2 className="text-lg font-bold">Dashboard <span className="text-primary"> FinancialTracker</span></h2>
+                    </div>
+                    <div className="grid md:grid-cols-3 gap-4 mt-10">
+                    <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                            <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
+                                <span className="text-xl">💰</span>
+                            </div>
+                                <p className="font-semibold text-lg">Total Pemasukan</p>
+                            <div className="flex justify-between">
+                                <p className="text-2xl font-bold">Rp. 10.000.000</p>
+                            </div>
+                            <div className="bg-green-300  text-green-600 text-sm w-fit font-normal px-2 py-1 rounded-2xl">▲ 8.12%</div>
+                                <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
+                        </div>
+                        <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                            <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
+                                <span className="text-xl">💰</span>
+                            </div>
+                                <p className="font-semibold text-lg">Total Pemasukan</p>
+                            <div className="flex justify-between">
+                                <p className="text-2xl font-bold">Rp. 10.000.000</p>
+                            </div>
+                            <div className="bg-green-300  text-green-600 text-sm w-fit font-normal px-2 py-1 rounded-2xl">▲ 8.12%</div>
+                                <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
+                        </div>
+                        <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                            <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
+                                <span className="text-xl">💰</span>
+                            </div>
+                                <p className="font-semibold text-lg">Total Pemasukan</p>
+                            <div className="flex justify-between">
+                                <p className="text-2xl font-bold">Rp. 10.000.000</p>
+                            </div>
+                            <div className="bg-green-300  text-green-600 text-sm w-fit font-normal px-2 py-1 rounded-2xl">▲ 8.12%</div>
+                                <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
+
+        
     )
 }
 

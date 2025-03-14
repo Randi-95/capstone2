@@ -17,7 +17,7 @@ function Login(){
                     <form action="">
                         <Input nama="Email" type= "email"></Input>
                         <Input nama="Password" type= "password"></Input>
-                        <button type="submit" className="bg-primary mt-4 w-full h-10 font-bold text-white rounded-lg">Masuk</button>
+                        <Link to = "/Dashboard"><button type="submit" className="bg-primary mt-4 w-full h-10 font-bold text-white rounded-lg">Masuk</button></Link>
                     </form>
                     <p className="text-center font-normal mt-4  dark:text-white">Kamu belum memiliki akun? <Link to='/Registrasi' className="font-bold text-primary">Daftar</Link></p>
                 </div> 
