@@ -85,15 +85,14 @@ const Dashboard = () => {
             </div>
        
             <div className="bg-gray-100 lg:ml-[300px] w-full">
-                <div className="p-4">
-                    <button className="lg:hidden text-gray-500 mb-4" onClick={toggleSidebar}>
-                        <Menu size={24} />
-                    </button>
-                    
-                    <div className="bg-white rounded-xl shadow-lg p-4 py-6">
-                        <h2 className="text-lg font-bold">Dashboard <span className="text-primary"> FinancialTracker</span></h2>
-                    </div>
-                    <div className="grid md:grid-cols-3 gap-4 mt-10">
+                <div className="p-4">    
+                        <div className="bg-white w-full fixed left-0 right-0 top-0 md:relative gap-2 items-center rounded-t-xl shadow-lg p-4 py-6 flex">
+                            <button className="lg:hidden text-gray-500" onClick={toggleSidebar}>
+                                <Menu size={24} />
+                            </button>
+                            <h2 className="text-lg font-bold">Dashboard <span className="text-primary"> FinancialTracker</span></h2>
+                        </div>
+                    <div className="grid md:grid-cols-3 gap-4 mt-20">
                         <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
                             <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
                                 <span className="text-xl">💰</span>
