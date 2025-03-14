@@ -1,6 +1,7 @@
 import { Calendar, BarChart, Grid, MessageCircle, Menu, X } from "react-feather"
 import DarkModeToggle from "../component/elements/darkMode"
 import { useState } from "react"
+import SalesChart from "../component/fragments/SalesChart"
 
 const Dashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -10,7 +11,7 @@ const Dashboard = () => {
     }
 
     return(
-        <div className="flex h-screen overflow-hidden">
+        <div className="flex h-screen bg-gray-100">
             <div className={`lg:hidden bg-gray-transparent  fixed top-0 left-0 bottom-0 z-20 px-4 py-5 transition-all duration-200
                 ${sidebarOpen ? "w-64" : "w-0 -translate-x-full overflow-hidden"}`}>
                 <div className="bg-white p-4 h-full shadow-xl border-solid border-[1.5px] border-gray-200 rounded-xl relative">
@@ -83,7 +84,7 @@ const Dashboard = () => {
                 </div>
             </div>
        
-            <div className="bg-gray-100 fixed top-1 right-0 bottom-0 left-0 lg:left-[20%]">
+            <div className="bg-gray-100 lg:ml-[300px] w-full">
                 <div className="p-4">
                     <button className="lg:hidden text-gray-500 mb-4" onClick={toggleSidebar}>
                         <Menu size={24} />
@@ -93,7 +94,7 @@ const Dashboard = () => {
                         <h2 className="text-lg font-bold">Dashboard <span className="text-primary"> FinancialTracker</span></h2>
                     </div>
                     <div className="grid md:grid-cols-3 gap-4 mt-10">
-                    <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                        <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
                             <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
                                 <span className="text-xl">💰</span>
                             </div>
@@ -127,6 +128,12 @@ const Dashboard = () => {
                                 <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
                         </div>
                     </div>
+                    <div className="grid grid-cols-2 mt-9">
+                        <div className="">
+                             <SalesChart />
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             
