@@ -2,6 +2,7 @@ import { Calendar, BarChart, Grid, MessageCircle, Menu, X } from "react-feather"
 import DarkModeToggle from "../component/elements/darkMode"
 import { useState } from "react"
 import SalesChart from "../component/fragments/SalesChart"
+import Kalender from "../component/fragments/calender"
 
 const Dashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -86,13 +87,13 @@ const Dashboard = () => {
        
             <div className="bg-gray-100 lg:ml-[300px] w-full">
                 <div className="p-4">    
-                        <div className="bg-white w-full fixed left-0 right-0 top-0 md:relative gap-2 items-center rounded-t-xl shadow-lg p-4 py-6 flex">
+                        <div className="bg-white w-full fixed left-0 right-0 top-0 md:relative gap-2 items-center rounded-t-xl md:rounded-xl shadow-lg p-4 py-6 flex">
                             <button className="lg:hidden text-gray-500" onClick={toggleSidebar}>
                                 <Menu size={24} />
                             </button>
                             <h2 className="text-lg font-bold">Dashboard <span className="text-primary"> FinancialTracker</span></h2>
                         </div>
-                    <div className="grid md:grid-cols-3 gap-4 mt-20">
+                    <div className="grid md:grid-cols-3 gap-4  mt-20 md:mt-2">
                         <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
                             <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
                                 <span className="text-xl">💰</span>
@@ -127,9 +128,12 @@ const Dashboard = () => {
                                 <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-[2fr_1fr] mt-9">
+                    <div className="grid md:grid-cols-[1.5fr_1fr] mt-9 gap-2">
                         <div className="">
                              <SalesChart />
+                        </div>
+                        <div className="bg-white shadow-lg rounded-xl p-3">
+                            <Kalender></Kalender>
                         </div>
                     </div>
                     
