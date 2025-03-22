@@ -1,6 +1,6 @@
 import Input from "../component/elements/input.jsx";
 import DarkModeToggle from "../component/elements/darkMode.jsx";
-import { Link } from "react-router-dom";
+import { Link,useNavigate } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { login } from "../services/auth.js";
 
@@ -8,6 +8,7 @@ function Login() {
   const [loginFailed, setLoginFailed] = useState("")
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const navigate = useNavigate();
 
   const handlerLogin = (event) => {
     event.preventDefault();
@@ -21,7 +22,7 @@ function Login() {
       if (status) {
         localStorage.setItem("token", res);
         setLoginFailed("")
-        window.location.replace("/dashboard");
+        navigate("/dashboard");
       } else {
         setLoginFailed(res.response.data.error)
         console.log(res.response.data.error);
