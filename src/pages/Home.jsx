@@ -229,7 +229,7 @@ function CardTutor(){
         </div>
     </div>
   )
-}
+} 
 
 function Tutorial(){
   return(
