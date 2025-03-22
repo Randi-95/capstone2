@@ -9,7 +9,6 @@ import Blogs from './pages/blogs.jsx'
 import Login from './pages/Login.jsx'
 import Registrasi from './pages/daftar.jsx'
 import Dashboard from './pages/dashboard.jsx'
-import Keuangan from './pages/keuangan.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -37,10 +36,6 @@ const router = createBrowserRouter ([
       path: "/Dashboard",
       element: <Dashboard />
     },
-    {
-      path: "/keuangan",
-      element: <Keuangan />
-    }
 ])
 
 createRoot(document.getElementById('root')).render(
