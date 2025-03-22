@@ -1,18 +1,44 @@
 import {  LogOut,AtSign,CreditCard, User } from "react-feather"
-import { useState, userRef } from "react"
+import { useState, useEffect, userRef,} from "react"
 import SalesChart from "../component/fragments/SalesChart"
 import Kalender from "../component/fragments/calender"
 import Sidebar from "../component/fragments/sidebar"
+import { getProfil } from "../services/auth"
+import { useNavigate } from "react-router-dom"
 
 
 const Dashboard = () => {
     const [sidebarOpen, setSidebarOpen] = useState(false);
+    const [profil, setProfil] = useState("")
+    const navigate = useNavigate()
 
     const toggleSidebar = () => {
         setSidebarOpen(!sidebarOpen);
     }
 
     const [isHovered, setIsHovered] = useState(false); 
+
+    const clickUser = () => {
+        if(isHovered){
+            setIsHovered(false)
+        } else {
+            setIsHovered(true)
+        }
+    }
+
+    const handlerLogout = () => {
+        localStorage.removeItem("token")
+        navigate("/login")
+    }
+
+    useEffect(() => {
+        const token = localStorage.getItem("token")
+        if(token){
+            setProfil(getProfil(token))
+        } else {
+            navigate("/login");
+        }
+    }, [])
 
     return(
         <div className="flex h-screen bg-gray-100">
@@ -25,31 +51,30 @@ const Dashboard = () => {
                             Dashboard <span className="text-primary">FinancialTracker</span>
                         </h2>
 
-                        {/* User Icon (Trigger untuk menampilkan profile) */}
                         <div
                             className="relative"
                             onMouseEnter={() => setIsHovered(true)}
                             onMouseLeave={() => setIsHovered(false)}
+                            onClick={clickUser}
                         >
                             <User className="text-gray-500 cursor-pointer" size={24} />
 
-                            {/* Dropdown Profile (Akan muncul saat hover) */}
                             <div
-                            className={`bg-white shadow-lg w-fit p-4 rounded-xl fixed top-20 right-6 z-50 h-50 transition-opacity duration-300 ${
+                            className={`bg-white shadow-lg w-fit p-4 rounded-xl fixed top-15 right-6 z-50 h-50 transition-opacity duration-300 ${
                                 isHovered ? "opacity-100 visible" : "opacity-0 invisible"
                             }`}
                             >
                             <div className="flex flex-col gap-4">
                                 <h2 className="text-sm font-semibold flex items-center gap-2">
-                                <User className="text-primary" /> Randi Permana
+                                <User className="text-primary" /> {profil.username}
                                 </h2>
                                 <h2 className="text-sm font-semibold flex items-center gap-2">
-                                <CreditCard className="text-primary" /> 020293039
+                                <CreditCard className="text-primary" /> {profil.id}
                                 </h2>
                                 <p className="text-sm font-semibold flex items-center gap-2">
-                                <AtSign className="text-primary" /> randi.permana@mail.com
+                                <AtSign className="text-primary" /> {profil.email}
                                 </p>
-                                <button className="flex justify-center text-sm font-bold rounded-lg mt-4 text-white bg-primary p-2">
+                                <button onClick={handlerLogout} className="flex justify-center text-sm font-bold rounded-lg mt-4 text-white bg-primary p-2">
                                 <LogOut /> Logout
                                 </button>
                             </div>
