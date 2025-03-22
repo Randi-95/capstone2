@@ -87,7 +87,7 @@ const Dashboard = () => {
        
             <div className="bg-gray-100 lg:ml-[300px] w-full ">
                 <div className="p-4 bg-gray-100">    
-                        <div className="bg-white w-full fixed left-0 right-0 top-0 md:relative gap-2 items-center rounded-t-xl md:rounded-xl shadow-lg p-4 py-6 flex">
+                        <div className="bg-white w-full fixed left-0 right-0 top-0 md:relative gap-2 items-center rounded-t-xl md:rounded-xl shadow-lg p-4 py-6 flex z-50">
                             <button className="lg:hidden text-gray-500" onClick={toggleSidebar}>
                                 <Menu size={24} />
                             </button>
@@ -128,11 +128,11 @@ const Dashboard = () => {
                                 <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
                         </div>
                     </div>
-                    <div className="grid md:grid-cols-[1.5fr_1fr] mt-2 gap-2">
+                    <div className="grid md:grid-cols-[1.5fr_1fr] mt-2 gap-2 z-0">
                         <div className="">
                              <SalesChart />
                         </div>
-                        <div className="bg-white shadow-lg rounded-xl p-3">
+                        <div className="bg-white shadow-lg rounded-xl p-3 z-0">
                             <Kalender></Kalender>
                         </div>
                     </div>
