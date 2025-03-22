@@ -52,7 +52,7 @@ function Registrasi() {
               type="submit"
               className="bg-primary mt-4 w-full h-10 font-bold text-white rounded-lg"
             >
-              Masuk
+              Daftar
             </button>
           </form>
           {successRegister && (
