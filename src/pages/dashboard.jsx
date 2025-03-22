@@ -137,7 +137,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                     
-                    <div className="grid lg:grid-cols-[1.5fr_1fr] gap-2 mt-2 ">
+                    <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-2 mt-2 ">
                         <div className="bg-white shadow-lg rounded-xl p-5 mt-6 border border-gray-100">
                             <div className="flex justify-between items-center mb-4">
                                 <h3 className="font-bold text-lg">Transaksi Terbaru</h3>
