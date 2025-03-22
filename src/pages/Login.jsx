@@ -21,7 +21,7 @@ function Login() {
       if (status) {
         localStorage.setItem("token", res);
         setLoginFailed("")
-        window.location.href = "/dashboard"
+        window.location.replace("/dashboard");
       } else {
         setLoginFailed(res.response.data.error)
         console.log(res.response.data.error);
