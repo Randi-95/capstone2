@@ -79,13 +79,13 @@ function DashboardMobile(){
                 <div className="flex items-center">
                     <ArrowUp className="bg-green-400 p-1 size-10 rounded-full text-white"/>
                     <div className="flex flex-col ml-2">
-                        <h2 className="text-xl font-semibold ">Gaji Bulanan</h2>
+                        <h2 className="text-xl font-medium">Gaji Bulanan</h2>
                         <p className="text-sm text-gray-400">20 Maret 2025</p>
                     </div>
                 </div>
 
                 <div className="flex flex-col items-end">
-                    <h2 className="text-green-500 text-2xl font-bold">8.000.000</h2>
+                    <h2 className="text-green-500 text-xl font-bold">8.000.000</h2>
                     <p className="text-sm text-gray-400 font-semibold">Pemasukan</p>
                 </div>
             </div>
@@ -94,13 +94,13 @@ function DashboardMobile(){
                 <div className="flex items-center">
                     <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/>
                     <div className="flex flex-col ml-2">
-                        <h2 className="text-xl font-semibold ">Pembayaran Listrik</h2>
+                        <h2 className="text-xl font-medium">Pembayaran Listrik</h2>
                         <p className="text-sm text-gray-400">20 Maret 2025</p>
                     </div>
                 </div>
 
                 <div className="flex flex-col items-end">
-                    <h2 className="text-red-500 text-2xl font-bold">200.000</h2>
+                    <h2 className="text-red-500 text-xl font-bold">200.000</h2>
                     <p className="text-sm text-gray-400 font-semibold">Pengeluaran</p>
                 </div>
             </div>
@@ -109,13 +109,13 @@ function DashboardMobile(){
                 <div className="flex items-center">
                     <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/>
                     <div className="flex flex-col ml-2">
-                        <h2 className="text-xl font-semibold ">Belanja Bulanan</h2>
+                        <h2 className="text-xl font-medium ">Belanja Bulanan</h2>
                         <p className="text-sm text-gray-400">20 Maret 2025</p>
                     </div>
                 </div>
 
                 <div className="flex flex-col items-end">
-                    <h2 className="text-red-500 text-2xl font-bold">3.000.000</h2>
+                    <h2 className="text-red-500 text-xl font-bold">3.000.000</h2>
                     <p className="text-sm text-gray-400 font-semibold">Pemasukan</p>
                 </div>
             </div>
