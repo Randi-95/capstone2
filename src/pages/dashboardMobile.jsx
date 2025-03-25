@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import {  Pagination } from "swiper/modules";
 
 function DashboardMobile(){
     return(
@@ -128,24 +128,24 @@ function DashboardMobile(){
         </div>
 
         <div className="max-w-2xl mx-auto">
-      <Swiper
-        modules={[Pagination]}
-        pagination={{ clickable: true }}
-        spaceBetween={50}
-        slidesPerView={1}
-        className="w-full h-64"
-      >
-        <SwiperSlide className="px-2 mt-10">
-            <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
-        </SwiperSlide>
-        <SwiperSlide className="px-2 mt-10">
-            <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
-        </SwiperSlide>
-        <SwiperSlide className="px-2 mt-10">
-            <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
-        </SwiperSlide>
-      </Swiper>
-    </div>
+            <Swiper
+                modules={[Pagination]}
+                pagination={{ clickable: true }}
+                spaceBetween={10}
+                slidesPerView={1}
+                className="w-full h-64"
+            >
+                <SwiperSlide className="px-2 mt-10">
+                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
+                </SwiperSlide>
+                <SwiperSlide className="px-2 mt-10">
+                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
+                </SwiperSlide>
+                <SwiperSlide className="px-2 mt-10">
+                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
+                </SwiperSlide>
+            </Swiper>
+        </div>
     </div>
     )
 }
