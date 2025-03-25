@@ -1,10 +1,10 @@
-import { User, CreditCard,AtSign, LogOut, Headphones ,Calendar, BarChart, Grid, MessageCircle,Menu, DollarSign, Clock, Activity } from "react-feather"
+import { User, CreditCard,AtSign, LogOut, Headphones ,Calendar, BarChart, Grid, MessageCircle,Menu, DollarSign, Clock, Activity, Plus, ArrowDown } from "react-feather"
 import NavMobile from "../component/fragments/navMobile";
 
 
 function DashboardMobile(){
     return(
-    <div className="">
+    <div className="h-[9999px]">
         <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
             <div className="p-5 flex justify-between items-center">
                 <div className="">
@@ -17,8 +17,9 @@ function DashboardMobile(){
                 </div>
             </div> 
 
-            <div className="w-[90%] grid grid-cols-[1fr_1.2fr]  h-40 bg-white border-[1.4px] shadow-xl border-[#d9d7d7] mx-auto mt-10 rounded-lg">
-                <div className=" pr-4 border-r-[1px] h-fit border-[#b0afaf] mt-1 w-full"> 
+            <div className="w-[90%] pb-3 bg-white border-[1.4px] shadow-xl border-[#d9d7d7] mx-auto mt-10 rounded-lg">
+                <div className="grid grid-cols-[1fr_1.2fr]">
+                <div className=" pr-4 border-r-[1px] h-fit border-[#d9d7d7] mt-1 w-full"> 
                     <div className="flex items-center gap-1 p-2">
                         <img src="/img/logo-capstone.png" alt="" className="w-8"/>
                         <p className="text-[#272727] font-bold">BALANCE</p>
@@ -39,6 +40,25 @@ function DashboardMobile(){
                     <div className="flex flex-col gap-2 items-center">
                         <Clock className="text-primary"/>
                         <p className="text-[#696666] text-xs font-bold">Riwayat</p>
+                    </div>
+                </div>
+                </div>
+                <div className="w-full border-t-[1px] border-[#d9d7d7] grid grid-cols-[1fr_1.2fr]">
+                    <div className="flex gap-3 mt-2 ml-2">
+                        <div className="flex flex-col items-center">
+                            <Plus className="bg-primary p-1 size-6 rounded-full text-white"/>
+                            <p className="text-xs text-[#696666]">Pemasukan</p>
+                        </div>
+                        <div className="flex flex-col items-center">
+                            <ArrowDown className="bg-primary p-1 size-6 rounded-full text-white"/>
+                            <p className="text-xs text-[#696666]">Pengeluaran</p>
+                        </div>
+                    </div>
+                    <div className="flex items-center justify-center">
+                        <div className="flex items-center justify-center gap-1 border border-[#d9d7d7] p-1 px-2 rounded-xl bg-gradient-to-r from-[#7f5efd] to-[#4f9efd]">  
+                            <img src="/img/logo-capstonewhite.png" alt="" className="size-5"/>
+                            <p className="text-[#ffffff] font-semibold text-xs">FINANCIAL TRACKER</p>
+                        </div>
                     </div>
                 </div>
             </div>           
