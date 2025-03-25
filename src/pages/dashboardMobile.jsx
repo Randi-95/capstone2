@@ -1,6 +1,6 @@
-import { User, CreditCard,AtSign, LogOut, Headphones ,Calendar, BarChart, Grid, MessageCircle,Menu, DollarSign, Clock, Activity, Plus, ArrowDown } from "react-feather"
+import { User, CreditCard,AtSign, LogOut, Headphones ,Calendar, BarChart, Grid, MessageCircle,Menu, DollarSign, Clock, Activity, Plus, ArrowDown, ArrowUp } from "react-feather"
 import NavMobile from "../component/fragments/navMobile";
-
+import SalesChart from "../component/fragments/SalesChart";
 
 function DashboardMobile(){
     return(
@@ -30,8 +30,8 @@ function DashboardMobile(){
                 </div>
                 <div className="h-20  w-full justify-center flex items-center gap-2 ">
                     <div className="flex flex-col gap-2 items-center">
-                        <Activity className="text-primary"/>
-                        <p className="text-[#696666] text-xs font-bold">Prediksi</p>
+                        <BarChart className="text-primary"/>
+                        <p className="text-[#696666] text-xs font-bold">Grafik</p>
                     </div>
                     <div className="flex flex-col gap-2 items-center">
                         <DollarSign className="text-primary"/>
@@ -52,7 +52,7 @@ function DashboardMobile(){
                         <div className="flex flex-col items-center">
                             <ArrowDown className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white"/>
                             <p className="text-xs text-[#696666]">Pengeluaran</p>
-                        </div>
+                        </div> 
                     </div>
                     <div className="flex items-center justify-center">
                         <div className="flex items-center justify-center gap-1 border border-[#d9d7d7] p-1 px-2 rounded-xl bg-gradient-to-r from-[#7f5efd] to-[#4f9efd]">  
@@ -64,8 +64,62 @@ function DashboardMobile(){
             </div>           
         </div>
 
-        <div className="">
+        <div className="z-60">
             <NavMobile/>
+        </div>
+
+        <div className="p-4 mt-20 z-20">
+            <div className="judul flex items-center justify-between">
+                <h2 className="text-primary font-bold text-2xl">Transaksi</h2>
+                <p className="text-primary text-sm font-semibold">Lihat Semua</p>
+            </div>
+
+            <div className="flex flex-col gap-4 mt-5">
+            <div className="mt-2 flex justify-between">
+                <div className="flex items-center">
+                    <ArrowUp className="bg-green-400 p-1 size-10 rounded-full text-white"/>
+                    <div className="flex flex-col ml-2">
+                        <h2 className="text-xl font-semibold ">Gaji Bulanan</h2>
+                        <p className="text-sm text-gray-400">20 Maret 2025</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-end">
+                    <h2 className="text-green-500 text-2xl font-bold">8.000.000</h2>
+                    <p className="text-sm text-gray-400 font-semibold">Pemasukan</p>
+                </div>
+            </div>
+
+            <div className="mt-2 flex justify-between">
+                <div className="flex items-center">
+                    <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/>
+                    <div className="flex flex-col ml-2">
+                        <h2 className="text-xl font-semibold ">Pembayaran Listrik</h2>
+                        <p className="text-sm text-gray-400">20 Maret 2025</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-end">
+                    <h2 className="text-red-500 text-2xl font-bold">200.000</h2>
+                    <p className="text-sm text-gray-400 font-semibold">Pengeluaran</p>
+                </div>
+            </div>
+
+            <div className="mt-2 flex justify-between">
+                <div className="flex items-center">
+                    <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/>
+                    <div className="flex flex-col ml-2">
+                        <h2 className="text-xl font-semibold ">Belanja Bulanan</h2>
+                        <p className="text-sm text-gray-400">20 Maret 2025</p>
+                    </div>
+                </div>
+
+                <div className="flex flex-col items-end">
+                    <h2 className="text-red-500 text-2xl font-bold">3.000.000</h2>
+                    <p className="text-sm text-gray-400 font-semibold">Pemasukan</p>
+                </div>
+            </div>
+            </div>
         </div>
     </div>
     )

@@ -29,7 +29,7 @@ const CustomTooltip = ({ active, payload, label }) => {
 
 const SalesChart = () => {
   return (
-    <div className="bg-white shadow-md rounded-xl p-6">
+    <div className="bg-white rounded-xl p-6">
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-lg font-semibold">Analytic</h2>
         <button className="border px-3 py-1 rounded-md text-gray-600">Sales Estimation ▼</button>
