@@ -127,21 +127,21 @@ function DashboardMobile(){
             </div>
         </div>
 
-        <div className="max-w-2xl mx-auto">
+        <div className=" p-2 ">
+            <h2></h2>
             <Swiper
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
                 spaceBetween={10}
-                slidesPerView={1}
-                className="w-full h-64"
+                className="w-full"
             >
-                <SwiperSlide className="px-2 mt-10">
+                <SwiperSlide className="">
+                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg "/>
+                </SwiperSlide>
+                <SwiperSlide className="">
                     <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
                 </SwiperSlide>
-                <SwiperSlide className="px-2 mt-10">
-                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
-                </SwiperSlide>
-                <SwiperSlide className="px-2 mt-10">
+                <SwiperSlide className="">
                     <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
                 </SwiperSlide>
             </Swiper>
