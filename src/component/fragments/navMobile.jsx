@@ -12,9 +12,6 @@ function NavMobile() {
                     <li className="font-semibold text-md flex flex-col items-center"><BarChart className=""/>Grafik</li>
                 </ul>
                 <ul>
-                    <li className="font-semibold text-md flex flex-col items-center"><Calendar className=""/>Kalender</li>
-                </ul>
-                <ul>
                     <li className="font-semibold text-md flex flex-col items-center"><Activity className=""/>Prediksi</li>
                 </ul>
                 <ul>
