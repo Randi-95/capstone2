@@ -36,7 +36,7 @@ const router = createBrowserRouter ([
     },
     {
       path: "/Dashboard",
-      element: <DashboardMobile />
+      element: <DashboardMobile/>
     },
     {
       path: "/Keuangan",
