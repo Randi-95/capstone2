@@ -75,7 +75,7 @@ function DashboardMobile(){
 
         <div className="p-4 mt-20 z-20">
             <div className="judul flex items-center justify-between">
-                <h2 className="text-primary font-bold text-2xl">Transaksi</h2>
+                <h2 className="text-gray-800 font-bold text-2xl">Transaksi</h2>
                 <p className="text-primary text-sm font-semibold">Lihat Semua</p>
             </div>
 
@@ -128,7 +128,7 @@ function DashboardMobile(){
         </div>
 
         <div className=" p-2 ">
-            <h2></h2>
+        <h2 className="text-gray-800 font-bold text-2xl mb-4">Fitur</h2>
             <Swiper
                 modules={[Pagination]}
                 pagination={{ clickable: true }}
@@ -139,10 +139,13 @@ function DashboardMobile(){
                     <img src="/img/GRAFIK.png" alt="" className="rounded-lg "/>
                 </SwiperSlide>
                 <SwiperSlide className="">
-                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
+                    <img src="/img/KALENDER-BANNER.png" alt="" className="rounded-lg"/>
                 </SwiperSlide>
                 <SwiperSlide className="">
-                    <img src="/img/GRAFIK.png" alt="" className="rounded-lg"/>
+                    <img src="/img/PREDIKSI.png" alt="" className="rounded-lg"/>
+                </SwiperSlide>
+                <SwiperSlide className="">
+                    <img src="/img/CHATBOT.png" alt="" className="rounded-lg"/>
                 </SwiperSlide>
             </Swiper>
         </div>
