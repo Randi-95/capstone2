@@ -9,6 +9,8 @@ import Blogs from './pages/blogs.jsx'
 import Login from './pages/Login.jsx'
 import Registrasi from './pages/daftar.jsx'
 import Dashboard from './pages/dashboard.jsx'
+import Keuangan from './pages/Keuangan.jsx'
+import DashboardMobile from './pages/dashboardMobile.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -34,7 +36,11 @@ const router = createBrowserRouter ([
     },
     {
       path: "/Dashboard",
-      element: <Dashboard />
+      element: <DashboardMobile />
+    },
+    {
+      path: "/Keuangan",
+      element: <Keuangan />
     },
 ])
 

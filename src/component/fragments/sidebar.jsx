@@ -27,14 +27,30 @@ function Sidebar () {
                 </div>
                 
                 <ul className="flex flex-col gap-4">
-                    <li className="text-sm bg-primary rounded-xl text-white px-3 py-2 font-medium flex gap-2 items-center">
-                        <Grid size={20}/>
-                        <span>Dashboard</span>
-                    </li>         
-                    <li className="text-sm hover:bg-primary rounded-xl text-gray-500 hover:text-white px-3 py-2 font-medium flex gap-2 items-center">
-                        <DollarSign size={20}/>
-                        <span>Keuangan</span>
-                    </li>             
+                <NavLink
+                to="/Dashboard"
+                className={({ isActive }) =>
+                    `text-sm rounded-xl px-3 py-2 font-medium flex gap-2 items-center ${
+                    isActive ? "bg-primary text-white" : "text-gray-500 hover:bg-primary hover:text-white"
+                    }`
+                }
+                >
+                <Grid size={20} />
+                <span>Dashboard</span>
+                </NavLink>
+
+                <NavLink
+                to="/keuangan"
+                className={({ isActive }) =>
+                    `text-sm rounded-xl px-3 py-2 font-medium flex gap-2 items-center ${
+                    isActive ? "bg-primary text-white" : "text-gray-500 hover:bg-primary hover:text-white"
+                    }`
+                }
+                >
+                <DollarSign size={20} />
+                <span>Keuangan</span>
+                </NavLink>
+         
                     <li className="text-sm hover:bg-primary rounded-xl text-gray-500 hover:text-white px-3 py-2 font-medium flex gap-2 items-center">
                         <BarChart size={20}/>
                         <span>Grafik</span>
@@ -72,15 +88,30 @@ function Sidebar () {
                 </div>
                 
                 <ul className="flex flex-col gap-4">
-                    <li className="text-sm bg-primary rounded-xl text-white px-3 py-2 font-medium flex gap-2 items-center">
-                        <Grid size={20}/>
-                        <span>Dashboard</span>
-                    </li>         
-                    <NavLink to ="/keuangan"><li className="text-sm hover:bg-primary rounded-xl text-gray-500 hover:text-white px-3 py-2 font-medium flex gap-2 items-center">
-                        <DollarSign size={20}/>
-                        <span>Keuangan</span>
-                    </li>
-                    </NavLink>            
+                <NavLink
+                to="/Dashboard"
+                className={({ isActive }) =>
+                    `text-sm rounded-xl px-3 py-2 font-medium flex gap-2 items-center ${
+                    isActive ? "bg-primary text-white" : "text-gray-500 hover:bg-primary hover:text-white"
+                    }`
+                }
+                >
+                <Grid size={20} />
+                <span>Dashboard</span>
+                </NavLink>
+
+                <NavLink
+                to="/keuangan"
+                className={({ isActive }) =>
+                    `text-sm rounded-xl px-3 py-2 font-medium flex gap-2 items-center ${
+                    isActive ? "bg-primary text-white" : "text-gray-500 hover:bg-primary hover:text-white"
+                    }`
+                }
+                >
+                <DollarSign size={20} />
+                <span>Keuangan</span>
+                </NavLink>
+           
                     <li className="text-sm hover:bg-primary rounded-xl text-gray-500 hover:text-white px-3 py-2 font-medium flex gap-2 items-center">
                         <BarChart size={20}/>
                         <span>Grafik</span>
