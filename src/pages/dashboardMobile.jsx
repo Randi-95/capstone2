@@ -24,21 +24,21 @@ function DashboardMobile(){
                         <p className="text-[#272727] font-bold">BALANCE</p>
                     </div>
                     <div className="px-3">
-                        <p className="text-[#272727] font-bold text-md">Rp 1.000.000</p>
+                        <p className="text-[#272727] font-semibold text-md">Rp 1.000.000</p>
                     </div>
                 </div>
                 <div className="h-20  w-full justify-center flex items-center gap-2 ">
                     <div className="flex flex-col items-center">
                         <Activity className="text-primary"/>
-                        <p className="text-[#272727] text-xs font-bold">Prediksi</p>
+                        <p className="text-[#272727] text-xs font-semibold">Prediksi</p>
                     </div>
                     <div className="flex flex-col items-center">
                         <DollarSign className="text-primary"/>
-                        <p className="text-[#272727] text-xs font-bold">Keuangan</p>
+                        <p className="text-[#272727] text-xs font-semibold">Keuangan</p>
                     </div>
                     <div className="flex flex-col items-center">
                         <Clock className="text-primary"/>
-                        <p className="text-[#272727] text-xs font-bold">Riwayat</p>
+                        <p className="text-[#272727] text-xs font-semibold">Riwayat</p>
                     </div>
                 </div>
             </div>           
