@@ -18,7 +18,7 @@ function DashboardMobile(){
             </div> 
 
             <div className="w-[90%] grid grid-cols-[1fr_1.2fr]  h-40 bg-white border-[1.4px] shadow-xl border-[#d9d7d7] mx-auto mt-10 rounded-lg">
-                <div className=" pr-4 border-r-[1.4px] h-fit border-[#b0afaf] mt-1 w-full"> 
+                <div className=" pr-4 border-r-[1px] h-fit border-[#b0afaf] mt-1 w-full"> 
                     <div className="flex items-center gap-1 p-2">
                         <img src="/img/logo-capstone.png" alt="" className="w-8"/>
                         <p className="text-[#272727] font-bold">BALANCE</p>
