@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import {  Pagination } from "swiper/modules";
+import { Link } from "react-router-dom";
 
 function DashboardMobile(){
     return(
@@ -50,10 +51,12 @@ function DashboardMobile(){
                 </div>
                 <div className="w-full border-t-[1px] border-[#d9d7d7] grid grid-cols-[1fr_1.2fr]">
                     <div className="flex gap-3 mt-2 ml-2">
-                        <div className="flex flex-col items-center">
-                            <Plus className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white"/>
-                            <p className="text-xs text-[#696666]">Pemasukan</p>
-                        </div>
+                        <Link to="/Keuangan">
+                            <div className="flex flex-col items-center">
+                                <Plus className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white"/>
+                                <p className="text-xs text-[#696666]">Pemasukan</p>
+                            </div>
+                        </Link>
                         <div className="flex flex-col items-center">
                             <ArrowDown className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white"/>
                             <p className="text-xs text-[#696666]">Pengeluaran</p>

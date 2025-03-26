@@ -1,26 +1,36 @@
-import NavDashboard from "../component/fragments/navDashboard";
-import Sidebar from "../component/fragments/sidebar";
+import { User,Book, CreditCard,AtSign, LogOut, Headphones ,Calendar, BarChart, Grid, MessageCircle,Menu, DollarSign, Clock, Activity, Plus, ArrowDown, ArrowUp } from "react-feather"
+import NavMobile from "../component/fragments/navMobile";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
-
-
-
-
-function Keuangan() {
-
+function KeuanganPage(){
     return(
-        <div className="flex h-screen bg-gray-100">
-            <Sidebar></Sidebar>
-            <div className="bg-gray-100 lg:ml-[300px] w-full ">
-                <div className="p-4 bg-gray-100"> 
-                    <NavDashboard/>
-                    <div className="mt-10 lg:mt-0 flex justify-center flex-col items-center">
-                        <h2 className="text-primary text-4xl font-bold">Atur Keuangan Sekarang</h2>
-                        <p className="w-80 text-center font-semibold text-gray-800 leading-5">Kelola pemasukan & pengeluaran dengan mudah.</p>
-                    </div>
+    <div className="">
+        <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
+            <div className="p-5 flex justify-between items-center">
+                <div className="">
+                    <h2 className="text-white font-bold text-lg -mt-1">Keuangan Saya</h2>
+                    <p className="text-white text-sm font-light">Semua Pemasukan dan Jumlah Pemasukan Pengeluaran.</p>
                 </div>
-            </div>
-        </div> 
+                <div className="flex gap-2">
+                    <Book className="text-white"/>
+                </div>
+            </div> 
+        </div>
+
+        <div className="-mt-10 bg-white h-[9999px] rounded-t-4xl">
+            
+        </div>
+
+        <div className="z-60">
+            <NavMobile/>
+        </div>
+
+        
+    
+    </div>
     )
 }
 
-export default Keuangan;
+export default KeuanganPage;

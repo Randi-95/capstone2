@@ -9,8 +9,9 @@ import Blogs from './pages/blogs.jsx'
 import Login from './pages/Login.jsx'
 import Registrasi from './pages/daftar.jsx'
 import Dashboard from './pages/dashboard.jsx'
-import Keuangan from './pages/Keuangan.jsx'
 import DashboardMobile from './pages/dashboardMobile.jsx'
+import KeuanganPage from './pages/Keuangan.jsx'
+import FormKeuangan from './pages/formTransaksi.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -40,7 +41,7 @@ const router = createBrowserRouter ([
     },
     {
       path: "/Keuangan",
-      element: <Keuangan />
+      element: <FormKeuangan/>
     },
 ])
 
