@@ -12,6 +12,7 @@ import Dashboard from './pages/dashboard.jsx'
 import DashboardMobile from './pages/dashboardMobile.jsx'
 import KeuanganPage from './pages/Keuangan.jsx'
 import FormKeuangan from './pages/formTransaksi.jsx'
+import Kalender from './pages/Keuangan.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -43,6 +44,10 @@ const router = createBrowserRouter ([
       path: "/Keuangan",
       element: <FormKeuangan/>
     },
+    {
+      path: "/Kalender",
+      element: <Kalender/>
+    }
 ])
 
 createRoot(document.getElementById('root')).render(

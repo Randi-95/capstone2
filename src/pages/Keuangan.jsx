@@ -4,7 +4,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-function KeuanganPage(){
+function Kalender(){
     return(
     <div className="">
         <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
@@ -33,4 +33,4 @@ function KeuanganPage(){
     )
 }
 
-export default KeuanganPage;
+export default Kalender;
