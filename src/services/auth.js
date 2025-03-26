@@ -24,6 +24,5 @@ export const login = async (data, callback) => {
 
 export const getProfil = (token) => {
     const decoded = jwtDecode(token)
-    console.log(decoded)
     return decoded
 }
