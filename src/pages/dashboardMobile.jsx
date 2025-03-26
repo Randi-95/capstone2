@@ -57,10 +57,12 @@ function DashboardMobile(){
                                 <p className="text-xs text-[#696666]">Pemasukan</p>
                             </div>
                         </Link>
-                        <div className="flex flex-col items-center">
-                            <ArrowDown className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white"/>
-                            <p className="text-xs text-[#696666]">Pengeluaran</p>
-                        </div> 
+                        <Link to="/Keuangan">
+                            <div className="flex flex-col items-center">
+                                <ArrowDown className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white"/>
+                                <p className="text-xs text-[#696666]">Pengeluaran</p>
+                            </div> 
+                        </Link>
                     </div>
                     <div className="flex items-center justify-center">
                         <div className="flex items-center justify-center gap-1 border border-[#d9d7d7] p-1 px-2 rounded-xl bg-gradient-to-r from-[#7f5efd] to-[#4f9efd]">  
