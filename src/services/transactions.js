@@ -1,8 +1,8 @@
 import axios from "axios";
 import { getProfil } from "./auth";
 
-// const url = "https://capstone-be-production.up.railway.app"
-const url = "http://localhost:9000"
+const url = "https://capstone-be-production.up.railway.app"
+// const url = "http://localhost:9000"
 const token = localStorage.getItem('token')
 
 const userData = getProfil(token)

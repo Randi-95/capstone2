@@ -33,8 +33,6 @@ function Kalender() {
           events={events}
           headerToolbar={{
             left: "title",
-            center: "prev,next",
-            right: ""
           }}
         />
       );

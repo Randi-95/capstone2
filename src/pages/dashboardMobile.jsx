@@ -7,31 +7,15 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import {  Pagination } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { useEffect, useState} from "react";
-import { useNavigate } from "react-router-dom";
-import { getProfil } from "../services/auth";
 
 function DashboardMobile(){
-    const [profil, setProfil] = useState("")
-    const navigate = useNavigate()
-    
-    useEffect(() => {
-        const token = localStorage.getItem("token")
-        if(token){
-            setProfil(getProfil(token))
-        } else {
-            navigate("/login");
-        }
-    }, [])
-
-
     return(
     <div className="h-[9999px]  lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
         <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center lg:shadow-xl lg:rounded-t-2xl">
             <div className="p-5 flex justify-between items-center">
                 <div className="">
                     <p className="text-white text-sm font-light">Selamat datang</p>
-                    <h2 className="text-white font-bold text-lg -mt-1">{profil.username}</h2>
+                    <h2 className="text-white font-bold text-lg -mt-1">Randi</h2>
                 </div>
                 <div className="flex gap-2">
                     <Headphones className="text-white"/>
@@ -59,10 +43,12 @@ function DashboardMobile(){
                         <DollarSign className="text-primary"/>
                         <p className="text-[#696666] text-xs font-bold">Keuangan</p>
                     </div>
+                    <Link to="/Riwayat">
                     <div className="flex flex-col gap-2 items-center">
                         <Clock className="text-primary"/>
                         <p className="text-[#696666] text-xs font-bold">Riwayat</p>
                     </div>
+                    </Link>
                 </div>
                 </div>
                 <div className="w-full border-t-[1px] border-[#d9d7d7] grid grid-cols-[1fr_1.2fr]">

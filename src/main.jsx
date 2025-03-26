@@ -10,9 +10,10 @@ import Login from './pages/Login.jsx'
 import Registrasi from './pages/daftar.jsx'
 import Dashboard from './pages/dashboard.jsx'
 import DashboardMobile from './pages/dashboardMobile.jsx'
-import KeuanganPage from './pages/Keuangan.jsx'
+import KeuanganPage from './pages/Kalender.jsx'
 import FormKeuangan from './pages/formTransaksi.jsx'
-import Kalender from './pages/Keuangan.jsx'
+import Riwayat from './pages/Riwayat.jsx'
+import KalenderPage from './pages/Kalender.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -46,7 +47,11 @@ const router = createBrowserRouter ([
     },
     {
       path: "/Kalender",
-      element: <Kalender/>
+      element: <KalenderPage/>
+    },
+    {
+      path: "/Riwayat",
+      element: <Riwayat/>
     }
 ])
 

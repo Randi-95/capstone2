@@ -8,18 +8,10 @@ import {
   Clock,
   Activity,
   Home,
-  LogOut,
 } from "react-feather";
 import { NavLink } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
 
-function NavDashboard() {
-  const navigate = useNavigate()
-
-  const handlerLogout = () => {
-    localStorage.removeItem("token")
-    navigate("/login")
-  }
+function NavMobile() {
   return (
     <div className="nav-mobile fixed bottom-0 lg:bottom-auto lg:top-0 right-0 left-0 z-50 bg-white shadow-2xl lg:h-[90vh] rounded-xl lg:w-[20vw] lg:p-10 lg:m-10 ">
       <div className=" shadow-[0_-8px_10px_-1px_rgba(0,0,0,0.1)] lg:shadow-none w-full lg:gap-20  py-4 flex lg:flex-col justify-between p-2 px-4">
@@ -37,41 +29,35 @@ function NavDashboard() {
           to="/Kalender"
           className={({ isActive }) =>
             isActive
-              ? "font-bold lg:text-xl text-primary lg:flex-row lg:gap-2text-xs flex flex-col items-center"
+              ? "font-bold lg:text-xl text-primary lg:flex-row lg:gap-2 text-xs flex flex-col items-center"
               : "text-xs lg:text-xl flex flex-col lg:flex-row lg:gap-2 items-center"
           }
         >
           <Calendar /> Kalender
         </NavLink>
         <NavLink
-          to="/prediksi"
+          to="/"
           className={({ isActive }) =>
             isActive
-              ? "font-bold lg:text-xl text-primary lg:flex-row text-xs lg:gap-2 flex flex-col items-center"
-              : "text-xs lg:text-xl flex flex-col lg:gap-2 lg:flex-row items-center"
+              ? "font-bold lg:text-xl text-primary lg:flex-row lg:gap-2 text-xs flex flex-col items-center"
+              : "text-xs lg:text-xl flex flex-col lg:flex-row lg:gap-2 items-center"
           }
         >
           <Activity /> Prediksi
         </NavLink>
         <NavLink
-          to="/chatbot"
+          to="/"
           className={({ isActive }) =>
             isActive
               ? "font-bold lg:text-xl text-primary lg:flex-row lg:gap-2 text-xs flex flex-col items-center"
-              : "text-xs lg:text-xl flex flex-col lg:gap-2 lg:flex-row items-center"
+              : "text-xs lg:text-xl flex flex-col lg:flex-row lg:gap-2 items-center"
           }
         >
           <MessageCircle /> Chatbot
         </NavLink>
-        <button
-          onClick={handlerLogout}
-          className="flex justify-center text-sm font-bold rounded-lg mt-4 text-white bg-primary p-2"
-        >
-          <LogOut /> Logout
-        </button>
       </div>
     </div>
   );
 }
 
-export default NavDashboard;
+export default NavMobile;
