@@ -5,7 +5,7 @@ import Kalender from "../component/fragments/calender"
 import Sidebar from "../component/fragments/sidebar"
 import { getProfil } from "../services/auth"
 import { useNavigate } from "react-router-dom"
-import NavDashboard from "../component/fragments/navDashboard"
+import NavDashboard from "../component/fragments/___navDashboard"
 
 
 const Dashboard = () => {
