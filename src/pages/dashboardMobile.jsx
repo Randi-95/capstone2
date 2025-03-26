@@ -10,8 +10,8 @@ import { Link } from "react-router-dom";
 
 function DashboardMobile(){
     return(
-    <div className="h-[9999px]">
-        <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
+    <div className="h-[9999px]  lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
+        <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center lg:shadow-xl lg:rounded-t-2xl">
             <div className="p-5 flex justify-between items-center">
                 <div className="">
                     <p className="text-white text-sm font-light">Selamat datang</p>
