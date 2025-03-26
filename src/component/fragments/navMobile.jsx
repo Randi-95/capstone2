@@ -36,7 +36,7 @@ function NavMobile() {
           <Calendar /> Kalender
         </NavLink>
         <NavLink
-          to="/"
+          to="/Prediksi"
           className={({ isActive }) =>
             isActive
               ? "font-bold lg:text-xl text-primary lg:flex-row lg:gap-2 text-xs flex flex-col items-center"
@@ -46,7 +46,7 @@ function NavMobile() {
           <Activity /> Prediksi
         </NavLink>
         <NavLink
-          to="/"
+          to="/Chatbot"
           className={({ isActive }) =>
             isActive
               ? "font-bold lg:text-xl text-primary lg:flex-row lg:gap-2 text-xs flex flex-col items-center"
