@@ -26,8 +26,8 @@ import {
   
   function KalenderPage() {
     return (
-      <div className="">
-        <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
+      <div className="lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
+        <div className="dashboard-mobile lg:rounded-2xl w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
           <div className="p-5 flex justify-between items-center">
             <div className="">
               <h2 className="text-white font-bold text-lg -mt-1">

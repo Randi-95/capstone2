@@ -1,4 +1,3 @@
-
 import Navbar from '../component/fragments/navbar'
 import { Home } from '../component/fragments/home'
 import {User, CheckCircle} from 'react-feather'
