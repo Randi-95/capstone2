@@ -30,12 +30,12 @@ function Profile() {
         <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center ">
             
         </div>
-        <div className="border-[1.4px] shadow-xl border-[#d9d7d7] bg-white h-40 w-[90%] lg:w-[60%] mx-auto -mt-20 rounded-xl flex  p-2">
-            <div className="flex items-center lg:justify-center w-full">
+        <div className="border-[1.4px] shadow-xl border-[#d9d7d7] bg-white h-40 w-[90%] lg:w-[50%] mx-auto -mt-20 rounded-xl flex  p-2">
+            <div className="flex flex-col items-center justify-center w-full">
                 <div className="bg-primary h-16 w-16 flex justify-center items-center rounded-full">
                     <h2 className="text-white font-semibold text-2xl">RA</h2>
                 </div>
-                <div className="ml-2">
+                <div className="ml-2 flex flex-col items-center">
                     <h2 className="text-gray-800 font-bold lg:text-xl">Randi Permana</h2>
                     <p className="text-xs lg:text-xl font-semibold text-gray-600">randi@mail.com | user-XmmOgjtm3N</p>
                 </div>
