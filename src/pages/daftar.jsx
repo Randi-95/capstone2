@@ -18,14 +18,19 @@ function Registrasi() {
     register(data, (status, res) => {
       if (status) {
         setSuccessRegister(res);
+        setErrorRegister("")
+        usernameRef.current.value = "";
+        emailRef.current.value = "";
+        passwordRef.current.value = "";
       } else {
         setErrorRegister(res)
+        setSuccessRegister("")
+        usernameRef.current.value = "";
+        emailRef.current.value = "";
+        passwordRef.current.value = "";
       }
     });
 
-    usernameRef.current.value = "";
-    emailRef.current.value = "";
-    passwordRef.current.value = "";
   };
 
   const usernameRef = useRef(null);

@@ -2,11 +2,11 @@ import axios from "axios";
 import { getProfil } from "./auth";
 import url from "./api_key";
 
-const token = localStorage.getItem('token')
 
-const userData = getProfil(token)
 export const addTransaction = async (data, callback) => {
     try{
+        const token = localStorage.getItem('token')
+        const userData = getProfil(token)
         const res = await axios.post(`${url}/transactions/${userData.id}`, data, {
             headers: {
                  Authorization: `Bearer ${token}`
