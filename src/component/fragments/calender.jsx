@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import axios from "axios";
 import { getProfil } from "../../services/auth";
@@ -35,7 +34,6 @@ function Kalender() {
             backgroundColor: h.type === "pemasukan" ? "green" : "red",
             borderColor: h.type === "pemasukan" ? "green" : "red",
             textColor: "#fff",
-            type: h.type
           }));
           setEvents(formattedData);
         }
@@ -63,14 +61,7 @@ function Kalender() {
           <div className="flex flex-col">
             <div className="font-semibold">{arg.event.extendedProps.description}</div>
             <div className="text-sm">
-              Rp {arg.event.title} 
-              <span className={`ml-2 px-2 py-1 rounded text-xs ${
-                arg.event.extendedProps.type === 'pemasukan' 
-                  ? 'bg-green-200 text-green-800' 
-                  : 'bg-red-200 text-red-800'
-              }`}>
-                {arg.event.extendedProps.type}
-              </span>
+              {arg.event.title}
             </div>
           </div>
         )}

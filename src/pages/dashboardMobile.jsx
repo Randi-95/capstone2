@@ -1,23 +1,14 @@
 import {
   User,
-  CreditCard,
-  AtSign,
-  LogOut,
   Headphones,
-  Calendar,
   BarChart,
-  Grid,
-  MessageCircle,
-  Menu,
   DollarSign,
   Clock,
-  Activity,
   Plus,
   ArrowDown,
   ArrowUp,
 } from "react-feather";
 import NavMobile from "../component/fragments/navMobile";
-import SalesChart from "../component/fragments/SalesChart";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
@@ -31,24 +22,44 @@ import url from "../services/api_key";
 import axios from "axios";
 
 function DashboardMobile() {
-  const [profil, setProfil] = useState("");
   const navigate = useNavigate();
-  const [summaryTransactions, setSummaryTransactions] = useState([]);
+  const [profil, setProfil] = useState(null);
+  const [summaryTransactions, setSummaryTransactions] = useState({
+    saldo_sekarang: "Rp. 0"
+  });
   const [historyTransactions, setHistoryTransactions] = useState([]);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
-    if (token) {
-      setProfil(getProfil(token));
-    } else {
+
+    if (!token) {
+      navigate("/login");
+      return;
+    }
+
+    try {
+      const userProfile = getProfil(token);
+      setProfil(userProfile);
+    } catch (error) {
+      console.error("Error getting user profile:", error);
+      localStorage.removeItem("token");
       navigate("/login");
     }
-  }, []);
-
-  const token = localStorage.getItem("token");
-  const userData = getProfil(token);
+  }, [navigate]);
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
+    if (!token) return;
+
+    let userData;
+    try {
+      userData = getProfil(token);
+    } catch (error) {
+      console.error("Error getting user profile:", error);
+      return;
+    }
+
     const handlerSummary = async () => {
       try {
         const res = await axios.get(`${url}/transactions/${userData.id}`, {
@@ -56,12 +67,13 @@ function DashboardMobile() {
             Authorization: `Bearer ${token}`,
           },
         });
+        
         if (res.data.status === "Sukses") {
-          setSummaryTransactions(res.data.data);
-          console.log(res.data.data);
+          setSummaryTransactions(res.data.data || { saldo_sekarang: "Rp. 0" });
         }
       } catch (err) {
-        console.log(err);
+        console.error("Error fetching summary:", err);
+        setSummaryTransactions({ saldo_sekarang: "Rp. 0" });
       }
     };
 
@@ -77,35 +89,26 @@ function DashboardMobile() {
         );
 
         if (res.data.status === "Sukses") {
-          setHistoryTransactions(res.data.data);
-          console.log(res.data.data);
+          setHistoryTransactions(res.data.data || []);
         }
       } catch (err) {
-        console.log(err);
+        console.error("Error fetching history:", err);
+        setHistoryTransactions([]);
       }
     };
 
-    if (token) {
-      handlerSummary();
-      handlerHistory();
-    } else {
-      navigate("/login");
-    }
+    handlerSummary();
+    handlerHistory();
   }, []);
 
-  const handlerLogout = () => {
-    localStorage.removeItem("token");
-    navigate("/login");
-  };
-
   return (
-    <div className="h-[9999px]  lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
+    <div className="h-[9999px] lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
       <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center lg:shadow-xl lg:rounded-t-2xl">
         <div className="p-5 flex justify-between items-center">
-          <div className="">
+          <div>
             <p className="text-white text-sm font-light">Selamat datang</p>
             <h2 className="text-white font-bold text-lg -mt-1">
-              {profil.username}
+              {profil?.username || "Pengguna"}
             </h2>
           </div>
           <div className="flex gap-2">
@@ -118,18 +121,18 @@ function DashboardMobile() {
 
         <div className="w-[90%] pb-3 bg-white border-[1.4px] shadow-xl border-[#d9d7d7] mx-auto mt-10 rounded-lg">
           <div className="grid grid-cols-[1fr_1.2fr]">
-            <div className=" pr-4 border-r-[1px] h-fit border-[#d9d7d7] mt-1 w-full">
+            <div className="pr-4 border-r-[1px] h-fit border-[#d9d7d7] mt-1 w-full">
               <div className="flex items-center gap-1 p-2">
                 <img src="/img/logo-capstone.png" alt="" className="w-8" />
                 <p className="text-[#272727] font-bold">BALANCE</p>
               </div>
               <div className="px-3">
                 <p className="text-[#272727] font-bold text-md">
-                  {summaryTransactions.saldo_sekarang || "Rp. 0"}
+                  {summaryTransactions.saldo_sekarang}
                 </p>
               </div>
             </div>
-            <div className="h-20  w-full justify-center flex items-center gap-2 ">
+            <div className="h-20 w-full justify-center flex items-center gap-2">
               <div className="flex flex-col gap-2 items-center">
                 <BarChart className="text-primary" />
                 <p className="text-[#696666] text-xs font-bold">Grafik</p>
@@ -154,12 +157,6 @@ function DashboardMobile() {
                   <p className="text-xs text-[#696666]">Tambah Transaksi</p>
                 </div>
               </Link>
-              {/* <Link to="/Keuangan">
-                <div className="flex flex-col items-center">
-                  <ArrowDown className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white" />
-                  <p className="text-xs text-[#696666]">Pengeluaran</p>
-                </div>
-              </Link> */}
             </div>
             <div className="flex items-center justify-center mt-2">
               <div className="flex items-center justify-center gap-1 border border-[#d9d7d7] p-1 px-2 rounded-xl bg-gradient-to-r from-[#7f5efd] to-[#4f9efd]">
@@ -185,7 +182,7 @@ function DashboardMobile() {
         <div className="judul flex items-center justify-between">
           <h2 className="text-gray-800 font-bold text-2xl">Transaksi</h2>
           <Link to="/Riwayat">
-          <p className="text-primary text-sm font-semibold">Lihat Semua</p>
+            <p className="text-primary text-sm font-semibold">Lihat Semua</p>
           </Link>
         </div>
 
@@ -240,7 +237,7 @@ function DashboardMobile() {
         </div>
       </div>
 
-      <div className=" p-2 cursor-grab">
+      <div className="p-2 cursor-grab">
         <h2 className="text-gray-800 font-bold text-2xl mb-4">Fitur</h2>
         <Swiper
           modules={[Pagination]}
@@ -248,16 +245,16 @@ function DashboardMobile() {
           spaceBetween={10}
           className="w-full"
         >
-          <SwiperSlide className="">
-            <img src="/img/GRAFIK.png" alt="" className="rounded-lg " />
+          <SwiperSlide>
+            <img src="/img/GRAFIK.png" alt="" className="rounded-lg" />
           </SwiperSlide>
-          <SwiperSlide className="">
+          <SwiperSlide>
             <img src="/img/KALENDER-BANNER.png" alt="" className="rounded-lg" />
           </SwiperSlide>
-          <SwiperSlide className="">
+          <SwiperSlide>
             <img src="/img/PREDIKSI.png" alt="" className="rounded-lg" />
           </SwiperSlide>
-          <SwiperSlide className="">
+          <SwiperSlide>
             <img src="/img/CHATBOT.png" alt="" className="rounded-lg" />
           </SwiperSlide>
         </Swiper>

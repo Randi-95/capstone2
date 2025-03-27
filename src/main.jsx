@@ -15,6 +15,7 @@ import FormKeuangan from './pages/formTransaksi.jsx'
 import Riwayat from './pages/Riwayat.jsx'
 import KalenderPage from './pages/Kalender.jsx'
 import Profile from './pages/Profile.jsx'
+import GrafikPage from './pages/grafik.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -49,6 +50,10 @@ const router = createBrowserRouter ([
     {
       path: "/Kalender",
       element: <KalenderPage/>
+    },
+    {
+      path: "/Grafik",
+      element: <GrafikPage />
     },
     {
       path: "/Riwayat",
