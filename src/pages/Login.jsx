@@ -24,8 +24,8 @@ function Login() {
         setLoginFailed("")
         navigate("/dashboard");
       } else {
-        setLoginFailed(res.response.data.error)
-        console.log(res.response.data.error);
+        setLoginFailed(res)
+        console.log(res);
       }
     });
     emailRef.current.value = "";

@@ -10,10 +10,14 @@ import { Link } from "react-router-dom";
 import { useEffect, useState} from "react";
 import { useNavigate } from "react-router-dom";
 import { getProfil } from "../services/auth";
+import url from "../services/api_key";
+import axios from "axios";
 
 function DashboardMobile(){
     const [profil, setProfil] = useState("")
     const navigate = useNavigate()
+    const [summaryTransactions, setSummaryTransactions] = useState([])
+    const [historyTransactions, setHistoryTransactions] = useState([])
     
     useEffect(() => {
         const token = localStorage.getItem("token")
@@ -23,6 +27,56 @@ function DashboardMobile(){
             navigate("/login");
         }
     }, [])
+
+    const token = localStorage.getItem('token')
+    const userData = getProfil(token)
+  
+  useEffect(() => {
+    const handlerSummary = async () => {
+      try {
+        const res = await axios.get(`${url}/transactions/${userData.id}`, {
+          headers: {
+              Authorization: `Bearer ${token}`
+          }
+        })
+        if(res.data.status === "Sukses"){
+          setSummaryTransactions(res.data.data)
+          console.log(res.data.data)
+        }
+      } catch(err) {
+        console.log(err)
+      }
+    }
+
+    const handlerHistory = async () => {
+      try {
+        const res = await axios.get(`${url}/transactions/detail/${userData.id}`, {
+          headers: {
+            Authorization: `Bearer ${token}`
+          }
+        })
+
+        if(res.data.status === "Sukses"){
+          setHistoryTransactions(res.data.data)
+          console.log(res.data.data)
+        }
+      } catch(err) {
+        console.log(err)
+      }
+    }
+
+    if(token) {
+      handlerSummary()
+      handlerHistory()
+    } else {
+      navigate("/login")
+    }
+    }, [])
+
+    const handlerLogout = () => {
+        localStorage.removeItem("token")
+        navigate("/login")
+    }
 
 
     return(
@@ -47,7 +101,7 @@ function DashboardMobile(){
                         <p className="text-[#272727] font-bold">BALANCE</p>
                     </div>
                     <div className="px-3">
-                        <p className="text-[#272727] font-bold text-md">Rp 1.000.000</p>
+                        <p className="text-[#272727] font-bold text-md">{summaryTransactions.saldo_sekarang || "Rp. 0"}</p>
                     </div>
                 </div>
                 <div className="h-20  w-full justify-center flex items-center gap-2 ">
@@ -103,50 +157,24 @@ function DashboardMobile(){
             </div>
 
             <div className="flex flex-col gap-4 mt-5">
+
+            {historyTransactions.slice(0, 3).map((history) => (
             <div className="mt-2 flex justify-between">
                 <div className="flex items-center">
-                    <ArrowUp className="bg-green-400 p-1 size-10 rounded-full text-white"/>
+                    {history.type === "pemasukan" ? <ArrowUp className="bg-green-400 p-1 size-10 rounded-full text-white"/> : <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/> }
+
                     <div className="flex flex-col ml-2">
-                        <h2 className="text-xl font-medium">Gaji Bulanan</h2>
-                        <p className="text-sm text-gray-400">20 Maret 2025</p>
+                        <h2 className="text-xl font-medium">{history.description}</h2>
+                        <p className="text-sm text-gray-400">{history.transaction_date}</p>
                     </div>
                 </div>
 
                 <div className="flex flex-col items-end">
-                    <h2 className="text-green-500 text-xl font-bold">8.000.000</h2>
-                    <p className="text-sm text-gray-400 font-semibold">Pemasukan</p>
+                    <h2 className={`text-${history.type === "pemasukan" ? "green" : "red"}-600 text-xl font-bold`}>{history.amount}</h2>
+                    <p className="text-sm text-gray-400 font-semibold">{history.type}</p>
                 </div>
             </div>
-
-            <div className="mt-2 flex justify-between">
-                <div className="flex items-center">
-                    <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/>
-                    <div className="flex flex-col ml-2">
-                        <h2 className="text-xl font-medium">Pembayaran Listrik</h2>
-                        <p className="text-sm text-gray-400">20 Maret 2025</p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-end">
-                    <h2 className="text-red-500 text-xl font-bold">200.000</h2>
-                    <p className="text-sm text-gray-400 font-semibold">Pengeluaran</p>
-                </div>
-            </div>
-
-            <div className="mt-2 flex justify-between">
-                <div className="flex items-center">
-                    <ArrowDown className="bg-red-500 p-1 size-10 rounded-full text-white"/>
-                    <div className="flex flex-col ml-2">
-                        <h2 className="text-xl font-medium ">Belanja Bulanan</h2>
-                        <p className="text-sm text-gray-400">20 Maret 2025</p>
-                    </div>
-                </div>
-
-                <div className="flex flex-col items-end">
-                    <h2 className="text-red-500 text-xl font-bold">3.000.000</h2>
-                    <p className="text-sm text-gray-400 font-semibold">Pemasukan</p>
-                </div>
-            </div>
+            ))}
             </div>
         </div>
 

@@ -33,7 +33,6 @@ function FormKeuangan() {
   const navigate = useNavigate();
 
   const handlerTransaksi = (e) => {
-
     const token = localStorage.getItem("token");
     e.preventDefault();
     const data = {
@@ -80,6 +79,7 @@ function FormKeuangan() {
             </label>
             <div className="relative">
               <input
+                required
                 ref={deskripsiRef}
                 type="text"
                 placeholder="Deskripsi Transaksi"
@@ -94,6 +94,7 @@ function FormKeuangan() {
                 Rp
               </span>
               <input
+                required
                 ref={jumlahRef}
                 type="number"
                 placeholder="10000"
@@ -107,6 +108,7 @@ function FormKeuangan() {
               Kategori
             </label>
             <select
+              required
               ref={typeRef}
               className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
@@ -117,7 +119,21 @@ function FormKeuangan() {
           </div>
 
           <div>
-            <input type="date" name="" id="" ref={tanggalRef} />
+            <label className="block text-gray-700 font-semibold mb-2">
+              Tanggal Transaksi
+            </label>
+            <div className="relative">
+              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                <Calendar className="text-gray-400 size-5" />
+              </div>
+              <input
+                required
+                type="date"
+                ref={tanggalRef}
+                className="w-full pl-10 pr-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                placeholder="Pilih Tanggal"
+              />
+            </div>
           </div>
 
           <button

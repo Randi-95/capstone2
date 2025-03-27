@@ -1,8 +1,7 @@
 import axios from "axios";
 import { getProfil } from "./auth";
+import url from "./api_key";
 
-const url = "https://capstone-be-production.up.railway.app"
-// const url = "http://localhost:9000"
 const token = localStorage.getItem('token')
 
 const userData = getProfil(token)
