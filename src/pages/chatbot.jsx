@@ -12,7 +12,7 @@ function Chatbot() {
             <div className="chatbot px-2">
                 <div className="">
                     <div className="mb-6 flex items-center justify-between p-4">
-                    <img src="/img/robot.svg" alt="" className="w-10" />
+                    <img src="/img/robot2.svg" alt="" className="w-10" />
                         <h1 className="text-2xl font-bold text-primary">Chatbot</h1>
                         <Link to= "/Profile"><User className="text-primary size-8"/></Link>
                     </div>
@@ -24,7 +24,7 @@ function Chatbot() {
                             <div className="bg-primary flex items-center justify-center w-10 h-10 p-1 rounded-full">
                                 <img src="/img/robot.svg" alt="" className="w-10" />
                             </div>
-                            <p className="text-gray-600 font-semibold text-sm leading-5 bg-gray-100 p-2 rounded-xl">Hello 🙌 <br /> how can I assist you today?</p>
+                            <p className="text-gray-600 font-semibold text-sm leading-5 bg-gray-100 p-2 rounded-xl">Hello Randi🙌 <br /> Bagaimana saya dapat membantu Anda hari ini?</p>
                         </div>
 
                         {chatHistory.map((chat, index) => (
