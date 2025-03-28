@@ -8,14 +8,13 @@ import NotFound from './pages/notFound.jsx'
 import Blogs from './pages/blogs.jsx'
 import Login from './pages/Login.jsx'
 import Registrasi from './pages/daftar.jsx'
-import Dashboard from './pages/dashboard.jsx'
 import DashboardMobile from './pages/dashboardMobile.jsx'
-import KeuanganPage from './pages/Kalender.jsx'
 import FormKeuangan from './pages/formTransaksi.jsx'
 import Riwayat from './pages/Riwayat.jsx'
 import KalenderPage from './pages/Kalender.jsx'
 import Profile from './pages/Profile.jsx'
 import GrafikPage from './pages/grafik.jsx'
+import Chatbot from './pages/chatbot.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -62,6 +61,10 @@ const router = createBrowserRouter ([
     {
       path: "/Profile",
       element: <Profile/>
+    },
+    {
+      path: "/Chatbot",
+      element: <Chatbot />,
     }
 ])
 
