@@ -16,7 +16,7 @@ function FormChatbot({setChatHistory}) {
         600)
     }
     return(
-        <form action="#" className="chat-form  rounded-xl bg-gray-200 py-4  mx-2" onSubmit={handleFormSubmit}>
+        <form action="#" className="chat-form  rounded-xl bg-gray-200 py-4  mx-2 mb-20" onSubmit={handleFormSubmit}>
             <div className="flex px-10 w-full">
                 <input ref={inputRef} type="text" placeholder="Tanya..." className="message-input w-full mr-4 outline-0 text-md font-semibold" required/>
                 <button className="">
