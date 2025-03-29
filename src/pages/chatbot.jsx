@@ -70,7 +70,7 @@ function Chatbot() {
         </div>
 
         <div className="flex flex-col justify-between">
-          <div ref={chatBodyRef} className="chat-body h-[80vh] overflow-y-auto p-5">
+          <div ref={chatBodyRef} className="chat-body h-[80vh] pb-30 overflow-y-auto p-5">
             <div className="message bot-message flex flex-col gap-2">
               <div className="bg-primary flex items-center justify-center w-10 h-10 p-1 rounded-full">
                 <img src="/img/robot.svg" alt="" className="w-10" />
