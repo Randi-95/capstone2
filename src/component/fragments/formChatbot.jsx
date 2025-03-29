@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { ArrowLeft, User, Send } from "react-feather";
 
-function FormChatbot({setChatHistory}) {
+function FormChatbot({chatHistory, setChatHistory, generateBotResponse}) {
     const inputRef = useRef();
 
     const handleFormSubmit = (e) => {
@@ -14,6 +14,8 @@ function FormChatbot({setChatHistory}) {
 
         setTimeout(() => setChatHistory((history) => [...history, { role: "model", text: "Berpikir..."}]),
         600)
+
+        generateBotResponse([...chatHistory, {role: "user", text: userMessage}])        
     }
     return(
         <form action="#" className="chat-form  rounded-xl bg-gray-200 py-4  mx-2 " onSubmit={handleFormSubmit}>

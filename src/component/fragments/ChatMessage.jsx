@@ -1,3 +1,5 @@
+import ReactMarkdown from "react-markdown";
+
 function ChatMessage({ chat }) {
     return (
         <div className={`message flex items-center gap-2 ${chat.role === "model" ? "bot-message justify-start" : "user-message justify-end"}`}>
@@ -6,10 +8,10 @@ function ChatMessage({ chat }) {
                     <img src="/img/robot.svg" alt="bot" className="w-10" />
                 </div>
             )}
-            <p className={`text-sm font-semibold leading-5 p-2 rounded-xl 
+            <div className={`text-sm font-semibold leading-5 p-2 rounded-xl 
                 ${chat.role === "model" ? "bg-gray-100 text-gray-600 mt-4" : "mt-4 bg-primary text-white"}`}>
-                {chat.text}
-            </p>
+                <ReactMarkdown>{chat.text}</ReactMarkdown>
+            </div>
         </div>
     );
 }
