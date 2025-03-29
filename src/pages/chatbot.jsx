@@ -61,21 +61,21 @@ function Chatbot() {
       <div className="chatbot px-2">
         <div className="">
           <div className="mb-6 flex items-center justify-between p-4">
-            <img src="/img/robot2.svg" alt="" className="w-10" />
-            <h1 className="text-2xl font-bold text-primary">Chatbot</h1>
-            <Link to="/Profile">
-              <User className="text-primary size-8" />
+            <Link to="/Dashboard">
+            <ArrowLeft className="text-primary size-8" />
             </Link>
+            <h1 className="text-2xl font-bold text-primary">Chatbot</h1>
+            <img src="/img/robot2.svg" alt="" className="w-10" />
           </div>
         </div>
 
         <div className="flex flex-col justify-between">
-          <div ref={chatBodyRef} className="chat-body h-[60vh] overflow-y-auto p-5">
-            <div className="message bot-message flex items-center gap-2">
+          <div ref={chatBodyRef} className="chat-body h-[80vh] overflow-y-auto p-5">
+            <div className="message bot-message flex flex-col gap-2">
               <div className="bg-primary flex items-center justify-center w-10 h-10 p-1 rounded-full">
                 <img src="/img/robot.svg" alt="" className="w-10" />
               </div>
-              <p className="text-gray-600 font-semibold text-sm leading-5 bg-gray-100 p-2 rounded-xl">
+              <p className="text-gray-600 font-semibold text-sm leading-5 ml-10 -mt-4 bg-gray-100 p-2 rounded-xl">
                 Hello {user_data.username} 🙌 <br /> Bagaimana saya dapat membantu Anda hari
                 ini?
               </p>
@@ -86,7 +86,7 @@ function Chatbot() {
             ))}
           </div>
 
-          <div className="chatbot-form  w-full ">
+          <div className="chatbot-form  w-full  lg:relative fixed bottom-0 right-0 left-0 py-4 bg-white border-1 border-gray-50 shadow-lg">
             <FormChatbot
               chatHistory={chatHistory}
               setChatHistory={setChatHistory}
@@ -95,7 +95,9 @@ function Chatbot() {
           </div>
         </div>
 
-        <NavMobile />
+        <div className="hidden lg:block">
+          <NavMobile />
+        </div>
       </div>
     </div>
   );

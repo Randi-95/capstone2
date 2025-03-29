@@ -5,15 +5,15 @@ function FormChatbot({ chatHistory, setChatHistory, generateBotResponse }) {
     const inputRef = useRef();
 
     const handleKeyDown = (event) => {
-        const isMobile = /Mobi|Android/i.test(navigator.userAgent); // Deteksi perangkat mobile
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent); 
 
         if (event.key === "Enter") {
             if (isMobile || event.shiftKey) {
-                // Jika di HP atau Shift + Enter ditekan, buat baris baru
+                
                 event.preventDefault();
                 inputRef.current.value += "\n";
             } else {
-                // Jika di laptop dan hanya Enter, kirim pesan
+                
                 event.preventDefault();
                 handleFormSubmit(event);
             }
