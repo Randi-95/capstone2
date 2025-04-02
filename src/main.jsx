@@ -15,6 +15,7 @@ import KalenderPage from './pages/Kalender.jsx'
 import Profile from './pages/Profile.jsx'
 import GrafikPage from './pages/grafik.jsx'
 import Chatbot from './pages/chatbot.jsx'
+import Prediksi from './pages/prediksi.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -53,6 +54,10 @@ const router = createBrowserRouter ([
     {
       path: "/Grafik",
       element: <GrafikPage />
+    },
+    {
+      path: "/Prediksi",
+      element: <Prediksi />
     },
     {
       path: "/Riwayat",

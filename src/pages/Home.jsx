@@ -4,6 +4,7 @@ import {User, CheckCircle} from 'react-feather'
 import CardAbout from '../component/elements/cardAbout'
 import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
+import { Footer } from '../component/fragments/footer';
 
 // halo
 
@@ -297,6 +298,7 @@ function HomePage() {
         <Benefit/>
         <Tutorial/>
         <FAQ/>
+        <Footer />
       </div>
   )
 }
