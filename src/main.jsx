@@ -15,7 +15,7 @@ import KalenderPage from './pages/Kalender.jsx'
 import Profile from './pages/Profile.jsx'
 import GrafikPage from './pages/grafik.jsx'
 import Chatbot from './pages/chatbot.jsx'
-import Prediksi from './pages/prediksi.jsx'
+import Prediksi from './pages/Prediksi.jsx'
 
 const router = createBrowserRouter ([
     {
