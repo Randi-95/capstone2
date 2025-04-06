@@ -5,7 +5,6 @@ import {
   import "swiper/css";
   import "swiper/css/navigation";
   import "swiper/css/pagination";
-  import Kalender from "../component/fragments/calender";
   import { Link } from "react-router-dom";
   import { useState, useEffect } from "react";
   import { useNavigate } from "react-router-dom";

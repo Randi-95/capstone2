@@ -7,6 +7,7 @@ import {
   Plus,
   ArrowDown,
   ArrowUp,
+  Loader,
 } from "react-feather";
 import NavMobile from "../component/fragments/navMobile";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -21,14 +22,17 @@ import { getProfil } from "../services/auth";
 import url from "../services/api_key";
 import axios from "axios";
 import DarkModeToggle from "../component/elements/darkMode";
+import { LoaderSaldo, LoaderTransaction } from "../component/elements/loader";
 
 function DashboardMobile() {
   const navigate = useNavigate();
   const [profil, setProfil] = useState(null);
   const [summaryTransactions, setSummaryTransactions] = useState({
-    saldo_sekarang: "Rp. 0"
+    saldo_sekarang: "Rp. 0",
   });
   const [historyTransactions, setHistoryTransactions] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     const token = localStorage.getItem("token");
@@ -63,23 +67,28 @@ function DashboardMobile() {
 
     const handlerSummary = async () => {
       try {
+        setIsLoading(true);
         const res = await axios.get(`${url}/transactions/${userData.id}`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
         });
-        
+
         if (res.data.status === "Sukses") {
           setSummaryTransactions(res.data.data || { saldo_sekarang: "Rp. 0" });
         }
       } catch (err) {
         console.error("Error fetching summary:", err);
         setSummaryTransactions({ saldo_sekarang: "Rp. 0" });
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
 
     const handlerHistory = async () => {
       try {
+        setIsLoading(true);
         const res = await axios.get(
           `${url}/transactions/detail/${userData.id}`,
           {
@@ -95,6 +104,9 @@ function DashboardMobile() {
       } catch (err) {
         console.error("Error fetching history:", err);
         setHistoryTransactions([]);
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
 
@@ -115,7 +127,7 @@ function DashboardMobile() {
           <div className="flex gap-2">
             <Headphones className="text-white" />
             <Link to="/Profile">
-               <User className="text-white" />
+              <User className="text-white" />
             </Link>
             <DarkModeToggle className="text-white" />
           </div>
@@ -126,27 +138,43 @@ function DashboardMobile() {
             <div className="pr-4 border-r-[1px] h-fit border-[#d9d7d7] dark:border-gray-700 mt-1 w-full">
               <div className="flex items-center gap-1 p-2">
                 <img src="/img/logo-capstone.png" alt="" className="w-8" />
-                <p className="text-[#272727] dark:text-white font-bold">BALANCE</p>
+                <p className="text-[#272727] dark:text-white font-bold">
+                  BALANCE
+                </p>
               </div>
               <div className="px-3">
                 <p className="text-[#272727] dark:text-white font-bold text-md">
-                  {summaryTransactions.saldo_sekarang}
+                  {isLoading ? (
+                    <LoaderSaldo />
+                  ) : isError ? (
+                    <div className="bg-red-200 dark:bg-red-900 border border-red-200 dark:border-red-700 text-red-600 dark:text-red-300 rounded p-2 mb-2 text-center shadow-sm">
+                      <p className="font-medium text-sm">Gagal memuat data.</p>
+                    </div>
+                  ) : (
+                    summaryTransactions.saldo_sekarang
+                  )}
                 </p>
               </div>
             </div>
             <div className="h-20 w-full justify-center flex items-center gap-2">
               <div className="flex flex-col gap-2 items-center">
                 <BarChart className="text-primary" />
-                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">Grafik</p>
+                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
+                  Grafik
+                </p>
               </div>
               <div className="flex flex-col gap-2 items-center">
                 <DollarSign className="text-primary" />
-                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">Keuangan</p>
+                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
+                  Keuangan
+                </p>
               </div>
               <Link to="/Riwayat">
                 <div className="flex flex-col gap-2 items-center">
                   <Clock className="text-primary" />
-                  <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">Riwayat</p>
+                  <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
+                    Riwayat
+                  </p>
                 </div>
               </Link>
             </div>
@@ -156,7 +184,9 @@ function DashboardMobile() {
               <Link to="/Keuangan">
                 <div className="flex gap-1 ml-1 items-center">
                   <Plus className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white" />
-                  <p className="text-xs text-[#696666] dark:text-gray-300">Tambah Transaksi</p>
+                  <p className="text-xs text-[#696666] dark:text-gray-300">
+                    Tambah Transaksi
+                  </p>
                 </div>
               </Link>
             </div>
@@ -182,14 +212,34 @@ function DashboardMobile() {
 
       <div className="p-4 mt-20 z-20">
         <div className="judul flex items-center justify-between">
-          <h2 className="text-gray-800 dark:text-white font-bold text-2xl">Transaksi</h2>
+          <h2 className="text-gray-800 dark:text-white font-bold text-2xl">
+            Transaksi
+          </h2>
           <Link to="/Riwayat">
             <p className="text-primary text-sm font-semibold">Lihat Semua</p>
           </Link>
         </div>
 
         <div className="flex flex-col gap-4 mt-5">
-          {historyTransactions.length === 0 ? (
+          {isLoading ? (
+            <>
+              <LoaderTransaction />
+              <LoaderTransaction />
+              <LoaderTransaction />
+            </>
+          ) : isError ? (
+            <div className="bg-red-200 dark:bg-red-900 border border-red-200 dark:border-red-700 text-red-600 dark:text-red-300 rounded-xl p-4 text-center shadow-sm">
+              <p className="font-medium text-sm">
+                Gagal memuat data. Periksa koneksi internet kamu.
+              </p>
+              <button
+                onClick={() => window.location.reload()}
+                className="mt-3 text-sm text-white bg-red-500 hover:bg-red-600 transition px-4 py-1.5 rounded-lg"
+              >
+                Coba Lagi
+              </button>
+            </div>
+          ) : historyTransactions.length === 0 ? (
             <div className="text-center py-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <p className="text-gray-600 dark:text-gray-300 font-medium">
                 Belum ada transaksi. Mulai catat keuanganmu sekarang!
@@ -240,7 +290,9 @@ function DashboardMobile() {
       </div>
 
       <div className="p-2 cursor-grab">
-        <h2 className="text-gray-800 dark:text-white font-bold text-2xl mb-4">Fitur</h2>
+        <h2 className="text-gray-800 dark:text-white font-bold text-2xl mb-4">
+          Fitur
+        </h2>
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}

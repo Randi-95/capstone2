@@ -21,10 +21,9 @@ import {
   import "swiper/css";
   import "swiper/css/navigation";
   import "swiper/css/pagination";
-  import Kalender from "../component/fragments/calender";
   import Grafik from "../component/fragments/Grafik";
   import { Link } from "react-router-dom";
-  
+
   function GrafikPage() {
     return (
       <div className="lg:w-[71vw] lg:absolute lg:right-10 lg:mt-10 dark:shadow-gray-900 lg:shadow-2xl">
