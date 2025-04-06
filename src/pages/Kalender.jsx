@@ -28,7 +28,7 @@ import {
   
   function KalenderPage() {
     return (
-      <div className="lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
+      <div className="lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl dark:lg:shadow-gray-800">
         <div className="dashboard-mobile lg:rounded-2xl w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
           <div className="p-5 flex justify-between items-center">
             <div className="">
@@ -47,9 +47,9 @@ import {
           </div>
         </div>
   
-        <div className="-mt-10 p-6 bg-white h-[9999px] rounded-t-4xl">
-          <div class="overflow-x-auto w-full">
-            <div class="min-w-[600px] mx-auto">
+        <div className="-mt-10 p-6 bg-white dark:bg-black dark:text-gray-100 rounded-t-4xl flex-grow flex flex-col relative">
+          <div className="overflow-x-auto w-full flex-grow">
+            <div className="min-w-[600px] mx-auto">
               <Kalender />
             </div>
           </div>

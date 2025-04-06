@@ -13,7 +13,7 @@ import FormPrediksi from "../component/fragments/formPrediksi";
   
   function Prediksi() {
     return (
-        <div className="lg:w-[71vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
+        <div className="lg:w-[71vw] lg:absolute lg:right-10 dark:shadow-gray-900 lg:mt-10 lg:shadow-2xl">
           <div className="dashboard-mobile lg:rounded-2xl w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
             <div className="p-5 flex justify-between items-center">
               <div className="">
@@ -32,9 +32,9 @@ import FormPrediksi from "../component/fragments/formPrediksi";
             </div>
           </div>
     
-          <div className="-mt-10 p-6 bg-white  rounded-t-4xl">
-            <div class="overflow-x-auto w-full">
-              <div class="w-full mx-auto">
+          <div className="-mt-10 p-6 bg-white dark:bg-black rounded-t-4xl">
+            <div className="overflow-x-auto w-full">
+              <div className="w-full mx-auto">
                     <FormPrediksi />
               </div>
             </div>

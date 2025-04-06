@@ -9,7 +9,7 @@ function ChatMessage({ chat }) {
             </div>
         )}
         <div className={`text-sm font-semibold leading-5 p-2 rounded-xl whitespace-pre-line
-            ${chat.role === "model" ? "bg-gray-100 text-gray-600  ml-10 -mt-4" : "mt-4 bg-primary  text-white"}`}>
+            ${chat.role === "model" ? "bg-gray-100 dark:bg-gray-800 dark:text-gray-300 text-gray-600  ml-10 -mt-4" : "mt-4 bg-primary  text-white"}`}>
             <ReactMarkdown>{chat.text}</ReactMarkdown>
         </div>
     </div>

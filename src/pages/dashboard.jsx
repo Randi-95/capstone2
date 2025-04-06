@@ -1,11 +1,11 @@
-import {  LogOut,AtSign,CreditCard, User } from "react-feather"
-import { useState, useEffect, userRef,} from "react"
-import SalesChart from "../component/fragments/SalesChart"
-import Kalender from "../component/fragments/calender"
-import Sidebar from "../component/fragments/sidebar"
-import { getProfil } from "../services/auth"
-import { useNavigate } from "react-router-dom"
-import NavDashboard from "../component/fragments/___navDashboard"
+import {  LogOut,AtSign,CreditCard, User } from "react-feather";
+import { useState, useEffect, userRef,} from "react";
+import SalesChart from "../component/fragments/SalesChart";
+import Kalender from "../component/fragments/calender";
+import Sidebar from "../component/fragments/sidebar";
+import { getProfil } from "../services/auth";
+import { useNavigate } from "react-router-dom";
+import NavDashboard from "../component/fragments/___navDashboard";
 
 
 const Dashboard = () => {
@@ -39,17 +39,17 @@ const Dashboard = () => {
         } else {
             navigate("/login");
         }
-    }, [])
+    }, []);
 
     return(
-        <div className="flex h-screen bg-gray-100">
+        <div className="flex h-screen bg-gray-100 dark:bg-gray-900">
             <Sidebar></Sidebar>
        
-            <div className="bg-gray-100 lg:ml-[300px] w-full ">
+            <div className="bg-gray-100 dark:bg-black lg:ml-[300px] w-full">
                 <div className="p-4 bg-gray-100">    
                     <NavDashboard/>
                     <div className="grid md:grid-cols-3 gap-4  mt-20 md:mt-2 ">
-                        <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                        <div className="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
                             <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
                                 <span className="text-xl">💰</span>
                             </div>
@@ -60,7 +60,7 @@ const Dashboard = () => {
                             <div className="bg-green-300  text-green-600 text-sm w-fit font-normal px-2 py-1 rounded-2xl">▲ 8.12%</div>
                                 <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
                         </div>
-                        <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                        <div className="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
                             <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
                                 <span className="text-xl">💰</span>
                             </div>
@@ -71,7 +71,7 @@ const Dashboard = () => {
                             <div className="bg-green-300  text-green-600 text-sm w-fit font-normal px-2 py-1 rounded-2xl">▲ 8.12%</div>
                                 <p className="text-gray-600 text-sm">total pemasukkan bulan ini</p>
                         </div>
-                        <div class="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
+                        <div className="bg-white max-w-[1000px] w-auto shadow-md rounded-xl p-6 flex flex-col gap-2">
                             <div className="h-10 w-10 bg-purple-100 flex items-center justify-center rounded-[50%]">
                                 <span className="text-xl">💰</span>
                             </div>
@@ -93,7 +93,7 @@ const Dashboard = () => {
                     </div>
                     
                     <div className="grid grid-cols-1 lg:grid-cols-[1.5fr_1fr] gap-2 mt-2 ">
-                        <div className="bg-white shadow-lg rounded-xl p-5 mt-6 border border-gray-100">
+                        <div className="bg-white dark:bg-black shadow-lg rounded-xl p-5 mt-6 border border-gray-100">
                             <div className="flex justify-between items-center mb-4">
                                 <h3 className="font-bold text-lg">Transaksi Terbaru</h3>
                                 <button className="text-blue-600 text-sm hover:underline">Lihat Semua</button>

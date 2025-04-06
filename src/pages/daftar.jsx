@@ -3,6 +3,7 @@ import DarkModeToggle from "../component/elements/darkMode.jsx";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { register } from "../services/auth.js";
+import { ArrowLeft } from "react-feather";
 
 function Registrasi() {
   const [successRegister, setSuccessRegister] = useState("");
@@ -46,6 +47,11 @@ function Registrasi() {
       <div className="container-login grid lg:grid-cols-2  items-center px-2 lg:px-10 ">
         <div className="login lg:px-15">
           <div className="absolute top-4 left-4 ">
+            <Link to="/login">
+              <ArrowLeft className="text-primary size-8" />
+            </Link>
+          </div>
+          <div className="absolute top-4 right-4 ">
             <DarkModeToggle />
           </div>
           <img src="/img/logo-capstone.png" alt="" className="w-[60px]" />

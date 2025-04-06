@@ -20,6 +20,7 @@ import { useNavigate } from "react-router-dom";
 import { getProfil } from "../services/auth";
 import url from "../services/api_key";
 import axios from "axios";
+import DarkModeToggle from "../component/elements/darkMode";
 
 function DashboardMobile() {
   const navigate = useNavigate();
@@ -102,7 +103,7 @@ function DashboardMobile() {
   }, []);
 
   return (
-    <div className="h-[9999px] lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl">
+    <div className="h-[9999px] lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl dark:bg-black">
       <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center lg:shadow-xl lg:rounded-t-2xl">
         <div className="p-5 flex justify-between items-center">
           <div>
@@ -116,18 +117,19 @@ function DashboardMobile() {
             <Link to="/Profile">
                <User className="text-white" />
             </Link>
+            <DarkModeToggle className="text-white" />
           </div>
         </div>
 
-        <div className="w-[90%] pb-3 bg-white border-[1.4px] shadow-xl border-[#d9d7d7] mx-auto mt-10 rounded-lg">
+        <div className="w-[90%] pb-3 bg-white dark:bg-gray-800 border-[1.4px] shadow-xl dark:shadow-gray-900 border-[#d9d7d7] dark:border-gray-700 mx-auto mt-10 rounded-lg">
           <div className="grid grid-cols-[1fr_1.2fr]">
-            <div className="pr-4 border-r-[1px] h-fit border-[#d9d7d7] mt-1 w-full">
+            <div className="pr-4 border-r-[1px] h-fit border-[#d9d7d7] dark:border-gray-700 mt-1 w-full">
               <div className="flex items-center gap-1 p-2">
                 <img src="/img/logo-capstone.png" alt="" className="w-8" />
-                <p className="text-[#272727] font-bold">BALANCE</p>
+                <p className="text-[#272727] dark:text-white font-bold">BALANCE</p>
               </div>
               <div className="px-3">
-                <p className="text-[#272727] font-bold text-md">
+                <p className="text-[#272727] dark:text-white font-bold text-md">
                   {summaryTransactions.saldo_sekarang}
                 </p>
               </div>
@@ -135,31 +137,31 @@ function DashboardMobile() {
             <div className="h-20 w-full justify-center flex items-center gap-2">
               <div className="flex flex-col gap-2 items-center">
                 <BarChart className="text-primary" />
-                <p className="text-[#696666] text-xs font-bold">Grafik</p>
+                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">Grafik</p>
               </div>
               <div className="flex flex-col gap-2 items-center">
                 <DollarSign className="text-primary" />
-                <p className="text-[#696666] text-xs font-bold">Keuangan</p>
+                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">Keuangan</p>
               </div>
               <Link to="/Riwayat">
                 <div className="flex flex-col gap-2 items-center">
                   <Clock className="text-primary" />
-                  <p className="text-[#696666] text-xs font-bold">Riwayat</p>
+                  <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">Riwayat</p>
                 </div>
               </Link>
             </div>
           </div>
-          <div className="w-full border-t-[1px] border-[#d9d7d7] grid grid-cols-[1fr_1.2fr]">
+          <div className="w-full border-t-[1px] border-[#d9d7d7] dark:border-gray-700 grid grid-cols-[1fr_1.2fr]">
             <div className="flex gap-3 mt-2 ml-2">
               <Link to="/Keuangan">
                 <div className="flex gap-1 ml-1 items-center">
                   <Plus className="bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] p-1 size-6 rounded-full text-white" />
-                  <p className="text-xs text-[#696666]">Tambah Transaksi</p>
+                  <p className="text-xs text-[#696666] dark:text-gray-300">Tambah Transaksi</p>
                 </div>
               </Link>
             </div>
             <div className="flex items-center justify-center mt-2">
-              <div className="flex items-center justify-center gap-1 border border-[#d9d7d7] p-1 px-2 rounded-xl bg-gradient-to-r from-[#7f5efd] to-[#4f9efd]">
+              <div className="flex items-center justify-center gap-1 border border-[#d9d7d7] dark:border-gray-700 p-1 px-2 rounded-xl bg-gradient-to-r from-[#7f5efd] to-[#4f9efd]">
                 <img
                   src="/img/logo-capstonewhite.png"
                   alt=""
@@ -180,7 +182,7 @@ function DashboardMobile() {
 
       <div className="p-4 mt-20 z-20">
         <div className="judul flex items-center justify-between">
-          <h2 className="text-gray-800 font-bold text-2xl">Transaksi</h2>
+          <h2 className="text-gray-800 dark:text-white font-bold text-2xl">Transaksi</h2>
           <Link to="/Riwayat">
             <p className="text-primary text-sm font-semibold">Lihat Semua</p>
           </Link>
@@ -188,8 +190,8 @@ function DashboardMobile() {
 
         <div className="flex flex-col gap-4 mt-5">
           {historyTransactions.length === 0 ? (
-            <div className="text-center py-4 bg-gray-100 rounded-lg">
-              <p className="text-gray-600 font-medium">
+            <div className="text-center py-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <p className="text-gray-600 dark:text-gray-300 font-medium">
                 Belum ada transaksi. Mulai catat keuanganmu sekarang!
               </p>
               <Link
@@ -210,10 +212,10 @@ function DashboardMobile() {
                   )}
 
                   <div className="flex flex-col ml-2">
-                    <h2 className="text-xl font-medium">
+                    <h2 className="text-xl font-medium dark:text-white">
                       {history.description}
                     </h2>
-                    <p className="text-sm text-gray-400">
+                    <p className="text-sm text-gray-400 dark:text-gray-300">
                       {history.transaction_date}
                     </p>
                   </div>
@@ -227,7 +229,7 @@ function DashboardMobile() {
                   >
                     {history.amount}
                   </h2>
-                  <p className="text-sm text-gray-400 font-semibold">
+                  <p className="text-sm text-gray-400 dark:text-gray-300 font-semibold">
                     {history.type}
                   </p>
                 </div>
@@ -238,7 +240,7 @@ function DashboardMobile() {
       </div>
 
       <div className="p-2 cursor-grab">
-        <h2 className="text-gray-800 font-bold text-2xl mb-4">Fitur</h2>
+        <h2 className="text-gray-800 dark:text-white font-bold text-2xl mb-4">Fitur</h2>
         <Swiper
           modules={[Pagination]}
           pagination={{ clickable: true }}

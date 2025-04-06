@@ -35,18 +35,18 @@ function FormChatbot({ chatHistory, setChatHistory, generateBotResponse }) {
     };
 
     return (
-        <form className="chat-form rounded-xl bg-gray-200 py-4 mx-2" onSubmit={handleFormSubmit}>
+        <form className="chat-form rounded-xl bg-gray-200 dark:bg-gray-800 py-4 mx-2" onSubmit={handleFormSubmit}>
             <div className="flex px-10 w-full">
                 <textarea
                     ref={inputRef}
                     placeholder="Tanya..."
-                    className="message-input w-full mr-4 outline-0 text-md font-semibold"
+                    className="message-input w-full mr-4 outline-0 text-md font-semibold dark:text-gray-300"
                     required
                     rows={2}
                     onKeyDown={handleKeyDown}
                 />
                 <button type="submit">
-                    <Send className="text-gray-600" />
+                    <Send className="text-gray-600 dark:text-gray-300" />
                 </button>
             </div>
         </form>

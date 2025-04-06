@@ -99,6 +99,22 @@ const Grafik = () => {
     }
   }, [historyTransactions]);
 
+  const CustomTooltip = ({ active, payload, label }) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-white dark:bg-gray-800 p-2 border border-gray-200 dark:border-gray-700 rounded shadow-md">
+          <p className="text-gray-700 dark:text-gray-200">{`Tanggal: ${label}`}</p>
+          {payload.map((entry, index) => (
+            <p key={`item-${index}`} style={{ color: entry.color }}>
+              {`${entry.name}: Rp ${entry.value.toLocaleString("id-ID")}`}
+            </p>
+          ))}
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <div>
       <ResponsiveContainer  height={300}>
@@ -106,16 +122,16 @@ const Grafik = () => {
           <CartesianGrid strokeDasharray="3 3" />
           <XAxis dataKey="tanggal" />
           <YAxis />
-          <Tooltip />
-          <Legend />
-          <Line type="monotone" dataKey="pemasukan" stroke="green" />
-          <Line type="monotone" dataKey="pengeluaran" stroke="red" />
-          <Line type="monotone" dataKey="saldo" stroke="blue" />
+          <Tooltip content={<CustomTooltip />} />
+          <Legend wrapperStyle={{ color: 'var(--color-text, #333)' }} className="dark:text-gray-300" />
+          <Line type="monotone" dataKey="pemasukan" stroke="#4ade80" strokeWidth={2} dot={{ stroke: '#4ade80', strokeWidth: 2 }} />
+          <Line type="monotone" dataKey="pengeluaran" stroke="#f87171" strokeWidth={2} dot={{ stroke: '#f87171', strokeWidth: 2 }} />
+          <Line type="monotone" dataKey="saldo" stroke="#60a5fa" strokeWidth={2} dot={{ stroke: '#60a5fa', strokeWidth: 2 }} />
         </LineChart>
       </ResponsiveContainer>
 
-      <h2 style={{ textAlign: "center", marginTop: "10px" }}>
-        Saldo Sekarang: <span style={{ color: "blue" }}>Rp {saldoAkhir.toLocaleString("id-ID")}</span>
+      <h2 className="text-center mt-6 text-gray-800 dark:text-white font-medium text-lg">
+        Saldo Sekarang: <span className="text-blue-500 dark:text-blue-400 font-semibold">Rp {saldoAkhir.toLocaleString("id-ID")}</span>
       </h2>
     </div>
   );
