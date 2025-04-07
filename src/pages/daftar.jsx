@@ -4,13 +4,16 @@ import { Link } from "react-router-dom";
 import { useEffect, useRef, useState } from "react";
 import { register } from "../services/auth.js";
 import { ArrowLeft } from "react-feather";
+import { Spinner } from "../component/elements/loader.jsx";
 
 function Registrasi() {
   const [successRegister, setSuccessRegister] = useState("");
   const [errorRegister, setErrorRegister] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
 
   const handleRegister = (event) => {
     event.preventDefault();
+    setIsLoading(true)
     const data = {
       username: usernameRef.current.value,
       email: emailRef.current.value,
@@ -20,12 +23,14 @@ function Registrasi() {
       if (status) {
         setSuccessRegister(res);
         setErrorRegister("")
+        setIsLoading(false)
         usernameRef.current.value = "";
         emailRef.current.value = "";
         passwordRef.current.value = "";
       } else {
         setErrorRegister(res)
         setSuccessRegister("")
+        setIsLoading(false)
         usernameRef.current.value = "";
         emailRef.current.value = "";
         passwordRef.current.value = "";
@@ -44,6 +49,7 @@ function Registrasi() {
 
   return (
     <div className="login h-screen dark:bg-[#0D1117]  flex flex-col justify-center lg:flex-row lg:items-center">
+      {isLoading && <Spinner />}
       <div className="container-login grid lg:grid-cols-2  items-center px-2 lg:px-10 ">
         <div className="login lg:px-15">
           <div className="absolute top-4 left-4 ">

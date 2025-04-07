@@ -31,7 +31,7 @@ import FormPrediksi from "../component/fragments/formPrediksi";
             </div>
           </div>
     
-          <div className="-mt-10 p-6 bg-white dark:bg-black rounded-t-4xl">
+          <div className="-mt-10 p-6 bg-white dark:bg-slate-800 rounded-t-4xl">
             <div className="overflow-x-auto w-full">
               <div className="w-full mx-auto">
                     <FormPrediksi />

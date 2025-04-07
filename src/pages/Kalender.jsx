@@ -8,19 +8,8 @@ import interactionPlugin from "@fullcalendar/interaction";
 import axios from "axios";
 import { getProfil } from "../services/auth";
 import url from "../services/api_key";
-
-const LoaderKalender = () => {
-  return (
-    <div className="grid grid-cols-7 gap-3 mt-6 animate-pulse min-h-[500px]">
-      {Array.from({ length: 28 }).map((_, i) => (
-        <div
-          key={i}
-          className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-xl"
-        />
-      ))}
-    </div>
-  );
-};
+import { LoaderKalender } from "../component/elements/loader";
+import "../index.css"
 
 function KalenderPage() {
   const token = localStorage.getItem("token");
@@ -84,8 +73,7 @@ function KalenderPage() {
         </div>
       </div>
 
-      {/* WRAPPER untuk loader dan calendar */}
-      <div className="-mt-10 p-6 bg-white dark:bg-black dark:text-gray-100 rounded-t-4xl min-h-[70vh]">
+      <div className="-mt-10 px-6 pt-6 pb-40 md:pb-30 bg-white dark:bg-slate-800 dark:text-gray-100 rounded-t-4xl min-h-[70vh]">
         <div className="w-full">
           {isLoading ? (
             <div className="w-full flex justify-center items-center">

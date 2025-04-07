@@ -21,6 +21,7 @@ import {
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import { addTransaction } from "../services/transactions";
+import { Spinner } from "../component/elements/loader";
 
 function FormKeuangan() {
   const deskripsiRef = useRef(null);
@@ -29,12 +30,30 @@ function FormKeuangan() {
   const tanggalRef = useRef(null);
   const [errorMessage, setError] = useState("");
   const [succesMessage, setSucces] = useState("");
+  const [isLoading, setIsLoading] = useState(false)
 
   const navigate = useNavigate();
 
   const handlerTransaksi = (e) => {
     const token = localStorage.getItem("token");
     e.preventDefault();
+    setIsLoading(true)
+
+    const rawJumlah = jumlahRef.current.value.trim();
+
+
+    if (!/^\d+$/.test(rawJumlah)) {
+      alert("Jumlah hanya boleh berupa angka tanpa simbol atau huruf");
+      return;
+    }
+
+    const jumlah = parseInt(jumlahRef.current.value, 10);
+
+    if (isNaN(jumlah) || jumlah <= 0) {
+      alert("Jumlah harus berupa angka lebih dari 0");
+      return;
+    }
+
     const data = {
       deskripsi: deskripsiRef.current.value,
       jumlah: jumlahRef.current.value,
@@ -53,8 +72,10 @@ function FormKeuangan() {
       addTransaction(data, (status, res) => {
         if (status) {
           setSucces(res);
+          setIsLoading(false)
         } else {
           setError(res);
+          setIsLoading(false)
         }
       });
     } else {
@@ -64,6 +85,7 @@ function FormKeuangan() {
 
   return (
     <div className="dark:bg-black min-h-screen">
+      {isLoading && <Spinner />}
       <div className="max-w-md mx-auto bg-white dark:bg-black rounded-2xl p-6">
         <div className="mb-10 flex items-center justify-between">
           <Link to="/Dashboard">
@@ -112,13 +134,24 @@ function FormKeuangan() {
               ref={typeRef}
               className="w-full px-3 py-2 border dark:border-gray-600 dark:text-white dark:bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             >
-              <option value="" disabled selected className="text-xs dark:text-gray-300">
+              <option
+                value=""
+                disabled
+                selected
+                className="text-xs dark:text-gray-300"
+              >
                 Pilih Kategori
               </option>
-              <option value="pemasukan" className="text-green-500 dark:text-green-400 text-xs">
+              <option
+                value="pemasukan"
+                className="text-green-500 dark:text-green-400 text-xs"
+              >
                 Pemasukan
               </option>
-              <option value="pengeluaran" className="text-red-500 dark:text-red-400 text-xs">
+              <option
+                value="pengeluaran"
+                className="text-red-500 dark:text-red-400 text-xs"
+              >
                 Pengeluaran
               </option>
             </select>

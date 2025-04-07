@@ -67,19 +67,6 @@ export const LoaderSaldo = (props) => {
   );
 };
 
-// export const LoaderKalender = () => {
-//   return (
-//     <div className="animate-pulse grid grid-cols-7 gap-3 mt-6">
-//       {Array.from({ length: 28 }).map((_, i) => (
-//         <div
-//           key={i}
-//           className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-xl"
-//         />
-//       ))}
-//     </div>
-//   );
-// };
-
 export const LoaderGrafik = () => {
   return (
     <div className="w-full flex flex-col items-center justify-center">
@@ -93,6 +80,30 @@ export const LoaderGrafik = () => {
       </div>
       <div className="flex justify-between gap-x-4 mt-3">
         <div className="h-6 w-30 bg-gray-300 dark:bg-gray-700 rounded" />
+      </div>
+    </div>
+  );
+};
+
+export const LoaderKalender = () => {
+  return (
+    <div className="grid grid-cols-7 gap-3 mt-6 animate-pulse min-h-[500px]">
+      {Array.from({ length: 28 }).map((_, i) => (
+        <div
+          key={i}
+          className="aspect-square bg-gray-200 dark:bg-gray-700 rounded-xl"
+        />
+      ))}
+    </div>
+  );
+};
+
+export const Spinner = () => {
+  return (
+    <div className="fixed inset-0 z-50 bg-white/80 dark:bg-[#0D1117]/80 flex justify-center items-center">
+      <div className="relative w-40 h-40">
+        <div className="absolute inset-0 rounded-full border-8 border-violet-300 opacity-30"></div>
+        <div className="absolute inset-0 rounded-full border-t-8 border-violet-500 animate-spin"></div>
       </div>
     </div>
   );

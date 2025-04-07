@@ -72,8 +72,8 @@ function FormPrediksi() {
   };
 
   return (
-    <div className="p-4 dark:bg-black">
-      <div className="flex items-center p-5 w-[100%] m-auto h-[20vh] bg-gray-50 dark:bg-gray-800 shadow-sm rounded-xl">
+    <div className="p-4 dark:bg-slate-800">
+      <div className="flex items-center p-5 w-[100%] m-auto h-[20vh] bg-gray-50 dark:bg-slate-900 shadow-sm rounded-xl">
         <div className="flex items-center justify-center w-full rounded-xl h-[15vh] bg-gradient-to-b from-gray-200 to-gray-10 dark:from-gray-700 dark:to-gray-800">
           <h1 className="font-semibold text-4xl dark:text-white">{prediksi} Bulan</h1>
         </div>
@@ -81,51 +81,51 @@ function FormPrediksi() {
 
       <div className="grid grid-cols-3 grid-rows-4 gap-6 py-6">
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(1)}
         >1</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(2)}
         >2</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(3)}
         >3</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(4)}
         >4</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(5)}
         >5</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(6)}
         >6</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(7)}
         >7</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(8)}
         >8</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(9)}
         >9</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4 flex justify-center"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4 flex justify-center"
           onClick={handleClear}
         ><XCircle className="dark:text-white" /></div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4"
           onClick={() => handleNumberClick(0)}
         >0</div>
         <div 
-          className="bg-gray-100 dark:bg-gray-800 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4 flex justify-center"
+          className="bg-gray-100 dark:bg-gray-900 cursor-pointer font-bold text-xl text-center rounded-xl text-black dark:text-white py-4 flex justify-center"
           onClick={handleDelete}
         ><Delete className="dark:text-white" /></div>
       </div>

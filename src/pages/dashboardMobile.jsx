@@ -115,10 +115,10 @@ function DashboardMobile() {
   }, []);
 
   return (
-    <div className="h-[9999px] lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl dark:bg-black">
+    <div className="h-auto lg:max-w-[70vw] lg:absolute lg:right-10 lg:mt-10 lg:shadow-2xl dark:bg-slate-900">
       <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center lg:shadow-xl lg:rounded-t-2xl">
         <div className="p-5 flex justify-between items-center">
-          <div>
+          <div> 
             <p className="text-white text-sm font-light">Selamat datang</p>
             <h2 className="text-white font-bold text-lg -mt-1">
               {profil?.username || "Pengguna"}
@@ -129,7 +129,7 @@ function DashboardMobile() {
             <Link to="/Profile">
               <User className="text-white" />
             </Link>
-            <DarkModeToggle className="text-white" />
+            <DarkModeToggle colorDark={"white"} />
           </div>
         </div>
 
@@ -210,7 +210,7 @@ function DashboardMobile() {
         <NavMobile />
       </div>
 
-      <div className="p-4 mt-20 z-20">
+      <div className="p-6 mt-20 z-20">
         <div className="judul flex items-center justify-between">
           <h2 className="text-gray-800 dark:text-white font-bold text-2xl">
             Transaksi
@@ -289,7 +289,7 @@ function DashboardMobile() {
         </div>
       </div>
 
-      <div className="p-2 cursor-grab">
+      <div className="px-6 pb-40 md:pb-30 cursor-grab">
         <h2 className="text-gray-800 dark:text-white font-bold text-2xl mb-4">
           Fitur
         </h2>
