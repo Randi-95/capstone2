@@ -68,7 +68,7 @@ function DashboardMobile() {
     const handlerSummary = async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get(`${url}/transactions/${userData.id}`, {
+        const res = await axios.get(`${url}/transactions/summary`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -90,7 +90,7 @@ function DashboardMobile() {
       try {
         setIsLoading(true);
         const res = await axios.get(
-          `${url}/transactions/detail/${userData.id}`,
+          `${url}/transactions/detail`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -112,6 +112,9 @@ function DashboardMobile() {
 
     handlerSummary();
     handlerHistory();
+    console.log(isError)
+    console.log(historyTransactions)
+    
   }, []);
 
   return (
@@ -220,6 +223,8 @@ function DashboardMobile() {
           </Link>
         </div>
 
+
+
         <div className="flex flex-col gap-4 mt-5">
           {isLoading ? (
             <>
@@ -287,7 +292,11 @@ function DashboardMobile() {
             ))
           )}
         </div>
+
+        
       </div>
+
+
 
       <div className="px-6 pb-40 md:pb-30 cursor-grab">
         <h2 className="text-gray-800 dark:text-white font-bold text-2xl mb-4">

@@ -37,7 +37,6 @@ function FormKeuangan() {
   const handlerTransaksi = (e) => {
     const token = localStorage.getItem("token");
     e.preventDefault();
-    setIsLoading(true)
 
     const rawJumlah = jumlahRef.current.value.trim();
 
@@ -53,6 +52,8 @@ function FormKeuangan() {
       alert("Jumlah harus berupa angka lebih dari 0");
       return;
     }
+
+    setIsLoading(true)
 
     const data = {
       deskripsi: deskripsiRef.current.value,

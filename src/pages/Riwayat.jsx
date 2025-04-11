@@ -28,7 +28,7 @@ const Riwayat = () => {
     const handlerSummary = async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get(`${url}/transactions/${userData.id}`, {
+        const res = await axios.get(`${url}/transactions/summary`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -49,7 +49,7 @@ const Riwayat = () => {
       try {
         setIsLoading(true);
         const res = await axios.get(
-          `${url}/transactions/detail/${userData.id}`,
+          `${url}/transactions/detail`,
           {
             headers: {
               Authorization: `Bearer ${token}`,

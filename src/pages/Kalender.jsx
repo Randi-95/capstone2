@@ -9,7 +9,7 @@ import axios from "axios";
 import { getProfil } from "../services/auth";
 import url from "../services/api_key";
 import { LoaderKalender } from "../component/elements/loader";
-import "../index.css"
+import "../index.css";
 
 function KalenderPage() {
   const token = localStorage.getItem("token");
@@ -24,7 +24,7 @@ function KalenderPage() {
     const handlerHistory = async () => {
       try {
         setIsLoading(true);
-        const res = await axios.get(`${url}/transactions/detail/${userData.id}`, {
+        const res = await axios.get(`${url}/transactions/detail`, {
           headers: { Authorization: `Bearer ${token}` },
         });
 
@@ -60,9 +60,12 @@ function KalenderPage() {
       <div className="dashboard-mobile lg:rounded-2xl w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center">
         <div className="p-5 flex justify-between items-center">
           <div>
-            <h2 className="text-white font-bold text-lg -mt-1">Kalender Keuangan</h2>
+            <h2 className="text-white font-bold text-lg -mt-1">
+              Kalender Keuangan
+            </h2>
             <p className="text-white text-sm font-light">
-              Semua Pemasukan dan Jumlah Pengeluaran akan dicatat di Kalender Keuangan
+              Semua Pemasukan dan Jumlah Pengeluaran akan dicatat di Kalender
+              Keuangan
             </p>
           </div>
           <div className="flex gap-2">
@@ -88,12 +91,16 @@ function KalenderPage() {
               editable={true}
               selectable={true}
               events={events}
+              eventDisplay="block"
+              dayMaxEventRows={true}
               eventContent={(arg) => (
                 <div className="flex flex-col p-1">
-                  <div className="font-semibold">
+                  <div className="font-semibold text-sm leading-snug whitespace-normal break-words">
                     {arg.event.extendedProps.description}
                   </div>
-                  <div className="text-xs truncate">{arg.event.title}</div>
+                  <div className="text-xs whitespace-normal break-words">
+                    {arg.event.title}
+                  </div>
                 </div>
               )}
               headerToolbar={{
@@ -103,8 +110,7 @@ function KalenderPage() {
               }}
               height="auto"
               contentHeight="auto"
-              aspectRatio={1.35}
-              className="dark:fc-theme-standard"
+              aspectRatio={1.2}
             />
           )}
         </div>

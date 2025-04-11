@@ -32,7 +32,7 @@ const Grafik = () => {
     const handlerSummary = async () => {
       try {
         setIsLoading(true)
-        const res = await axios.get(`${url}/transactions/${userData.id}`, {
+        const res = await axios.get(`${url}/transactions/summary`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
@@ -50,7 +50,7 @@ const Grafik = () => {
 
     const handlerHistory = async () => {
       try {
-        const res = await axios.get(`${url}/transactions/detail/${userData.id}`, {
+        const res = await axios.get(`${url}/transactions/detail`, {
           headers: {
             Authorization: `Bearer ${token}`,
           },
