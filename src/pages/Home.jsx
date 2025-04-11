@@ -6,7 +6,6 @@ import { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import { Footer } from '../component/fragments/footer';
 
-// halo
 
 const faqs = [
   {
@@ -22,8 +21,6 @@ const faqs = [
     answer: "Anda dapat menghubungi tim support kami melalui email atau fitur live chat yang tersedia di dalam aplikasi."
   }
 ];
-
-// tes
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -237,7 +234,6 @@ function Tutorial(){
       <div className="container mx-auto">
         <div className="judul-tutor flex flex-col items-center justify-center px-2">
           <h1 className="text-[#374151] dark:text-white font-[700] text-3xl md:text-5xl mt-2 text-center"> Cara Menggunakan <span className="text-primary">Smart Financial Tracker</span></h1>
-          {/* <p className='text-[#374151] mt-2 font-[500] text-sm text-center md:w-full md:text-xl'>Ikuti langkah-langkah ini untuk mulai mengelola keuangan Anda dengan Smart Financial Tracker.</p> */}
         </div>
         <CardTutor></CardTutor>
       </div>
@@ -250,7 +246,6 @@ function Benefit() {
         <div className="max-w-6xl mx-auto p-6 dark:bg-black">
         <div className="judul-tutor flex flex-col items-center justify-center">
           <h1 className="text-[#374151] dark:text-white font-[700] text-3xl md:text-5xl mt-2 text-center"> Benefit <span className="text-primary">Financial Tracker</span></h1>
-          {/* <p className='text-[#374151] mt-2 font-[500] text-center text-sm md:text-xl'>Benefit Benefit yang didapatkan dalam menggunakan aplikasi ini.</p> */}
         </div>
         <div className="flex justify-center md:px-10 mt-[60px]">
             <div className="flex flex-col gap-8">

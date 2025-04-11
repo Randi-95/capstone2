@@ -1,7 +1,7 @@
 const articles = [
   {
     id: 1,
-    foto: "img/artikel.webp",
+    foto: "img/saving-goals.png",
     title: "Cara Mengatur Keuangan Pribadi",
     subTitle: "untuk masa depan yang baik",
     summary:
@@ -81,7 +81,7 @@ const articles = [
   
   {
     id: 2,
-    foto: "img/artikel.webp",
+    foto: "img/memulai-investasi.png",
     title: "Cara Memulai Investasi untuk Anak Muda",
     subTitle: "Langkah-langkah penting untuk memulai investasi.",
     summary:
@@ -147,7 +147,7 @@ const articles = [
   },
   {
     id: 3,
-    foto: "img/artikel.webp",
+    foto: "img/5_kesalahan.png",
     title: "5 Kesalahan Finansial yang Harus Dihindari Anak Muda",
     subTitle: "Hindari kesalahan ini untuk masa depan finansial yang lebih stabil.",
     summary:
@@ -218,7 +218,7 @@ const articles = [
   },
   {
     id: 4,
-    foto: "img/artikel.webp",
+    foto: "img/membangun-mindset.png",
     title: "Membangun Mindset Finansial",
     subTitle: "yang Benar untuk Masa Depan",
     summary:
@@ -310,7 +310,7 @@ const articles = [
   },
   {
     id: 5,
-    foto: "img/artikel.webp",
+    foto: "img/efek-compounding.png",
     title: "Apa Itu Efek Compounding? ",
     subTitle: "Cara Memanfaatkannya untuk Kebebasan Finansial",
     summary:
@@ -381,7 +381,7 @@ const articles = [
   },
   {
     id: 6,
-    foto: "img/artikel.webp",
+    foto: "img/dana darurat.png",
     title: "Kenapa Harus Punya Dana Darurat?",
     subTitle: "Pentingnya Menabung untuk Keadaan Tak Terduga",
     summary:
@@ -456,7 +456,7 @@ const articles = [
   },
   {
     id: 7,
-    foto: "img/artikel.webp",
+    foto: "img/financial-freedom.png",
     title: "Cara Mencapai Financial Freedom Sebelum Usia 30",
     subTitle: "Strategi cerdas untuk mencapai kebebasan finansial lebih cepat.",
     summary:
