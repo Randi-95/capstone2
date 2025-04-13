@@ -77,7 +77,7 @@ function KalenderPage() {
       </div>
 
       <div className="-mt-10 px-6 pt-6 pb-40 md:pb-30 bg-white dark:bg-slate-800 dark:text-gray-100 rounded-t-4xl min-h-[70vh]">
-        <div className="w-full">
+        <div className="overflow-x-auto">
           {isLoading ? (
             <div className="w-full flex justify-center items-center">
               <LoaderKalender />
@@ -85,6 +85,7 @@ function KalenderPage() {
           ) : isError ? (
             <p className="text-center text-red-500 mt-10">Gagal memuat data</p>
           ) : (
+            <div className="min-w-[600px]">
             <FullCalendar
               plugins={[dayGridPlugin, interactionPlugin]}
               initialView="dayGridMonth"
@@ -112,6 +113,7 @@ function KalenderPage() {
               contentHeight="auto"
               aspectRatio={1.2}
             />
+            </div>
           )}
         </div>
       </div>

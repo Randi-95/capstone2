@@ -63,7 +63,7 @@ function Profile() {
     navigate("/login");
   };
   return (
-    <div className="h-[9999px] dark:bg-black">
+    <div className="dark:bg-black">
       <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center ">
         
       </div>

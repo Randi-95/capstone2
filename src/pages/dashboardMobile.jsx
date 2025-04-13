@@ -128,7 +128,6 @@ function DashboardMobile() {
             </h2>
           </div>
           <div className="flex gap-2">
-            <Headphones className="text-white" />
             <Link to="/Profile">
               <User className="text-white" />
             </Link>

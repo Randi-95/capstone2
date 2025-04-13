@@ -6,9 +6,8 @@ import {
   import "swiper/css/navigation";
   import "swiper/css/pagination";
   import { Link } from "react-router-dom";
-  import { useState, useEffect } from "react";
-  import { useNavigate } from "react-router-dom";
-import FormPrediksi from "../component/fragments/formPrediksi";
+  import { Calendar } from "react-feather";
+import GrafikPrediksi from "../component/fragments/grafikPrediksi";
   
   function Prediksi() {
     return (
@@ -17,10 +16,10 @@ import FormPrediksi from "../component/fragments/formPrediksi";
             <div className="p-5 flex justify-between items-center">
               <div className="">
                 <h2 className="text-white font-bold text-lg -mt-1">
-                  Grafik Keuangan
+                  Prediksi Keuangan
                 </h2>
                 <p className="text-white text-sm font-light">
-                  menampilkan data pemasukan, pengeluaran, dan saldo keuangan dalam bentuk visual.
+                menganalisis data pemasukan dan pengeluaran untuk memprediksi kondisi keuangan di masa depan dalam bentuk visual.
                 </p>
               </div>
               <div className="flex gap-2">
@@ -33,9 +32,26 @@ import FormPrediksi from "../component/fragments/formPrediksi";
     
           <div className="-mt-10 p-6 bg-white dark:bg-slate-800 rounded-t-4xl">
             <div className="overflow-x-auto w-full">
-              <div className="w-full mx-auto">
-                    <FormPrediksi />
-              </div>
+                 <div>
+                            <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
+                              Tanggal Prediksi
+                            </label>
+                            <div className="relative">
+                              <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                                <Calendar className="text-gray-400 size-5" />
+                              </div>
+                              <input
+                                required
+                                type="date"
+                                className="w-full pl-10 pr-3 py-2 border border-primary dark:border-gray-600 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 appearance-none"
+                                placeholder="Pilih Tanggal"
+                              />
+                            </div>
+                          </div>
+
+                          <div className="mt-10">
+                           <GrafikPrediksi/>
+                          </div>
             </div>
           </div>
     
