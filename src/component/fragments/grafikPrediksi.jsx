@@ -3,14 +3,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { getProfil } from "../../services/auth";
 import {
-  LineChart,
-  Line,
+  ResponsiveContainer,
+  CartesianGrid,
   XAxis,
   YAxis,
-  CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
   BarChart,
   Bar,
 } from "recharts";
@@ -22,10 +20,17 @@ function GrafikPrediksi() {
   const [prediksiData, setPrediksiData] = useState(null);
   const [isLoading, setIsLoading] = useState(false);
   const [isError, setIsError] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
 
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
   const userData = getProfil(token);
+
+  // Fungsi untuk memformat mata uang dan mengonversi ke angka
+  const formatCurrency = (value) => {
+    const cleanValue = value.replace("Rp ", "").replace(/\./g, "").replace(",", ".");
+    return parseFloat(cleanValue);
+  };
 
   const fetchPrediksi = async () => {
     try {
@@ -48,18 +53,48 @@ function GrafikPrediksi() {
         const { tanggal, prediksi_saldo, batas_atas, batas_bawah } =
           res.data.data;
 
+        console.log(res.data.data);
+
         setPrediksiData([
           {
             tanggal,
-            "Saldo Prediksi": parseInt(prediksi_saldo?.replace(/\D/g, ""), 10),
-            "Batas Atas": parseInt(batas_atas?.replace(/\D/g, ""), 10),
-            "Batas Bawah": parseInt(batas_bawah?.replace(/\D/g, ""), 10),
+            "Saldo Prediksi": formatCurrency(prediksi_saldo),
+            "Batas Atas": formatCurrency(batas_atas),
+            "Batas Bawah": formatCurrency(batas_bawah),
           },
         ]);
+
+        console.log(prediksiData);
       }
     } catch (err) {
       console.error("Gagal memuat prediksi:", err);
       setIsError(true);
+
+      let finalMessage = "";
+
+      if (err.response?.data) {
+        const serverData = err.response.data;
+
+        if (typeof serverData === "string") {
+          finalMessage = serverData;
+        } else if (typeof serverData === "object") {
+          if (serverData.message) {
+            finalMessage = serverData.message;
+          } else if (serverData.detail) {
+            finalMessage = serverData.detail;
+          } else {
+            finalMessage = JSON.stringify(serverData);
+          }
+        } else {
+          finalMessage = "Terjadi kesalahan tidak diketahui.";
+        }
+      } else if (err.message) {
+        finalMessage = err.message;
+      } else {
+        finalMessage = "Terjadi kesalahan tidak diketahui.";
+      }
+
+      setErrorMessage(finalMessage);
     } finally {
       setIsLoading(false);
     }
@@ -107,7 +142,11 @@ function GrafikPrediksi() {
         <LoaderGrafik />
       ) : isError ? (
         <div className="bg-red-200 dark:bg-red-900 border border-red-200 dark:border-red-700 text-red-600 dark:text-red-300 rounded-xl p-4 text-center shadow-sm">
-          <p className="font-medium text-sm">Gagal Memprediksi Data Keuangan</p>
+          <p className="font-medium text-sm">
+            {typeof errorMessage === "object"
+              ? JSON.stringify(errorMessage)
+              : errorMessage}
+          </p>
           <button
             onClick={() => window.location.reload()}
             className="mt-3 text-sm text-white bg-red-500 hover:bg-red-600 transition px-4 py-1.5 rounded-lg"
