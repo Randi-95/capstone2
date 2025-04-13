@@ -78,7 +78,7 @@ const Riwayat = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 dark:bg-black p-4">
+    <div className="min-h-screen bg-gray-50  dark:bg-slate-900 p-4">
       <div className="container mx-auto max-w-md">
         <div className="mb-6 flex items-center justify-between">
           <Link to="/Dashboard">
@@ -91,7 +91,7 @@ const Riwayat = () => {
         </div>
 
         {isLoading ? (
-          <div className="bg-white rounded-xl dark:bg-gray-900 shadow-md dark:shadow-gray-900 p-6 mb-6 text-center">
+          <div className="bg-white rounded-xl dark:bg-gray-200 shadow-md dark:shadow-gray-900 p-6 mb-6 text-center">
             <h2 className="text-gray-500 dark:text-gray-300 text-sm mb-2">
               Total Balance
             </h2>
@@ -123,7 +123,7 @@ const Riwayat = () => {
             <p className="font-medium text-sm">Gagal memuat data.</p>
           </div>
         ) : (
-          <div className="bg-white rounded-xl dark:bg-gray-900 shadow-md dark:shadow-gray-900 p-6 mb-6 text-center">
+          <div className="bg-white rounded-xl dark:bg-gray-800 shadow-md dark:shadow-gray-900 p-6 mb-6 text-center">
             <h2 className="text-gray-500 dark:text-gray-300 text-sm mb-2">
               Total Balance
             </h2>
@@ -174,7 +174,7 @@ const Riwayat = () => {
         <div className="space-y-4">
           {historyTransactions.map((history) => (
             <div
-              className="bg-white dark:bg-gray-900 shadow-md dark:shadow-gray-900 rounded-xl p-4"
+              className="bg-white dark:bg-gray-800 shadow-md dark:shadow-gray-900 rounded-xl p-4"
               key={history.id}
             >
               <div className="flex items-center justify-between">

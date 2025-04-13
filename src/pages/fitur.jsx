@@ -6,7 +6,7 @@ import { Footer } from "../component/fragments/footer";
 function IsiFitur() {
   return (
     <div className="container">
-      <div className="max-w-6xl mx-auto p-6 dark:bg-black">
+      <div className="-mb-10 mx-auto p-6 dark:bg-black">
         <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="deskripsi-fitur order-2 md:order-1 flex flex-col  md:items-baseline">
             <h2 className="text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]">

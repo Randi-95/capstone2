@@ -45,7 +45,7 @@ import {
           </div>
         </div>
   
-        <div className="-mt-10 px-6 py-6 pb-40 md:pb-30 bg-white dark:bg-black rounded-t-4xl">
+        <div className="-mt-10 px-6 py-6 pb-40 md:pb-30 bg-white dark:bg-slate-900 rounded-t-4xl">
           <div className="overflow-x-auto w-full">
             <div className="w-full mx-auto">
               <Grafik />

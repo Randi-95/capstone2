@@ -8,6 +8,7 @@ import {
   ArrowDown,
   ArrowUp,
   Loader,
+  MessageCircle,
 } from "react-feather";
 import NavMobile from "../component/fragments/navMobile";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -166,9 +167,9 @@ function DashboardMobile() {
                 </p>
               </div>
               <div className="flex flex-col gap-2 items-center">
-                <DollarSign className="text-primary" />
+                <MessageCircle className="text-primary" />
                 <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
-                  Keuangan
+                  Chatbot
                 </p>
               </div>
               <Link to="/Riwayat">
