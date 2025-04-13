@@ -63,7 +63,7 @@ function Profile() {
     navigate("/login");
   };
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-slate-900">
       <div className="dashboard-mobile w-full h-50 bg-[url('/img/foto-mobile.png')] bg-cover bg-center ">
         
       </div>
@@ -85,6 +85,7 @@ function Profile() {
         </div>
       </div>
 
+      <Link to="/Riwayat">
       <div className="m-6 cursor-pointer mt-10 hover:bg-gray-100 dark:hover:bg-gray-800">
         <div className="flex justify-between border-b-1 border-gray-400 dark:border-gray-600 py-4 px-2">
           <div className="flex gap-2 ">
@@ -95,6 +96,7 @@ function Profile() {
           <ChevronRight className="text-gray-700 dark:text-gray-300" />
         </div>
       </div>
+      </Link>
 
       <Link to="/TentangFinancialTracker">
       <div className="m-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800">
@@ -102,7 +104,7 @@ function Profile() {
           <div className="flex gap-2 ">
             <HelpCircle className="text-gray-700 dark:text-gray-300" />
             <h2 className="font-semibold text-gray-700 dark:text-gray-300">
-              Tetang Financial Tracker
+              Tentang Financial Tracker
             </h2>
           </div>
 

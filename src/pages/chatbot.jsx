@@ -57,7 +57,7 @@ function Chatbot() {
     chatBodyRef.current.scrollTo({top: chatBodyRef.current.scrollHeight, behavior: "smooth"})
   }, [chatHistory])
   return (
-    <div className="lg:w-[70vw] pb-6 lg:absolute lg:right-10 dark:bg-black lg:mt-10 lg:shadow-2xl dark:shadow-gray-900">
+    <div className="lg:w-[70vw] pb-6 lg:absolute lg:right-10 dark:bg-slate-800 lg:mt-10 lg:shadow-2xl dark:shadow-gray-900">
       <div className="chatbot px-2">
         <div className="">
           <div className="mb-6 flex items-center justify-between p-4">
@@ -75,7 +75,7 @@ function Chatbot() {
               <div className="bg-primary flex items-center justify-center w-10 h-10 p-1 rounded-full">
                 <img src="/img/robot.svg" alt="" className="w-10" />
               </div>
-              <p className="text-gray-600 dark:text-gray-300 font-semibold text-sm leading-5 ml-10 -mt-4 bg-gray-100 dark:bg-gray-800 p-2 rounded-xl">
+              <p className="text-gray-600 dark:text-gray-300 font-semibold text-sm leading-5 ml-10 -mt-4 bg-gray-100 dark:bg-gray-600 p-2 rounded-xl">
                 Hello {user_data.username} 🙌 <br /> Bagaimana saya dapat membantu Anda hari
                 ini?
               </p>
@@ -86,7 +86,7 @@ function Chatbot() {
             ))}
           </div>
 
-          <div className="chatbot-form  w-full  lg:relative fixed bottom-0 right-0 left-0 py-4 bg-white dark:bg-black border-1 border-gray-50 dark:border-gray-800 shadow-lg">
+          <div className="chatbot-form  w-full  lg:relative fixed bottom-0 right-0 left-0 py-4 bg-white dark:bg-slate-800 border-1 border-gray-50 dark:border-gray-800 shadow-lg">
             <FormChatbot
               chatHistory={chatHistory}
               setChatHistory={setChatHistory}

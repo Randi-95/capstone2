@@ -15,11 +15,11 @@ function TentangFinancialTracker() {
           <p></p>
         </div>
 
-        <h4 className="text-base font-semibold mb-2">
+        <h4 className="text-base font-semibold mb-2  dark:text-gray-300">
           1. Tentang Financial Tracker
         </h4>
 
-        <p className="text-justify text-sm mb-4 leading-relaxed">
+        <p className="text-justify text-sm mb-4 leading-relaxed dark:text-gray-300">
           Generasi muda saat ini sering menghadapi tantangan dalam mengelola
           keuangan secara efektif. Kurangnya pemahaman mengenai alur pemasukan
           dan pengeluaran dapat memicu permasalahan finansial di masa depan.

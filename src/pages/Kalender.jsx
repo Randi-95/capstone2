@@ -85,7 +85,7 @@ function KalenderPage() {
           ) : isError ? (
             <p className="text-center text-red-500 mt-10">Gagal memuat data</p>
           ) : (
-            <div className="min-w-[600px]">
+            <div className="min-w-[600px] ">
             <FullCalendar
               plugins={[dayGridPlugin, interactionPlugin]}
               initialView="dayGridMonth"
