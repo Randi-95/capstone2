@@ -56,57 +56,6 @@ function FAQ() {
   );
 }
 
-function FiturUtama() {
-  return (
-    <div className="max-w-6xl mx-auto p-6 dark:bg-black">
-      <div className="container grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="deskripsi-fitur order-2 md:order-1 flex flex-col justify-center items-center md:items-baseline">
-            <h2 className='text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]'>Kendalikan Keuangan Anda dengan Mudah</h2>
-            <p className='text-lg md:text-xl mb-4 md:w-[80%] dark:text-gray-300'>Kelola keuangan Anda dengan dasbor interaktif yang memberikan tampilan jelas dan informatif. Pantau pemasukan dan pengeluaran dengan visualisasi data yang intuitif, sehingga Anda bisa mengambil keputusan finansial yang lebih baik.</p>
-            <ul className='mt-2'>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Lihat keuangan dalam satu tampilan</li>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Monitor pemasukan dan pengeluaran dengan mudah</li>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Visualisasi data yang informatif</li>
-            </ul>
-        </div>
-        <div className="foto-fitur order-1 md:order-2">
-           <img className='m-auto rounded-2xl shadow-lg' src="img/dashboard.webp" alt="" width="600px"/>
-        </div>
-      </div>
-
-      <div className="container grid grid-cols-1 md:grid-cols-2 mt-4 gap-8">
-        <div className="deskripsi-fitur order-2 flex flex-col justify-center items-center md:items-baseline">
-            <h2 className='text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]'>Optimalkan Keuangan dengan AI</h2>
-            <p className='text-lg md:text-xl mb-4 md:w-[80%] dark:text-gray-300'>Dapatkan wawasan mendalam tentang kondisi keuangan Anda dengan analisis berbasis kecerdasan buatan. AI kami membantu Anda memahami kebiasaan finansial dan memberikan rekomendasi cerdas untuk pengelolaan yang lebih baik.</p>
-            <ul className='mt-2'>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Wawasan finansial yang personal</li>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Analisis kebiasaan keuangan otomatis</li>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Rekomendasi cerdas untuk keputusan yang lebih baik</li>
-            </ul>
-        </div>
-        <div className="foto-fitur order-1">
-           <img className='m-auto rounded-2xl shadow-lg' src="img/chatbot.webp" alt="" width="500px"/>
-        </div>
-      </div>
-
-      <div className="container grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
-        <div className="deskripsi-fitur order-2 md:order-1 flex flex-col justify-center items-center md:items-baseline">
-            <h2 className='text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]'>Optimalkan Keuangan dengan AI</h2>
-            <p className='text-lg md:text-xl mb-4 md:w-[80%] dark:text-gray-300'>Dapatkan wawasan mendalam tentang kondisi keuangan Anda dengan analisis berbasis kecerdasan buatan. AI kami membantu Anda memahami kebiasaan finansial dan memberikan rekomendasi cerdas untuk pengelolaan yang lebih baik.</p>
-            <ul className='mt-2'>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Wawasan finansial yang personal</li>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Analisis kebiasaan keuangan otomatis</li>
-              <li className='flex gap-2 font-[600] text-[#374151] dark:text-gray-300 text-sm md:text-lg'><img src="img/cheklist.png" alt="" width='20px'/>Rekomendasi cerdas untuk keputusan yang lebih baik</li>
-            </ul>
-        </div>
-        <div className="foto-fitur order-1 md:order-2">
-           <img className='m-auto rounded-2xl shadow-lg' src="img/kalender.png" alt="" width="500px"/>
-        </div>
-      </div>
-    </div>
-  )
-}
-
 function KenapaHarus(){
   return(
     <div className="kenapa-harus mt-10">
@@ -288,9 +237,8 @@ function HomePage() {
       <div className="dark:bg-black">
         <Navbar type='home'/>
         <Home header='Kelola Keuangan dengan' isi='Cerdas Bersama Financial Tracker' deskripsi='Smart Financial Tracker membantu Anda mencatat transaksi, menganalisis pola keuangan, dan memprediksi keuangan dengan Al. Aman, mudah, dan otomatis!'/>
-        <FiturUtama/>
-        <KenapaHarus/>
         <Benefit/>
+        <KenapaHarus/>
         <Tutorial/>
         <FAQ/>
         <Footer />

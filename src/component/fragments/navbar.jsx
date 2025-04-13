@@ -44,7 +44,7 @@ function Navbar() {
                             <NavLink to="/tentangkami" className={({ isActive}) => isActive ? "text-primary dark:text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary dark:hover:text-primary"}>Tentang Kami</NavLink>
                         </li>
                         <li>
-                            <NavLink to="/fitur" className={({ isActive }) => isActive ? "text-primary dark:text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary dark:hover:text-primary"}>Fitur</NavLink>
+                            <NavLink to="/Fitur" className={({ isActive }) => isActive ? "text-primary dark:text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary dark:hover:text-primary"}>Fitur</NavLink>
                         </li>
                         <li> 
                             <NavLink to="/blogs" className={({ isActive}) => isActive ? "text-primary dark:text-primary font-[500]" : "text-[16px] font-[500] hover:text-primary dark:hover:text-primary"}>Blog</NavLink>

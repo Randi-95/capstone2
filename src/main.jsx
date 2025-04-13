@@ -16,6 +16,8 @@ import Profile from './pages/Profile.jsx'
 import GrafikPage from './pages/grafik.jsx'
 import Chatbot from './pages/chatbot.jsx'
 import Prediksi from './pages/Prediksi.jsx'
+import Fitur from './pages/fitur.jsx'
+import TentangFinancialTracker from './pages/tentangFintrack.jsx'
 
 const router = createBrowserRouter ([
     {
@@ -70,6 +72,14 @@ const router = createBrowserRouter ([
     {
       path: "/Chatbot",
       element: <Chatbot />,
+    },
+    {
+      path: "/Fitur",
+      element: <Fitur/>
+    },
+    {
+      path: "/TentangFinancialTracker",
+      element: <TentangFinancialTracker/>,
     }
 ])
 

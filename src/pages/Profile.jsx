@@ -96,6 +96,7 @@ function Profile() {
         </div>
       </div>
 
+      <Link to="/TentangFinancialTracker">
       <div className="m-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800">
         <div className="flex justify-between border-b-1 border-gray-400 dark:border-gray-700 py-4 px-2">
           <div className="flex gap-2 ">
@@ -108,6 +109,7 @@ function Profile() {
           <ChevronRight className="text-gray-700 dark:text-gray-300" />
         </div>
       </div>
+      </Link>
 
       <div className="m-6 cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-800">
         <div className="flex justify-between border-b-1 border-gray-400 dark:border-gray-700 py-4 px-2">

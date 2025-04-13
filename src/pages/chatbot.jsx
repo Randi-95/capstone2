@@ -23,12 +23,12 @@ function Chatbot() {
     console.log(history);
 
     const Messages = history
-      .filter((chat) => chat.role === "user") // Hanya ambil yang role-nya "user"
-      .map((chat) => chat.text); // Ambil text saja
+      .filter((chat) => chat.role === "user")
+      .map((chat) => chat.text);
 
     console.log(Messages);
 
-    const userMessage = Messages.pop(); // Ambil pesan terakhir
+    const userMessage = Messages.pop();
     console.log(userMessage);
 
     const data = {
@@ -36,7 +36,7 @@ function Chatbot() {
     };
     try {
       const res = await axios.post(
-        `${url}/chatbot/${user_data.id}`,
+        `${url}/chatbot`,
         data,
         {
           headers: {

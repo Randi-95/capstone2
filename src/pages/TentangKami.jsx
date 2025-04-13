@@ -2,6 +2,7 @@ import Navbar from '../component/fragments/navbar'
 import { Home } from '../component/fragments/home'
 import CardAbout from '../component/elements/cardAbout'
 import {Shield, Zap, CheckCircle, TrendingUp} from 'react-feather'
+import { Footer } from '../component/fragments/footer'
 
 
 const Deskripsi = () => {
@@ -95,6 +96,7 @@ export function TentangKamiPage() {
         <Home header = 'Mengenal Financial Tracker' isi = 'Solusi Keuangan Pintar' deskripsi = 'Financial Tracker hadir untuk membantu Anda mengelola keuangan dengan lebih baik.'/>
         <Deskripsi />
         <NilaiInti />
+        <Footer/>
       </div>
   )
 }
