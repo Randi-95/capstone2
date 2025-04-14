@@ -107,7 +107,7 @@ function IsiFitur() {
         </div>
 
         <div className="container grid grid-cols-1 md:grid-cols-2 mt-10 gap-8">
-          <div className="deskripsi-fitur order-2 md:order-1 flex flex-col  md:items-baseline">
+          <div className="deskripsi-fitur order-2 md:order-2 flex flex-col  md:items-baseline">
             <h2 className="text-3xl md:text-4xl mt-8 mb-4 md:mt-0 text-primary font-[700]">
             Chatbot Pintar Keuangan
             </h2>
@@ -129,7 +129,7 @@ function IsiFitur() {
               </li>
             </ul>
           </div>
-          <div className="foto-fitur order-1 md:order-2">
+          <div className="foto-fitur order-1 md:order-1">
             <img
               className="m-auto rounded-2xl shadow-lg"
               src="img/chatbotFitur.png"

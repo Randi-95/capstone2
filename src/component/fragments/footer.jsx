@@ -29,7 +29,7 @@ export const Footer = () => {
                             <div className="bg-white/10 p-2 rounded-full">
                                 <img src="/img/phone.svg" alt="" className="w-[20px]"/>
                             </div>
-                            <p className="text-md  text-white">0878-5593-2641</p>
+                            <p className="text-md  text-white">0899-3903-149</p>
                         </div>
                     </div>
                     <div className="flex flex-col">

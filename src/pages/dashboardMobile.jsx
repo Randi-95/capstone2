@@ -160,18 +160,22 @@ function DashboardMobile() {
               </div>
             </div>
             <div className="h-20 w-full justify-center flex items-center gap-2">
-              <div className="flex flex-col gap-2 items-center">
-                <BarChart className="text-primary" />
-                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
-                  Grafik
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 items-center">
-                <MessageCircle className="text-primary" />
-                <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
-                  Chatbot
-                </p>
-              </div>
+              <Link to="/Grafik">
+                <div className="flex flex-col gap-2 items-center">
+                  <BarChart className="text-primary" />
+                  <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
+                    Grafik
+                  </p>
+                </div>
+              </Link>
+              <Link to="/Chatbot">
+                <div className="flex flex-col gap-2 items-center">
+                  <MessageCircle className="text-primary" />
+                  <p className="text-[#696666] dark:text-gray-300 text-xs font-bold">
+                    Chatbot
+                  </p>
+                </div>
+              </Link>
               <Link to="/Riwayat">
                 <div className="flex flex-col gap-2 items-center">
                   <Clock className="text-primary" />

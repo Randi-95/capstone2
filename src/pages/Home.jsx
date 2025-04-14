@@ -9,16 +9,20 @@ import { Footer } from '../component/fragments/footer';
 
 const faqs = [
   {
-    question: "Apakah Smart Financial Tracker gratis?",
-    answer: "Ya, Smart Financial Tracker tersedia dalam versi gratis dengan fitur utama yang bisa digunakan tanpa biaya. Namun, tersedia juga versi premium dengan fitur tambahan yang lebih lengkap."
+    question: "Apa itu Financial Tracker?",
+    answer: "Financial Tracker adalah alat bantu digital yang memudahkan kamu mencatat, mengelola, dan memantau pemasukan serta pengeluaran harian, mingguan, atau bulanan. Tujuannya agar kamu bisa lebih sadar dan bijak dalam mengatur keuangan."
   },
   {
-    question: "Apakah data keuangan saya aman?",
-    answer: "Tentu! Kami menggunakan enkripsi tingkat tinggi untuk melindungi data keuangan Anda dan memastikan keamanannya."
+    question: "Apakah saya bisa mengakses Financial Tracker di perangkat lain?",
+    answer: "Bisa. Selama kamu login dengan akun yang sama, kamu bisa mengakses data keuanganmu dari perangkat manapun — baik itu laptop, tablet, maupun smartphone."
   },
   {
-    question: "Bagaimana cara menghubungi tim support jika ada masalah?",
-    answer: "Anda dapat menghubungi tim support kami melalui email atau fitur live chat yang tersedia di dalam aplikasi."
+    question: "Apakah saya bisa menggunakan Capstone Financial Tracker secara gratis?",
+    answer: "Ya! Website ini bisa digunakan secara gratis tanpa biaya berlangganan."
+  },
+  {
+    question: "Siapa yang membuat website ini?",
+    answer: "Website ini dikembangkan oleh tim Capstone Project Coding Camp Dicoding X DBS Foundation dengan tujuan membantu masyarakat lebih melek finansial dan mudah mengelola keuangannya secara digital."
   }
 ];
 
@@ -59,7 +63,7 @@ function FAQ() {
 function KenapaHarus(){
   return(
     <div className="kenapa-harus mt-10">
-      <div className="container mx-auto bg-primary dark:bg-primary lg:h-screen rounded-2xl py-16 px-4 lg:px-20"> 
+      <div className="container mx-auto bg-primary mb-10 dark:bg-primary rounded-2xl py-16 px-4 lg:px-20"> 
           <div className="flex flex-col items-center">
             <h1 className='text-white text-2xl text-center font-[700] md:text-3xl'>Kenapa Harus Financial Tracker?</h1>
           </div>
@@ -97,7 +101,7 @@ function KenapaHarus(){
               </div>
             </div>
             <div className="">
-              <img className='m-auto rounded-2xl' src="img/chatbot.webp" alt="" width="400px"/>
+              <img className='m-auto rounded-2xl ' src="img/homeFitur.png" alt=""/>
             </div>
           </div>
       </div>

@@ -51,7 +51,7 @@ function Navbar() {
                         </li>
                         <div className="button md:hidden flex flex-col gap-3">
                             <Button to='/login' bgColor='bg-primary' border='border-primary' hover='hover:bg-transparent' hoverText='group-hover:text-primary dark:group-hover:text-primary' classCustom='w-full'>Masuk</Button>
-                            <Button bgColor='bg-white dark:bg-transparent' text='text-black dark:text-white' border='border-primary' hover='hover:bg-primary dark:hover:bg-primary' hoverText='group-hover:text-white' classCustom='w-full'>Daftar</Button>
+                            <Button to= '/Registrasi' bgColor='bg-white dark:bg-transparent' text='text-black dark:text-white' border='border-primary' hover='hover:bg-primary dark:hover:bg-primary' hoverText='group-hover:text-white' classCustom='w-full'>Daftar</Button>
                         </div>
                     </ul>
                 </div>

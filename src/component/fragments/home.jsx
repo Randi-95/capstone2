@@ -1,5 +1,6 @@
 import Button from "../elements/Button";
 
+
 export const Home = (props) => {
     const {header, isi, deskripsi} = props;
 
@@ -15,7 +16,7 @@ export const Home = (props) => {
                 </span>
             </div>
             <div className="mt-[10px]">
-                <Button bgColor='bg-primary' border='border-primary' hover='hover:bg-transparent dark:hover:bg-transparent' hoverText = 'group-hover:text-primary ' >Bergabung Sekarang</Button>
+                    <Button to='/login' bgColor='bg-primary' border='border-primary' hover='hover:bg-transparent dark:hover:bg-transparent' hoverText = 'group-hover:text-primary ' >Bergabung Sekarang</Button>
             </div>
 
             

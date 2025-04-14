@@ -85,9 +85,9 @@ function FormKeuangan() {
   };
 
   return (
-    <div className="dark:bg-black min-h-screen">
+    <div className="dark:bg-slate-900 min-h-screen">
       {isLoading && <Spinner />}
-      <div className="max-w-md mx-auto bg-white dark:bg-black rounded-2xl p-6">
+      <div className="max-w-md mx-auto bg-white dark:bg-slate-800 rounded-2xl p-6">
         <div className="mb-10 flex items-center justify-between">
           <Link to="/Dashboard">
             <ArrowLeft className="text-primary size-8" />
