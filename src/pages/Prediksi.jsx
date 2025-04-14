@@ -31,7 +31,7 @@ function Prediksi() {
 
       <div className="-mt-10 p-6 bg-white dark:bg-slate-800 rounded-t-4xl">
         <div className="overflow-x-auto w-full">
-          <div className="mt-10">
+          <div className="mt-10 mb-20">
             <GrafikPrediksi />
           </div>
         </div>
