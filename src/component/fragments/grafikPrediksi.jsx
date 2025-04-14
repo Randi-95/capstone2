@@ -26,13 +26,19 @@ function GrafikPrediksi() {
   const token = localStorage.getItem("token");
   const userData = getProfil(token);
 
-  // Fungsi untuk memformat mata uang dan mengonversi ke angka
   const formatCurrency = (value) => {
-    const cleanValue = value.replace("Rp ", "").replace(/\./g, "").replace(",", ".");
+    const cleanValue = value
+      .replace("Rp ", "")
+      .replace(/\./g, "")
+      .replace(",", ".");
     return parseFloat(cleanValue);
   };
 
   const fetchPrediksi = async () => {
+    if (!tanggalPrediksi) {
+      alert("Tanggal prediksi wajib diisi!");
+      return;
+    }
     try {
       setIsLoading(true);
       setIsError(false);
@@ -73,20 +79,21 @@ function GrafikPrediksi() {
       let finalMessage = "";
 
       if (err.response?.data) {
-        const serverData = err.response.data;
+        const errorData = err.response.data;
 
-        if (typeof serverData === "string") {
-          finalMessage = serverData;
-        } else if (typeof serverData === "object") {
-          if (serverData.message) {
-            finalMessage = serverData.message;
-          } else if (serverData.detail) {
-            finalMessage = serverData.detail;
-          } else {
-            finalMessage = JSON.stringify(serverData);
-          }
+        if (errorData.status === "Error" && errorData.message?.detail) {
+          finalMessage = errorData.message.detail;
+        } else if (errorData.status === "fail" && errorData.message) {
+          finalMessage = errorData.message;
+        } else if (errorData.detail) {
+          finalMessage = errorData.detail;
+        } else if (typeof errorData.message === "string") {
+          finalMessage = errorData.message;
         } else {
-          finalMessage = "Terjadi kesalahan tidak diketahui.";
+          finalMessage =
+            typeof errorData === "object"
+              ? JSON.stringify(errorData)
+              : String(errorData);
         }
       } else if (err.message) {
         finalMessage = err.message;
@@ -137,7 +144,6 @@ function GrafikPrediksi() {
           Prediksi
         </button>
       </div>
-
       {isLoading ? (
         <LoaderGrafik />
       ) : isError ? (
@@ -177,6 +183,22 @@ function GrafikPrediksi() {
           </h2>
         </>
       ) : null}
+
+      <div className="mt-3 bg-blue-50 dark:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-4">
+        <h3 className="font-medium text-xl text-blue-800 dark:text-blue-300 mb-2">
+          Catatan Penting!!
+        </h3>
+        <h3 className="font-medium text-blue-800 dark:text-blue-300 mb-2">
+        Sebelum melakukan prediksi, pastikan memenuhi syarat berikut:
+        </h3>
+        <ul className="list-disc list-inside text-sm text-blue-700 dark:text-blue-300 space-y-1">
+          <li>Data Transaksi Lengkap: Sistem membutuhkan data pemasukan dan pengeluaran untuk melakukan prediksi yang akurat.</li>
+          <li>Minimal Dua Tanggal: Harus terdapat transaksi pada minimal dua tanggal berbeda untuk melakukan analisis tren.</li>
+          <li>Tanggal Prediksi Valid: Tanggal prediksi yang dipilih harus lebih besar (setelah) dari tanggal data terakhir yang tersedia di sistem.
+          Contoh: Jika data terakhir tersedia hingga 15 April 2025, maka tanggal prediksi harus setelah tanggal tersebut.</li>
+        </ul>
+      </div>
+
     </div>
   );
 }

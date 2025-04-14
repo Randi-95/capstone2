@@ -30,7 +30,7 @@ function FormKeuangan() {
   const tanggalRef = useRef(null);
   const [errorMessage, setError] = useState("");
   const [succesMessage, setSucces] = useState("");
-  const [isLoading, setIsLoading] = useState(false)
+  const [isLoading, setIsLoading] = useState(false);
 
   const navigate = useNavigate();
 
@@ -39,7 +39,6 @@ function FormKeuangan() {
     e.preventDefault();
 
     const rawJumlah = jumlahRef.current.value.trim();
-
 
     if (!/^\d+$/.test(rawJumlah)) {
       alert("Jumlah hanya boleh berupa angka tanpa simbol atau huruf");
@@ -53,7 +52,7 @@ function FormKeuangan() {
       return;
     }
 
-    setIsLoading(true)
+    setIsLoading(true);
 
     const data = {
       deskripsi: deskripsiRef.current.value,
@@ -73,10 +72,10 @@ function FormKeuangan() {
       addTransaction(data, (status, res) => {
         if (status) {
           setSucces(res);
-          setIsLoading(false)
+          setIsLoading(false);
         } else {
           setError(res);
-          setIsLoading(false)
+          setIsLoading(false);
         }
       });
     } else {
@@ -126,37 +125,6 @@ function FormKeuangan() {
             </div>
           </div>
 
-          <div>
-            <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
-              Kategori
-            </label>
-            <select
-              required
-              ref={typeRef}
-              className="w-full px-3 py-2 border dark:border-gray-600 dark:text-white dark:bg-black rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-            >
-              <option
-                value=""
-                disabled
-                selected
-                className="text-xs dark:text-gray-300"
-              >
-                Pilih Kategori
-              </option>
-              <option
-                value="pemasukan"
-                className="text-green-500 dark:text-green-400 text-xs"
-              >
-                Pemasukan
-              </option>
-              <option
-                value="pengeluaran"
-                className="text-red-500 dark:text-red-400 text-xs"
-              >
-                Pengeluaran
-              </option>
-            </select>
-          </div>
 
           <div>
             <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
@@ -176,6 +144,38 @@ function FormKeuangan() {
             </div>
           </div>
 
+          <div >
+            <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
+              Kategori
+            </label>
+            <div className="flex space-x-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white">
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="type"
+                  value="pemasukan"
+                  ref={typeRef}
+                  className="form-radio h-5 w-5 text-blue-500 "
+                  required
+                />
+                <span className="ml-2 text-green-500 dark:text-green-400">
+                  Pemasukan
+                </span>
+              </label>
+              <label className="flex items-center">
+                <input
+                  type="radio"
+                  name="type"
+                  value="pengeluaran"
+                  ref={typeRef}
+                  className="form-radio h-5 w-5 text-blue-500"
+                />
+                <span className="ml-2 text-red-500 dark:text-red-400">
+                  Pengeluaran
+                </span>
+              </label>
+            </div>
+          </div>
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] font-bold text-white py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 mt-4"
