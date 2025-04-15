@@ -1,22 +1,6 @@
 import {
-  User,
-  Book,
-  CreditCard,
-  AtSign,
-  LogOut,
-  Headphones,
-  Calendar,
-  BarChart,
-  Grid,
-  MessageCircle,
-  Menu,
-  DollarSign,
-  Clock,
-  Activity,
-  Plus,
-  ArrowDown,
-  ArrowUp,
   ArrowLeft,
+  Calendar,
 } from "react-feather";
 import { Link, useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
@@ -26,8 +10,9 @@ import { Spinner } from "../component/elements/loader";
 function FormKeuangan() {
   const deskripsiRef = useRef(null);
   const jumlahRef = useRef(null);
-  const typeRef = useRef(null);
   const tanggalRef = useRef(null);
+
+  const [type, setType] = useState("");
   const [errorMessage, setError] = useState("");
   const [succesMessage, setSucces] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -35,8 +20,8 @@ function FormKeuangan() {
   const navigate = useNavigate();
 
   const handlerTransaksi = (e) => {
-    const token = localStorage.getItem("token");
     e.preventDefault();
+    const token = localStorage.getItem("token");
 
     const rawJumlah = jumlahRef.current.value.trim();
 
@@ -46,7 +31,6 @@ function FormKeuangan() {
     }
 
     const jumlah = parseInt(jumlahRef.current.value, 10);
-
     if (isNaN(jumlah) || jumlah <= 0) {
       alert("Jumlah harus berupa angka lebih dari 0");
       return;
@@ -57,25 +41,27 @@ function FormKeuangan() {
     const data = {
       deskripsi: deskripsiRef.current.value,
       jumlah: jumlahRef.current.value,
-      type: typeRef.current.value,
+      type: type,
       tanggal: tanggalRef.current.value,
     };
 
+    // Reset field
     deskripsiRef.current.value = "";
     jumlahRef.current.value = "";
-    typeRef.current.value = "";
     tanggalRef.current.value = "";
+    setType("");
 
     console.log(data);
 
     if (token) {
       addTransaction(data, (status, res) => {
+        setIsLoading(false);
         if (status) {
           setSucces(res);
-          setIsLoading(false);
+          setError("");
         } else {
           setError(res);
-          setIsLoading(false);
+          setSucces("");
         }
       });
     } else {
@@ -99,15 +85,16 @@ function FormKeuangan() {
             <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
               Deskripsi
             </label>
-            <div className="relative">
-              <input
-                required
-                ref={deskripsiRef}
-                type="text"
-                placeholder="Deskripsi Transaksi"
-                className="w-full pl-4 pr-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
-              />
-            </div>
+            <input
+              required
+              ref={deskripsiRef}
+              type="text"
+              placeholder="Deskripsi Transaksi"
+              className="w-full pl-4 pr-3 py-2 border dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white"
+            />
+          </div>
+
+          <div>
             <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
               Jumlah
             </label>
@@ -124,7 +111,6 @@ function FormKeuangan() {
               />
             </div>
           </div>
-
 
           <div>
             <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
@@ -144,18 +130,19 @@ function FormKeuangan() {
             </div>
           </div>
 
-          <div >
+          <div>
             <label className="block text-gray-700 dark:text-gray-200 font-semibold mb-2">
               Kategori
             </label>
-            <div className="flex space-x-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500 dark:text-white">
+            <div className="flex space-x-4 py-2">
               <label className="flex items-center">
                 <input
                   type="radio"
                   name="type"
                   value="pemasukan"
-                  ref={typeRef}
-                  className="form-radio h-5 w-5 text-blue-500 "
+                  checked={type === "pemasukan"}
+                  onChange={(e) => setType(e.target.value)}
+                  className="form-radio h-5 w-5 text-blue-500"
                   required
                 />
                 <span className="ml-2 text-green-500 dark:text-green-400">
@@ -167,7 +154,8 @@ function FormKeuangan() {
                   type="radio"
                   name="type"
                   value="pengeluaran"
-                  ref={typeRef}
+                  checked={type === "pengeluaran"}
+                  onChange={(e) => setType(e.target.value)}
                   className="form-radio h-5 w-5 text-blue-500"
                 />
                 <span className="ml-2 text-red-500 dark:text-red-400">
@@ -176,6 +164,7 @@ function FormKeuangan() {
               </label>
             </div>
           </div>
+
           <button
             type="submit"
             className="w-full bg-gradient-to-r from-[#7f5efd] to-[#4f9efd] font-bold text-white py-3 rounded-lg hover:bg-blue-600 transition-colors duration-300 mt-4"
@@ -183,12 +172,13 @@ function FormKeuangan() {
             Simpan Transaksi
           </button>
         </form>
+
         {succesMessage && (
           <div
             role="alert"
             className="border-s-4 border-green-700 bg-green-50 dark:bg-green-900/30 dark:border-green-500 p-4 mt-4"
           >
-            <div className="flex items-center gap-2 text-green-700 dark:text-green-400  text-center">
+            <div className="flex items-center gap-2 text-green-700 dark:text-green-400 text-center">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 24 24"
@@ -201,13 +191,11 @@ function FormKeuangan() {
                   clipRule="evenodd"
                 />
               </svg>
-
-              <strong className="font-medium text-center">
-                {succesMessage}
-              </strong>
+              <strong className="font-medium">{succesMessage}</strong>
             </div>
           </div>
         )}
+
         {errorMessage && (
           <div
             role="alert"
@@ -226,10 +214,7 @@ function FormKeuangan() {
                   clipRule="evenodd"
                 />
               </svg>
-
-              <strong className="font-medium text-center">
-                {errorMessage}
-              </strong>
+              <strong className="font-medium">{errorMessage}</strong>
             </div>
           </div>
         )}
